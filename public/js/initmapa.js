@@ -17,7 +17,7 @@ function onLocationError(e) {
 function onLocationFound(e) {
     markerGeoLoc = L.marker(e.latlng).addTo(mapa);
     latlngmap = L.latLng(e.latlng.lat, e.latlng.lng);
-    console.log(e.latlng);    
+    //console.log(e.latlng);    
 }
 
 function onMapClick(e) {

@@ -406,8 +406,7 @@ var h = d.getHours();
 function addCirculo(__latlng){
 
 				if (circulo != null)
-				{	
-					console.log("borra circulo");
+				{						
 					mapa.removeLayer(circulo);
 					circulo = null;
  			    }				
@@ -497,12 +496,14 @@ function cargarEstaciones()
 
 
 function actualizarMapa()
-{		
+{	
+    var paradas = [];	
 	socket.on('paradas',function (data) {
 						paradas = data;	
-    					actualizoMarkers(paradas);
-    					
+    					//actualizoMarkers(paradas);
+
   	});
+    actualizoMarkers(paradas);
 
   	socket.on('error',function () {	
   		$( "#aviso" ).html( "<p>Servidor fuera de servicio. Reintente luego</p>" );			
@@ -521,6 +522,7 @@ function actualizarMapa()
 
 };
 
+
 function obtenerDatos(timems)
 {	
 
@@ -528,7 +530,7 @@ function obtenerDatos(timems)
 	 //idPM = setInterval(function(){ //COMENTADO MOMENTÁNEAMENTE para DEMO
 	 	//No es necesario setinterval porque actualiza el servidor
 	   //socket = io.connect("/localhost:5000");
-       socket = io();
+       socket = io("http://bicimapuy.herokuapp.com");
        actualizarMapa();       
      //},timems);
 //	actualizarMapa();
@@ -562,11 +564,10 @@ function actualizoMarkers(paradas)
 // Hora de de funcionamiento de las estaciones Plan Movete 7-21hs
 var fecha = new Date();
 var h = fecha.getHours();
-console.log("va a chequear hora", h);
 
 if ((h < 21) && (h >= 7))
 {
-console.log("hora pm");
+
      if (paradas == null)
     {     
       $( "#aviso" ).html( "<p>Los datos de las estaciones no están actualizados</p>" );
@@ -576,7 +577,7 @@ console.log("hora pm");
    {  
     $( "#aviso" ).html( "" );  
     if (paradas.length == 0)
-    {   content.log("se fueee");    
+    {       
         $( "#aviso" ).html( "<p>No hay datos de las estaciones</p>" );
         return;
     }
@@ -594,7 +595,7 @@ console.log("hora pm");
 		{				
 			if (parada[4] == -1) //&& (paradant[4] != -1))	
 			{
-                console.log("\nparada[4] es -1");
+                
 				desc = "<b><center>" + parada[0] + "</center></b>" + "<br>" +
 				"Calle Alzáibar 1321 - Lunes a Viernes: 9:00 a 18:00 h." + "<br>" + 
 				"Sábados: De 10:00 a 14:00 h";	
@@ -692,7 +693,7 @@ console.log("hora pm");
 	  }// if antes for
 	  else  //horario en que las estaciones están fuera de servicio
 	  {	  
-        console.log("debe entrar aca");	
+      console.log("acaaaaaaaaaaaa fuera de hora");        
 	  	for (var i = 0; i < estaciones.length; i++) {
 			estacion = estaciones[i];
 
@@ -732,7 +733,9 @@ console.log("hora pm");
 	  }
 	  paradas_ant = paradas.slice();
 	//}  	
-};		
+};	
+
+
 
 
 function loadBiciAmigos()
@@ -1104,7 +1107,6 @@ function loadPatrimonio()
                 var bounds = layer.getBounds();
                 // Get center of bounds
                 var center = bounds.getCenter();  
-                console.log(center);
                 var desc = '';
                 if (feature.properties.NOMBRE != null)
                 {
@@ -1209,7 +1211,7 @@ function loadEspVerdes()
                 var bounds = layer.getBounds();
                 // Get center of bounds
                 var center = bounds.getCenter();  
-                console.log(center);
+                
                 var desc = '';
                 if (feature.properties.NOM_TIPO_E != null)
                     desc = feature.properties.NOM_TIPO_E;
@@ -2072,8 +2074,8 @@ function nearest_estacionPM()
 				//var nlatlng = L.GeometryUtil.closestLayer(mapa,lmarkersE.getLayers() , latlngmap);
 
 			
-				console.log("nlatlng :");console.log(nlatlng);
-				console.log("latlngmap :");console.log(latlngmap);
+				// console.log("nlatlng :");console.log(nlatlng);
+				// console.log("latlngmap :");console.log(latlngmap);
 
 
 				mapa.setView(nlatlng,15); 	
@@ -2650,8 +2652,7 @@ function loadDatosIniciales()
     socket.on('biciamigos',function (data) {        
                         //biciamigos = data;     
                         biciamigos = jQuery.parseJSON(data);
-
-                        console.log(biciamigos);                    
+                        
                         
     });
     socket.on('infladores',function (data1) {        
@@ -2705,6 +2706,12 @@ function loadDatosIniciales()
     socket.on('paseoPrado',function (data9) {        
                         //biciamigos = data;     
                         paseoPrado = jQuery.parseJSON(data9);
+                        //console.log(biciamigos);                    
+                        
+    });
+    socket.on('paradas',function (data10) {        
+                        //biciamigos = data;     
+                        paradas = jQuery.parseJSON(data10);
                         //console.log(biciamigos);                    
                         
     });

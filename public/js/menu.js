@@ -27,10 +27,10 @@ $(function() {
         			 },
         			navbar:{
         				title: "Inicio"        				
-        			},
-        			offCanvas: {
-               		  zposition : "next"
-            		}
+        			 }
+        			// offCanvas: {
+           //     		  zposition : "next"
+           //  		}
     	
 			});
 

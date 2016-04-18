@@ -1,8 +1,6 @@
 var routing = false;
 
 
-
-
 function borrarPath()
 {
   if (circulo != null)
@@ -256,7 +254,7 @@ var $bicipuntos = $('input[name="bp"');
       {
         if (!$planMoveterb.is( ':checked' ))
          { 
-            cargarEstaciones();            
+            cargarEstaciones();             
             obtenerDatos(5000);
             mapa.addLayer(lmarkersE); 
          }   
@@ -427,16 +425,9 @@ $repechos.click(function() {
       }
         
   });        
-
-
-//////// prueba
-///Prueba
-
   
 }  
 
-
- 
 
 // funciones de nearest
 function onLocationFound(e) {
@@ -445,13 +436,14 @@ function onLocationFound(e) {
     latlngmap = e.latlng;
 
     if (latlngmap != null)
-      console.log("latlngmap no es null");
+    {  
 
-    if (markerGeoLoc != null)
-      mapa.removeLayer(markerGeoLoc);
+      if (markerGeoLoc != null)
+        mapa.removeLayer(markerGeoLoc);
 
-    markerGeoLoc = L.marker(e.latlng).addTo(mapa)
-        .bindPopup("Estás dentro a " + radius + " mts desde este punto").openPopup();  
+      markerGeoLoc = L.marker(e.latlng).addTo(mapa)
+          .bindPopup("Estás dentro a " + radius + " mts desde este punto").openPopup();  
+    }    
     
 }
 
@@ -849,7 +841,7 @@ var $bicipuntos = $('input:radio[id="bprb"] ');
       borrarPath();      
       if (!$planMovetechk.is( ':checked' )) 
       {
-        cargarEstaciones();            
+        cargarEstaciones();       
         obtenerDatos(5000);
         mapa.addLayer(lmarkersE); 
         $planMovetechk.prop( "checked", true );

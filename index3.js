@@ -152,6 +152,8 @@ var intReq, intSend;
     socket.emit('paseoRambla',paseoRambla);
     socket.emit('paseoPeniarol',paseoPeniarol);
     socket.emit('paseoPrado',paseoPrado);
+    socket.emit('paradas',paradas);
+
  	
  		//socket.emit()
   
@@ -172,7 +174,6 @@ var h = d.getHours();
 // Hora de de funcionamiento de las estaciones Plan Movete 7-21hs
 if ((h <= 21) && (h >= 7))
 {
-
 	intReq = setInterval(function() {	
 
 		request('http://movete.montevideo.gub.uy/index.php?option=com_content&view=article&id=1&Itemid=2', function (error, response, html) {
@@ -222,7 +223,8 @@ if ((h <= 21) && (h >= 7))
 	
 	});
 
-	}, 15000); // 3 minutos
+	//}, 15000); // 3 minutos
+  }, 8000); // 3 minutos
 
 
 
@@ -263,8 +265,10 @@ else
 	io.sockets.on('connection', function (socket) {
 		console.log("conectooooo");
 		paradas.push(-1);  
-    	socket.emit('paradas', paradas);
-
+    
+    
+      socket.emit('paradas', paradas);    
+    
  		io.sockets.on('error', function() {
  			io.connect(host, {
   			'force new connection': true
@@ -272,7 +276,11 @@ else
  		});
  		 		 	 	
   });	
-
+  
+  setInterval(function()
+    {
+      io.sockets.emit('paradas', paradas);    
+    },2000);
 }
 
 console.log("acaaaa- sacar control");
