@@ -90,6 +90,7 @@ var talleres = null;
 var cvpr = null;
 var paseoPeniarol = null;
 var paseoPrado = null;
+var paradas = null;
 
 
 var estaciones = [
@@ -2712,8 +2713,8 @@ function loadDatosIniciales()
                         
     });
     socket.on('paradas',function (data10) {        
-                        //biciamigos = data;     
-                        paradas = jQuery.parseJSON(data10);
+                        paradas = data;     
+                        //paradas = jQuery.parseJSON(data10);
                         //console.log(biciamigos);                    
                         
     });
