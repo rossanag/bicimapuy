@@ -218,13 +218,13 @@ if ((h <= 21) && (h >= 7))
 				paradas.push(elemParadas);
 	
 		    } 		    
-
+        io.sockets.emit('paradas', paradas);    
 		}
 	
 	});
 
-	//}, 15000); // 3 minutos
-  }, 8000); // 3 minutos
+	}, 15000); // 3 minutos
+  //}, 8000); // 3 minutos
 
 
 
@@ -249,6 +249,12 @@ io.sockets.on('connection', function (socket) {
   
     
  });
+
+setInterval(function()
+{
+      if (paradas.length > 0)   
+        io.sockets.emit('paradas', paradas);    
+},2000);
 
 io.sockets.on('disconnect', function(){
 	clearInterval(intReq);
@@ -283,7 +289,7 @@ else
     },2000);
 }
 
-console.log("acaaaa- sacar control");
+console.log("acaaaa fuera de chequeo- sacar control");
 
 //server.listen(5000);
  server.listen(process.env.PORT || 5000);

@@ -496,14 +496,15 @@ function cargarEstaciones()
 
 
 function actualizarMapa()
-{	
+{	    
     var paradas = [];	
 	socket.on('paradas',function (data) {
 						paradas = data;	
-    					//actualizoMarkers(paradas);
+                        console.log(paradas);
+    					actualizoMarkers(paradas);
 
   	});
-    actualizoMarkers(paradas);
+    //actualizoMarkers(paradas);
 
   	socket.on('error',function () {	
   		$( "#aviso" ).html( "<p>Servidor fuera de servicio. Reintente luego</p>" );			
@@ -530,14 +531,16 @@ function obtenerDatos(timems)
 	 //idPM = setInterval(function(){ //COMENTADO MOMENTÁNEAMENTE para DEMO
 	 	//No es necesario setinterval porque actualiza el servidor
 	   //socket = io.connect("/localhost:5000");
+       //setInterval(function(){
        socket = io("http://bicimapuy.herokuapp.com");
-       actualizarMapa();       
+       actualizarMapa();     // }); 
      //},timems);
 //	actualizarMapa();
 }
 
 function actualizoMarkers(paradas)
-{				
+{			
+console.log("entro a act markers");	
 	var markerObj = null;
 	var desc = '';
 	var actualizo = false;
@@ -692,8 +695,7 @@ if ((h < 21) && (h >= 7))
 		}	 //for
 	  }// if antes for
 	  else  //horario en que las estaciones están fuera de servicio
-	  {	  
-      console.log("acaaaaaaaaaaaa fuera de hora");        
+	  {	        
 	  	for (var i = 0; i < estaciones.length; i++) {
 			estacion = estaciones[i];
 

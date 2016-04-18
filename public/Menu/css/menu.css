@@ -1,24 +1,15 @@
-/*@media (max-width: 600px) {
-   #my-menu {
-      display: none !important;
-   }
-}
-@media (min-width: 601px) {
-   #mm-my-menu{
-      display: none !important;
-   }
-}*/
-
-@media (min-width: 768px) { /* mobile horizontal, tablet vertical */ 
+@media (max-width: 600px) {
    #mm-menu {
       display: none !important;
    }
 }
-@media (min-width: 1024px) { /* mobile horizontal, tablet horizontal */ 
+@media (min-width: 601px) {
    #mm-menu{
       display: none !important;
    }
 }
+
+
 
 html, body
 {
