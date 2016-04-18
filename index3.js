@@ -234,7 +234,7 @@ io.sockets.on('connection', function (socket) {
   	intSend = setInterval(function() {
     
 	    socket.emit('paradas', paradas);
-	    paradasant = paradas.slice();
+	    //paradasant = paradas.slice();
 
    },2000);	
   }
@@ -278,4 +278,4 @@ else
 console.log("acaaaa- sacar control");
 
 //server.listen(5000);
-server.listen(process.env.PORT || 5000);
+ server.listen(process.env.PORT || 5000);

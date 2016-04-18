@@ -561,7 +561,6 @@ function actualizoMarkers(paradas)
 var fecha = new Date();
 var h = fecha.getHours();
 
-console.log("hora\n");console.log(h);
 if ((h < 21) && (h >= 7))
 {
   
@@ -2628,7 +2627,7 @@ function loadDatosIniciales()
     //socket = io.connect("/" );
     socket = io();
     
-    socket.on('biciam  igos',function (data) {        
+    socket.on('biciamigos',function (data) {        
                         //biciamigos = data;     
                         biciamigos = jQuery.parseJSON(data);
 
