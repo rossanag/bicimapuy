@@ -542,27 +542,46 @@ function actualizoMarkers(paradas)
 	var parada = [];
 	var paradant = [];
 
-  
   if (paradas == null)
-  {  	
-	  $( "#aviso" ).html( "<p>Los datos de las estaciones no están actualizados</p>" );
+    {     
+      $( "#aviso" ).html( "<p>Los datos de las estaciones no están actualizados</p>" );
+      return;
+   }
+   else
+   {  
+    $( "#aviso" ).html( "" );  
+    if (paradas.length == 0)
+    {       
+        $( "#aviso" ).html( "<p>No hay datos de las estaciones</p>" );
+        //return;
+    }
+   } 
+    
 
-  }
-  else
-  {  
-	$( "#aviso" ).html( "" );  
-	if (paradas.length == 0)
-	{		
-		$( "#aviso" ).html( "<p>No hay datos de las estaciones</p>" );
-	}
-	
     
 // Hora de de funcionamiento de las estaciones Plan Movete 7-21hs
 var fecha = new Date();
 var h = fecha.getHours();
+console.log("va a chequear hora", h);
 
 if ((h < 21) && (h >= 7))
 {
+console.log("hora pm");
+     if (paradas == null)
+    {     
+      $( "#aviso" ).html( "<p>Los datos de las estaciones no están actualizados</p>" );
+
+   }
+   else
+   {  
+    $( "#aviso" ).html( "" );  
+    if (paradas.length == 0)
+    {   content.log("se fueee");    
+        $( "#aviso" ).html( "<p>No hay datos de las estaciones</p>" );
+        return;
+    }
+   } 
+    
   
 	for (var i = 0; i < paradas.length; i++)
 	{							    
@@ -672,7 +691,8 @@ if ((h < 21) && (h >= 7))
 		}	 //for
 	  }// if antes for
 	  else  //horario en que las estaciones están fuera de servicio
-	  {	  	
+	  {	  
+        console.log("debe entrar aca");	
 	  	for (var i = 0; i < estaciones.length; i++) {
 			estacion = estaciones[i];
 
@@ -711,7 +731,7 @@ if ((h < 21) && (h >= 7))
 				
 	  }
 	  paradas_ant = paradas.slice();
-	}  	
+	//}  	
 };		
 
 

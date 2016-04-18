@@ -263,7 +263,7 @@ else
 	io.sockets.on('connection', function (socket) {
 		console.log("conectooooo");
 		paradas.push(-1);  
-    	socket.emit('paradas', paradasant);
+    	socket.emit('paradas', paradas);
 
  		io.sockets.on('error', function() {
  			io.connect(host, {
