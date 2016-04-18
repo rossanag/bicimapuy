@@ -1,10 +1,10 @@
 {
-  "name": "bicimap",
+  "name": "bicimapuy",
   "version": "0.1.0",
-  "description": "App para bicicletas",
-  "main": "index.js",
+  "description": "Web/App para bicicletas - versión beta",
+  "main": "index3.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index3.js"
   },
   "dependencies": {
     "cheerio": "0.18.0",
@@ -13,15 +13,14 @@
     "request": "2.47.0",
     "serve-static": "1.7.1",
     "mongodb": "~2.0",
-    "socket.io": "~1.3.7"
-    ////
+    "socket.io": "~1.3.7" 
   },
   "engines": {
     "node": "0.10.x"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rossanag/bicimap"
+    "url": "https://github.com/rossanag/bicimapuy"
   },
   "keywords": [
     "node",
