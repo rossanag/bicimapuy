@@ -27,13 +27,14 @@
     "node",
     "heroku",
     "express",
+    "socket",
     "mongodb"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rossanag/bicimap/issues"
+    "url": "https://github.com/rossanag/bicimapuy/issues"
   },
-  "homepage": "https://github.com/rossanag/bicimap",
+  "homepage": "https://github.com/rossanag/bicimapuy",
   "devDependencies": {},
   "author": "rossana guerra"
 }
