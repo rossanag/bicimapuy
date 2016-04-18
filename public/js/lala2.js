@@ -541,7 +541,7 @@ function obtenerDatos(timems)
 
 function actualizoMarkers(paradas)
 {			
-console.log("entro a act markers");	
+//console.log("entro a act markers");	
 	var markerObj = null;
 	var desc = '';
 	var actualizo = false;
