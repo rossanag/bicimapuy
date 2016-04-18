@@ -1,0 +1,21 @@
+#twitter{
+  position: fixed;
+  top:45px;  
+  left:10px;
+  width:200px;
+  z-index: 10;
+  
+}
+
+#twitter-widget-0 {height:420px !important;}
+
+
+#tw{
+    display: block;    
+    /*background: url(../imagenes/bird1.png) no-repeat 4px 10px;                 */
+}
+
+#twbtn{
+  left:0;
+
+}

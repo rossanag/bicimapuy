@@ -1,0 +1,59 @@
+Bicicircuitos, bicicletarios, estaciones y talleres de reparación
+-----------------------------------------------------------------
+URL: http://catalogodatos.gub.uy/dataset/bicicircuitos-bicicletarios-estaciones-y-talleres-de-reparacion
+
+Descripcion
+-----------
+
+Juego de datos que contiene información georreferenciada de bicicircuitos (ciclovías, bicisendas, calles 30 km/h), bicicletarios, estaciones “Movete” de préstamo de bicicletas públicas y talleres de reparación.
+
+
+Responsable de la Información
+-----------------------------
+Unidad Ejecutiva del Plan de Movilidad Urbana – Depto. Movilidad
+http://www.montevideo.gub.uy/institucional/dependencias/unidad-ejecutiva-del-plan-de-movilidad-urbana
+
+
+Descripción de los campos - Capa Bicicircuitos (capa de líneas)
+---------------------------------------------------------------
+
+descripcion       - Descripción breve
+sentido           - Indica el sentido por el que se transita (valor 0 singifica en ambas direcciones)
+ancho             - Ancho en metros de la senda o carril si corresponde (en calles 30 no corresponde ya que se comparte el espacio con los demás vehículos)
+activo            - Valor "Si" indica que existe y está transitable en la vía pública. Valor "No" está planificado o en construcción
+tipo_bicicircuito - Existen tres tipos
+        "Bicisenda" - Senda sobre la vereda destinada exclusivamente al uso de bicicletas
+        "Ciclovia"  - Carril sobre la calzada con separación física delimitada, destinado exclusivamente al uso de bicicletas
+        "Calle 30"  - En este caso se comparte la calzada con el resto de los vehículos restringiendo a estos un máximo de 30 km/h
+
+
+Descripción de los campos - Capa Bicicletarios
+---------------------------------------------------------------
+
+nombre_ubicacion  - Texto descriptivo sobre el lugar dónde se encuentra el bicicletario
+activo            - Valor "Si" indica que existe en la vía pública. Valor "No" está planificado
+cantidad          - Cantidad de módulos que contiene el bicicletario
+ubic_bicicletario - Indica si se encuentra en calzada o vereda
+observaciones     - Alguna observación si corresponde
+
+
+Descripción de los campos - Capa Estaciones públicas de préstamo (Movete)
+-------------------------------------------------------------------------
+
+nombre_ubicacion    - Texto descriptivo sobre el lugar dónde se encuentra el bicicletario
+activo              - Valor "Si" indica que existe en la vía pública. Valor "No" está planificado
+cantidad            - Cantidad de módulos que se disponen
+hora_ini y hora_fin - Horario de funcionamiento
+observaciones       - Alguna observación si corresponde
+
+
+Descripción de los campos - Capa Talleres de reparación
+-------------------------------------------------------
+
+nombre    - Nombre del Taller
+horarios  - Horario de funcionamiento
+servicios - Texto descriptivo de los servicios que ofrece el taller (reparación, repuestos, accesorios, ventas de bicicletas, etc.)
+
+
+
+

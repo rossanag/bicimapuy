@@ -1,0 +1,1046 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>SUPERS MVD</name>
+		<description><![CDATA[]]></description>
+		<Folder>
+			<name>Capa sin nombre</name>
+			<Placemark>
+				<name>DISCO 14 PUNTA DEL ESTE</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-54.946758,-34.966102,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 2 AGRACIADA</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.197987,-34.875792,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 3 ARENAL GRANDE</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.173141,-34.902772,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 4 LEGRAND</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.09859500000001,-34.889592,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 5 PUNTA DELE STE</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-54.932606,-34.943081,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 6 FERNANDEZ CRESPO</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.177849,-34.898814,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 7 SOCA</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.154706000000004,-34.905642,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 8 MALDONADO</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-54.961338000000005,-34.91342,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 9 PUNTA CARRETAS</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.15902,-34.923977,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 10 CAMINO MALDONADO</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.086568,-34.801629,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 12 CURVA MAROÑAS</name>
+				<description><![CDATA[Montevideo 12100]]></description>
+				<styleUrl>#icon-167</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.132447,-34.85722,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 13 CHUCARRO</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.144444,-34.908977,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 15 MARCELINO SOSA</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.181319,-34.877772,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 16 AYACUCHO</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.144838,-34.894358,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 17 CALLE MALDONADO</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.193609,-34.910077,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 18 SOLYMAR</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-55.965184,-34.826178,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 19 ATLANTIDA</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-55.761173,-34.771371,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 21 EJIDO</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.18714,-34.902332,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 22 BARRIOS AMORIN</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.18391,-34.913895,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 23 GIANNASTASIO</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-55.927604,-34.805607,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 24 OBLIGADO</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.160103,-34.913248,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 25 SOLANO LOPEZ</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.125176,-34.89166,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 26 CIUDAD CANELONES</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.280057,-34.521541,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 27 LOSTORTO</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.141231000000005,-34.887304,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEVOTO 7 COLON</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.222738,-34.80513500000001,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEVOTO 20 ARENAL GRANDE</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.18052,-34.892619,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEVOTO 2 GENERAL PAZ</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.079796,-34.893617,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEVOTO 11 SAYAGO</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.211419,-34.835734,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEVOTO 19 SUAREZ</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.19542400000001,-34.864338,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEVOTO 4 BOLIVIA</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.066344,-34.893358,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEVOTO 12 PANDO</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-55.96459200000001,-34.726253,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEVOTO 24 SAN QUINTIN</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.22335,-34.852464,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEVOTO 14 PIRIAPOLIS</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-55.269352,-34.865748,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEVOTO 9 PUNTA DEL ESTE</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-54.939709,-34.932949,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEVOTO 23 CORONEL MORA</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.157007,-34.919256,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Devoto 2 GENERAL PAZ</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.079755,-34.893605,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEVOTO 3 BRISAS</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.115653,-34.893311,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEVOTO 10 PORTONES</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.080989,-34.880219000000004,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEVOTO 13 PIRIA RAMBLA</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-55.291464,-34.856144,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEVOTO 18 LAS PIEDRAS</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.21676,-34.729202,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEVOTO 5 SHANGRILA CALCANEO</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-55.999022,-34.850089,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEVOTO 15 AGRACIADA</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.21006700000001,-34.865581,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEVOTO 6 SANTA MONICA</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.057517,-34.877484,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Geant</name>
+				<styleUrl>#icon-161-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.024094,-34.865792,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DISCO 1 SCOCERIA</name>
+				<styleUrl>#icon-167-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.15547,-34.915479,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEVOTO 1 MALVIN</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.107242,-34.894995,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEVOTO 22  26 DE MARZO</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.145941,-34.907763,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEVOTO 21 8 DE OCTUBRE</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.143677,-34.87666300000001,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEVOTO 16 SAN MARTIN</name>
+				<styleUrl>#icon-159-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.182234,-34.869705,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TI CENTRAL</name>
+				<styleUrl>#icon-168-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.081654,-34.883585,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TI AROCENA</name>
+				<styleUrl>#icon-168-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.058469,-34.888078,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TI MVD SHOPPING</name>
+				<styleUrl>#icon-168-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.13594200000001,-34.902607,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TI PROPIOS</name>
+				<styleUrl>#icon-168-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.181179,-34.853626,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TI LAGOMAR</name>
+				<styleUrl>#icon-168-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-55.980213,-34.834624,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TI PQUE POSADAS</name>
+				<styleUrl>#icon-168-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.195251,-34.857205,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TI BENITO BLANCO</name>
+				<styleUrl>#icon-168-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.149052,-34.913847,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TI ATLANTIDA</name>
+				<styleUrl>#icon-168-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-55.767009,-34.768022,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TI UNION</name>
+				<styleUrl>#icon-168-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.134847,-34.87088,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TI PUNTA DEL ESTE</name>
+				<styleUrl>#icon-168-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-54.934602,-34.940495,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>MACRO CARRASCO</name>
+				<styleUrl>#icon-165-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.022313,-34.869736,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>MACRO PASO DE LA ARENA</name>
+				<styleUrl>#icon-165-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.26266,-34.83952,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>MACRO LA TEJA</name>
+				<styleUrl>#icon-165-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.231294,-34.861778,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>MACRO PUNTA RIELES</name>
+				<styleUrl>#icon-165-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.102114,-34.8241,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>MACRO PUNTA DEL ESTE</name>
+				<styleUrl>#icon-165-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-54.945492,-34.916033,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>MACRO PUNGALINI</name>
+				<styleUrl>#icon-165-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.18023,-34.86665500000001,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TATA LAS PIEDRAS</name>
+				<styleUrl>#icon-164-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.22347,-34.726664,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TATA TRES CRUCES</name>
+				<styleUrl>#icon-164-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.166508,-34.893147,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TATA MONTEVIDEO SHOPPING</name>
+				<styleUrl>#icon-164-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.135845,-34.902281,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TATA PORTONES</name>
+				<styleUrl>#icon-164-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.08265200000001,-34.881764,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TATA CIUDAD CANELONES</name>
+				<styleUrl>#icon-164-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.281135,-34.517431,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TATA CORDON</name>
+				<styleUrl>#icon-164-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.181703,-34.904026,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TATA CERRO</name>
+				<styleUrl>#icon-164-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.247709,-34.89030900000001,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TATA CENTRO</name>
+				<styleUrl>#icon-164-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.196179,-34.906337,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TATA UNION</name>
+				<styleUrl>#icon-164-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.145598,-34.877869,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TATA PASO MOLINO</name>
+				<styleUrl>#icon-164-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.201943,-34.872982,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TATA MALVIN NORTE</name>
+				<styleUrl>#icon-164-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.122587,-34.874505,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TATA 18 DE JULIO</name>
+				<styleUrl>#icon-164-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.188382,-34.905812,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TATA COLON</name>
+				<styleUrl>#icon-164-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.223183,-34.804417,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TATA GOES</name>
+				<styleUrl>#icon-164-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-56.181453,-34.880404,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TATA HIPER SAN CARLOS</name>
+				<styleUrl>#icon-164-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-54.91866100000001,-34.792577,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TATA MALDONADO</name>
+				<styleUrl>#icon-164-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-54.954547,-34.909021,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TATA PANDO</name>
+				<styleUrl>#icon-164-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-55.960468,-34.719584,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>TATA SHOPPING COSTA URBANA</name>
+				<styleUrl>#icon-164-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-55.993508,-34.841116,0.0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Style id='icon-159-nodesc-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/159-blue-pushpin.png</href>
+				</Icon>
+				<hotSpot x='10' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-159-nodesc-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/159-blue-pushpin.png</href>
+				</Icon>
+				<hotSpot x='10' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-159-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-159-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-159-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-161-nodesc-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/161-grn-pushpin.png</href>
+				</Icon>
+				<hotSpot x='10' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-161-nodesc-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/161-grn-pushpin.png</href>
+				</Icon>
+				<hotSpot x='10' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-161-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-161-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-161-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-164-nodesc-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/164-ltblu-pushpin.png</href>
+				</Icon>
+				<hotSpot x='10' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-164-nodesc-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/164-ltblu-pushpin.png</href>
+				</Icon>
+				<hotSpot x='10' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-164-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-164-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-164-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-165-nodesc-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/165-pink-pushpin.png</href>
+				</Icon>
+				<hotSpot x='10' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-165-nodesc-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/165-pink-pushpin.png</href>
+				</Icon>
+				<hotSpot x='10' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-165-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-165-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-165-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-167-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/167-red-pushpin.png</href>
+				</Icon>
+				<hotSpot x='10' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-167-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/167-red-pushpin.png</href>
+				</Icon>
+				<hotSpot x='10' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-167'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-167-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-167-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-167-nodesc-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/167-red-pushpin.png</href>
+				</Icon>
+				<hotSpot x='10' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-167-nodesc-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/167-red-pushpin.png</href>
+				</Icon>
+				<hotSpot x='10' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-167-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-167-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-167-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-168-nodesc-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/168-ylw-pushpin.png</href>
+				</Icon>
+				<hotSpot x='10' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-168-nodesc-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/168-ylw-pushpin.png</href>
+				</Icon>
+				<hotSpot x='10' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-168-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-168-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-168-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+	</Document>
+</kml>
