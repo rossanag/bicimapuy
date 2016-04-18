@@ -501,7 +501,7 @@ function actualizarMapa()
     var paradas = [];	
 	socket.on('paradas',function (data) {
 						paradas = data;	
-                        console.log(paradas);
+                        //console.log(paradas);
     					actualizoMarkers(paradas);
 
   	});
