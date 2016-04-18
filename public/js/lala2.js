@@ -504,7 +504,7 @@ function actualizarMapa()
     					actualizoMarkers(paradas);
 
   	});
-    actualizoMarkers(paradas);
+    
 
   	socket.on('error',function () {	
   		$( "#aviso" ).html( "<p>Servidor fuera de servicio. Reintente luego</p>" );			
