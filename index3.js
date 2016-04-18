@@ -278,6 +278,4 @@ else
 console.log("acaaaa- sacar control");
 
 //server.listen(5000);
-server.listen(process.env.PORT || 5000, function(){
-  console.log("Express server listening on port %d in %s mode", this.address().port, server.settings.env);
-})
+server.listen(process.env.PORT || 5000);
