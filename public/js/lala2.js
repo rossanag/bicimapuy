@@ -2713,7 +2713,7 @@ function loadDatosIniciales()
                         
     });
     socket.on('paradas',function (data10) {        
-                        paradas = data;     
+                        paradas = data10;     
                         //paradas = jQuery.parseJSON(data10);
                         //console.log(biciamigos);                    
                         
