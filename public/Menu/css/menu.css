@@ -279,7 +279,7 @@ label.mm-toggle:before {
 
 .logo10{
 	position: relative;
-	left: -80px;	
+	left: -80px;	/* antes 80 */
 	top:-45px;	
 	height:32px;
 	

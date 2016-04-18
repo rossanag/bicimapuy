@@ -612,7 +612,7 @@ if ((h < 21) && (h >= 7))
 			}
 			else
 				            
-				if ((parada[4] == 4) || (parada[4] == 5)) //&& (parada[4] != paradant[4]))
+				if ((parada[4] == 4) || (parada[4] == 5) || (parada[8] == "'0'")) //&& (parada[4] != paradant[4]))
 			    {
                     
 						markerObj._marker.setIcon(brokenIcon);						
@@ -624,26 +624,25 @@ if ((h < 21) && (h >= 7))
 				    
 				}
 				
-
 				
-				if (parada[8] == "'0'") //&& (parada[8] != paradant[8]))
-				{
+				// if (parada[8] == "'0'") //&& (parada[8] != paradant[8]))
+				// {
                     
-					markerObj._marker.setIcon(brokenIcon);						
-					desc = "<b><centre>" + parada[0] + "</centre></b>" + "<br>" +
-						"FUERA DE SERVICIO";											
-				    //markerObj._marker.getPopup().setContent(desc);	
-				    markerObj._marker.setPopupContent(desc);
-				    actualizo = true;
+				// 	markerObj._marker.setIcon(brokenIcon);						
+				// 	desc = "<b><centre>" + parada[0] + "</centre></b>" + "<br>" +
+				// 		"FUERA DE SERVICIO";											
+				//     //markerObj._marker.getPopup().setContent(desc);	
+				//     markerObj._marker.setPopupContent(desc);
+				//     actualizo = true;
 				   
 				   	   
-				}	
+				// }	
 				else					    
                 {
                     
 					if (((parada[6] == parada[7]) && (parada[7] != 0))) //&& (parada[6] != paradant[6]))
 					{
-                        
+                        console.log("parada ", parada[0]);
 						markerObj._marker.setIcon(fullIcon);								
 						desc = "<b><centre>" + parada[0] + "</centre></b>" + "<br>" + "Estación llena";											
 				    	//markerObj._marker.getPopup().setContent(desc);
