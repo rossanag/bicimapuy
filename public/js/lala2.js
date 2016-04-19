@@ -90,7 +90,7 @@ var talleres = null;
 var cvpr = null;
 var paseoPeniarol = null;
 var paseoPrado = null;
-var paradas = null;
+var paradas = [];
 
 
 var estaciones = [
@@ -498,14 +498,18 @@ function cargarEstaciones()
 
 function actualizarMapa()
 {	    
-    var paradas = [];	
+    
 	socket.on('paradas',function (data) {
-						paradas = data;	
-                        //console.log(paradas);
+        //console.log("recibiendooo sin parse",data);						
+                        //paradas = jQuery.parse(data);  
+                        var paradas = [];                 
+                        paradas2= data;    
+                        JSON.parse('['+paradas2.split("'").join('"')+']').forEach(function(paradas3){paradas.push(paradas3)});                                            
+                        
     					actualizoMarkers(paradas);
 
   	});
-    actualizoMarkers(paradas);
+    //actualizoMarkers(paradas);
     
 
   	socket.on('error',function () {	
@@ -534,22 +538,25 @@ function obtenerDatos(timems)
 	 	//No es necesario setinterval porque actualiza el servidor
 	   //socket = io.connect("/localhost:5000");
        //setInterval(function(){
-       socket = io("http://bicimapuy.herokuapp.com");
+       //socket = io("http://bicimapuy.herokuapp.com");
+       socket = io();
        actualizarMapa();     // }); 
      //},timems);
 //	actualizarMapa();
 }
 
-function actualizoMarkers(paradas)
+function actualizoMarkers(_paradas)
 {			
-//console.log("entro a act markers");	
+    
+   
 	var markerObj = null;
 	var desc = '';
 	var actualizo = false;
 	var parada = [];
 	var paradant = [];
+    
 
-  if (paradas == null)
+  if (_paradas == null)
     {     
       $( "#aviso" ).html( "<p>Los datos de las estaciones no están actualizados</p>" );
       return;
@@ -557,7 +564,7 @@ function actualizoMarkers(paradas)
    else
    {  
     $( "#aviso" ).html( "" );  
-    if (paradas.length == 0)
+    if (_paradas.length == 0)
     {       
         $( "#aviso" ).html( "<p>No hay datos de las estaciones</p>" );
         //return;
@@ -573,7 +580,7 @@ var h = fecha.getHours();
 if ((h < 21) && (h >= 7))
 {
 
-     if (paradas == null)
+     if (_paradas == null)
     {     
       $( "#aviso" ).html( "<p>Los datos de las estaciones no están actualizados</p>" );
 
@@ -581,7 +588,7 @@ if ((h < 21) && (h >= 7))
    else
    {  
     $( "#aviso" ).html( "" );  
-    if (paradas.length == 0)
+    if (_paradas.length == 0)
     {       
         $( "#aviso" ).html( "<p>No hay datos de las estaciones</p>" );
         return;
@@ -591,9 +598,10 @@ if ((h < 21) && (h >= 7))
 	for (var i = 0; i < paradas.length; i++)
 	{							    
 
-			parada = paradas[i];        
+			parada = _paradas[0][i];        
 			paradant = paradas_ant[i]; //viene cargada de cargar estaciones de PM
-			markerObj = markersArray[i];			
+			markerObj = markersArray[i];
+
 
 		if (parada[4] != 6)	// es una estación válida		
 		{				
@@ -612,7 +620,7 @@ if ((h < 21) && (h >= 7))
 			}
 			else
 				            
-				if ((parada[4] == 4) || (parada[4] == 5) || (parada[8] == "'0'")) //&& (parada[4] != paradant[4]))
+				if ((parada[4] == 4) || (parada[4] == 5) || (parada[8] == 0)) //&& (parada[4] != paradant[4]))
 			    {
                     
 						markerObj._marker.setIcon(brokenIcon);						
@@ -641,8 +649,7 @@ if ((h < 21) && (h >= 7))
                 {
                     
 					if (((parada[6] == parada[7]) && (parada[7] != 0))) //&& (parada[6] != paradant[6]))
-					{
-                        console.log("parada ", parada[0]);
+					{                        
 						markerObj._marker.setIcon(fullIcon);								
 						desc = "<b><centre>" + parada[0] + "</centre></b>" + "<br>" + "Estación llena";											
 				    	//markerObj._marker.getPopup().setContent(desc);
@@ -2650,6 +2657,7 @@ function loadDatosIniciales()
      
     //socket = io.connect("/" );
     socket = io();
+    //socket = io("http://bicimapuy.herokuapp.com")
     
     socket.on('biciamigos',function (data) {        
                         //biciamigos = data;     
@@ -2712,9 +2720,9 @@ function loadDatosIniciales()
                         
     });
     socket.on('paradas',function (data10) {        
-                        paradas = data10;     
-                        //paradas = jQuery.parseJSON(data10);
-                        //console.log(biciamigos);                    
+                        //paradas = data10;     
+                        paradas = data10;
+                        
                         
     });
     

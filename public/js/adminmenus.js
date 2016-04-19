@@ -1229,6 +1229,22 @@ function espaciosVerdesEvent(e)
     //fn_ant = espaciosVerdesEvent;
   });
     
+
+   function espaciosPatrimonialesEvent(e)
+{
+    latlngmap = null;
+    borrarPath();      
+    if (markerGeoLoc != null)
+      mapa.removeLayer(markerGeoLoc);
+    markerGeoLoc = L.marker(e.latlng).addTo(mapa);
+    latlngmap = L.latLng(e.latlng.lat, e.latlng.lng);
+    
+    mapa.removeLayer(geoPatrimonio);
+    mapa.removeLayer(lmarkersPatrimonio); 
+    loadPatrimonio();    
+    mapa.addLayer(geoPatrimonio);
+    mapa.addLayer(lmarkersPatrimonio); 
+} 
     // Lugares patrimoniales
   var $paseoPat   = $('input[name="ppat"'); 
   $paseoPat.click(function()
@@ -1239,7 +1255,7 @@ function espaciosVerdesEvent(e)
                       'top': '10px'
                                 });  
     borrarPath();
-    fn_actual = onMapClicked;          
+    fn_actual = espaciosPatrimonialesEvent;          
     mapa.off('click', fn_ant);
     mapa.on('click', fn_actual);
 

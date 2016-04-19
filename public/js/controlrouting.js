@@ -78,7 +78,7 @@ function displayRoutingControl()
 
          $(".btnBorrar").css({ 
                        'display': 'inline',
-                       'right': '27%', //antes 37% 6
+                       'right': '37%', //antes 37% 6
                       'top': '70px' //antes 13%*  5
                        });            
         showControl = true;   
