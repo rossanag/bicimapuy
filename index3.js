@@ -218,7 +218,7 @@ if ((h <= 21) && (h >= 7))
 				paradas.push(elemParadas);
 	
 		  } 		    
-      io.sockets.emit('paradas', paradas);    
+      io.sockets.emit('paradas', paradas);    //sacar y ver
 		}
 	
 	});

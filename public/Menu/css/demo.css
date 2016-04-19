@@ -106,17 +106,17 @@ nav:not(.mm-menu)
 
 
 .mm-menu {  
-  width: 71% !important;	
+  width: 60% !important;	
   background: #0A7A26 !important; 
  
 }
 
 .html.mm-opening .mm-slideout {
-  -webkit-transform: translate(65%, 0) !important;
-  -moz-transform: translate(65%, 0) !important;
-  -ms-transform: translate(65%, 0) !important;
-  -o-transform: translate(65%, 0) !important;
-  transform: translate(65%,0) !important; }
+  -webkit-transform: translate(64%, 0) !important;
+  -moz-transform: translate(54%, 0) !important;
+  -ms-transform: translate(54%, 0) !important;
+  -o-transform: translate(54%, 0) !important;
+  transform: translate(54%,0) !important; }
 
 
 
