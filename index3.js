@@ -207,7 +207,7 @@ if ((h <= 21) && (h >= 7))
 
 			paradas = [];
 			while (pos1 != -1)
-		    {
+		  {
 
 		    	var subElem = paradas1.slice(pos1+1,pos2); //elemento del vector entre []
 		    	elemParadas = subElem.split(',');
@@ -217,13 +217,13 @@ if ((h <= 21) && (h >= 7))
 				pos2 = paradas1.indexOf(']',pos2+1);
 				paradas.push(elemParadas);
 	
-		    } 		    
-        io.sockets.emit('paradas', paradas);    
+		  } 		    
+      io.sockets.emit('paradas', paradas);    
 		}
 	
 	});
 
-	}, 10000); // 3 minutos antes 15000
+	}, 15000); // 3 minutos antes 15000
   //}, 8000); // 3 minutos
 
 

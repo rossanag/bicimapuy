@@ -505,6 +505,7 @@ function actualizarMapa()
     					actualizoMarkers(paradas);
 
   	});
+    actualizoMarkers(paradas);
     
 
   	socket.on('error',function () {	
@@ -586,11 +587,10 @@ if ((h < 21) && (h >= 7))
         return;
     }
    } 
-    
-  
+      
 	for (var i = 0; i < paradas.length; i++)
 	{							    
-        
+
 			parada = paradas[i];        
 			paradant = paradas_ant[i]; //viene cargada de cargar estaciones de PM
 			markerObj = markersArray[i];			
@@ -623,7 +623,7 @@ if ((h < 21) && (h >= 7))
 				    	actualizo = true;
 				    
 				}
-				
+				 
 				
 				// if (parada[8] == "'0'") //&& (parada[8] != paradant[8]))
 				// {
