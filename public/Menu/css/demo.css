@@ -112,22 +112,22 @@ nav:not(.mm-menu)
  
 }
 
-@media only screen and (min-width: 1024px){
+@media all and (min-width: 1024px){
 html.mm-opening .mm-slideout {
-  -webkit-transform: translate(95%, 0) !important;
-  -moz-transform: translate(95%, 0) !important;
-  -ms-transform: translate(95%, 0) !important;
-  -o-transform: translate(95%, 0) !important;
-  transform: translate(95%, 0) !important;}
+  -webkit-transform: translate(75%, 0) !important;
+  -moz-transform: translate(75%, 0) !important;
+  -ms-transform: translate(75%, 0) !important;
+  -o-transform: translate(75%, 0) !important;
+  transform: translate(75%, 0) !important;}
 }  
   
 @media all screen and (min-width: 321px) {  /*smartphones ladnscape */
   html.mm-opening .mm-slideout {
-    -webkit-transform: translate(90%, 0) !important;
-    -moz-transform: translate(90%, 0) !important;
-    -ms-transform: translate(90%, 0) !important;
-    -o-transform: translate(90%, 0) !important;
-    transform: translate(90%, 0) !important;} 
+    -webkit-transform: translate(75%, 0) !important;
+    -moz-transform: translate(75%, 0) !important;
+    -ms-transform: translate(75%, 0) !important;
+    -o-transform: translate(75%, 0) !important;
+    transform: translate(75%, 0) !important;} 
    }  
 
 @media only screen and (max-width: 320px) {  /*smartphones portrait */
