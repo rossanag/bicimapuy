@@ -106,7 +106,8 @@ nav:not(.mm-menu)
 
 
 .mm-menu {  
-  width: 60% !important;	  
+  width: 60% !important;
+  height: auto !important;	  
   background: #0A7A26 !important;   
  
 }
