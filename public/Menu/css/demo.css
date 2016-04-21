@@ -106,17 +106,17 @@ nav:not(.mm-menu)
 
 
 .mm-menu {  
-  width: 60% !important;	  
+  width: 85% !important;	  
   background: #0A7A26 !important;   
  
 }
 
 html.mm-opening .mm-slideout {
-  -webkit-transform: translate(77%, 0);
-  -moz-transform: translate(77%, 0) ;
-  -ms-transform: translate(77%, 0) ;
-  -o-transform: translate(77%, 0) ;
-  transform: translate(77%, 0) }
+  -webkit-transform: translate(80%, 0) !important;
+  -moz-transform: translate(80%, 0) !important;
+  -ms-transform: translate(80%, 0) !important;
+  -o-transform: translate(80%, 0) !important;
+  transform: translate(80%, 0) !important; }
   
   
 @media all screen and (min-width: 321px) {  /*smartphones ladnscape */
