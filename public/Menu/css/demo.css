@@ -119,42 +119,7 @@ html.mm-opening .mm-slideout {
   transform: translate(80%, 0) !important; }
   
   
-@media all screen and (min-width: 321px) {  /*smartphones ladnscape */
-  html.mm-opening .mm-slideout {
-    -webkit-transform: translate(75%, 0) !important;
-    -moz-transform: translate(75%, 0) !important;
-    -ms-transform: translate(75%, 0) !important;
-    -o-transform: translate(75%, 0) !important;
-    transform: translate(75%, 0) !important;} 
-   }  
 
-@media only screen and (max-width: 320px) {  /*smartphones portrait */
-  html.mm-opening .mm-slideout {
-    -webkit-transform: translate(90%, 0) !important;
-    -moz-transform: translate(90%, 0) !important;
-    -ms-transform: translate(90%, 0) !important;
-    -o-transform: translate(90%, 0) !important;
-    transform: translate(90%, 0) !important;} 
-   } 
-   
-   
-@media all and {min-device-width: 768px} and {max-device-width: 1024px} and {orientation: landscape) {  /*smartphones portrait */
-  html.mm-opening .mm-slideout {
-    -webkit-transform: translate(90%, 0) !important;
-    -moz-transform: translate(90%, 0) !important;
-    -ms-transform: translate(90%, 0) !important;
-    -o-transform: translate(90%, 0) !important;
-    transform: translate(90%, 0) !important;} 
-   }
-   
-@media all and (min-width: 550px) {
-  html.mm-opening .mm-slideout {
-    -webkit-transform: translate(90%, 0) !important;
-    -moz-transform: translate(90%, 0) !important;
-    -ms-transform: translate(90%, 0) !important;
-    -o-transform: translate(90%, 0) !important;
-    transform: translate(90%, 0) !important; }}   
-   
 /*
 @media all and (max-width: 175px) {
   html.mm-opening .mm-slideout {
