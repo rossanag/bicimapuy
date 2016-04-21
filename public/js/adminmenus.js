@@ -1278,9 +1278,20 @@ function espaciosVerdesEvent(e)
   
 }
 
+function loadData(){
+	loadDatosIniciales();
+	loadMapa();
+	loadFacultades();
+	loadPOI();
+	loadPOISCercanos();
+	loadPaseosTuristicos();
+}
 
-
-
+		
+		
+		
+		
+		
 
 
 
