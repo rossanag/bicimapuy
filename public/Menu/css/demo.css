@@ -113,13 +113,29 @@ nav:not(.mm-menu)
 }
 
 html.mm-opening .mm-slideout {
-  -webkit-transform: translate(80%, 0) ;
-  -moz-transform: translate(80%, 0) ;
-  -ms-transform: translate(80%, 0) ;
-  -o-transform: translate(80%, 0) ;
-  transform: translate(80%, 0) }
+  -webkit-transform: translate(82%, 0) ;
+  -moz-transform: translate(82%, 0) ;
+  -ms-transform: translate(82%, 0) ;
+  -o-transform: translate(82%, 0) ;
+  transform: translate(82%, 0) }
   
-  
+@media all and (max-width: 175px) {
+  html.mm-opening .mm-slideout {
+    -webkit-transform: translate(140px, 0) ;
+    -moz-transform: translate(140px, 0) ;
+    -ms-transform: translate(140px, 0) ;
+    -o-transform: translate(140px, 0) ;
+    transform: translate(140px, 0) } 
+   }
+
+@media all and (min-width: 550px) {
+  html.mm-opening .mm-slideout {
+    -webkit-transform: translate(440px, 0);
+    -moz-transform: translate(440px, 0) ;
+    -ms-transform: translate(440px, 0) ;
+    -o-transform: translate(440px, 0) ;
+    transform: translate(440px, 0)}
+}  
 
 
 
