@@ -200,8 +200,7 @@ if ((h < 21) && (h >= 7))
       var pos1 = 0;
       var pos2 = 0;
 
-      
-      
+          
       io.sockets.emit('paradas', paradas1);  
       io.sockets.on('connection', function (socket) {
   
@@ -209,12 +208,9 @@ if ((h < 21) && (h >= 7))
    if (paradas1.length > 0)   
   {
     intSend = setInterval(function() {
-    //console.log("mando paradas ", paradas);
     
-    //console.log(paradas1);
       socket.emit('paradas', paradas1);
-      //paradasant = paradas.slice();
-
+     
    },2000); 
   }
   else

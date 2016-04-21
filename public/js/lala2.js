@@ -506,8 +506,7 @@ function obtenerDatos(timems)
        socket = io();
        actualizarMapa();     // });  
     }
-    else {
-           console.log("carga fuera hora");
+    else {           
             for (var i = 0; i < estaciones.length; i++) {
             estacion = estaciones[i];
 
@@ -656,8 +655,7 @@ if ((h < 21) && (h >= 7))
 				   	   
 				// }	
 				else					    
-                {
-                    
+                {                   
 					if (((parada[6] == parada[7]) && (parada[7] != 0))) //&& (parada[6] != paradant[6]))
 					{                        
 						markerObj._marker.setIcon(fullIcon);								
