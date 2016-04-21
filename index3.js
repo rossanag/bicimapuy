@@ -240,13 +240,6 @@ if ((h <= 21) && (h >= 7))
 
 
 
-
-// setInterval(function()
-// {
-//       if (paradas.length > 0)   
-//         io.sockets.emit('paradas', paradas);    
-// },2000);
-
 io.sockets.on('disconnect', function(){
   clearInterval(intReq);
   clearInterval(intSend);
@@ -256,27 +249,6 @@ io.sockets.on('disconnect', function(){
 
 }
 
-else
-{  
-  io.sockets.on('connection', function (socket) {    
-    paradas.push(-1);  
-    
-    
-      socket.emit('paradas', paradas);    
-    
-    io.sockets.on('error', function() {
-      io.connect(host, {
-        'force new connection': true
-      }); 
-    });
-            
-  }); 
-  
-  setInterval(function()
-    {
-      io.sockets.emit('paradas', paradas);    
-    },2000);
-}
 
 console.log("acaaaa fuera de chequeo- sacar control");
 

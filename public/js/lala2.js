@@ -545,7 +545,7 @@ function obtenerDatos(timems)
         markerObj = markersArrayAnt[i];
                 
       }
-      paradas_ant = paradas.slice();
+      //paradas_ant = paradas.slice();
 }
 
        
