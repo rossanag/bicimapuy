@@ -127,7 +127,7 @@ var intReq, intSend;
         }       
         
         paseoPeniarol = data9;
-        //console.log(data2);     
+         
     });
 
   fs.readFile('public/Mapas/paseoPrado.js', 'utf8', function (err,data10) {
@@ -137,7 +137,7 @@ var intReq, intSend;
         }       
         
         paseoPrado = data10;
-        //console.log(data2);     
+     
     });
   
 
@@ -152,10 +152,7 @@ var intReq, intSend;
     socket.emit('paseoRambla',paseoRambla);
     socket.emit('paseoPeniarol',paseoPeniarol);
     socket.emit('paseoPrado',paseoPrado);
-    //socket.emit('paradas',paradas);
-
-  
-    //socket.emit()
+    
   
     io.sockets.on('error', function() {
       io.connect(host, {
@@ -230,7 +227,7 @@ if ((h < 21) && (h >= 7))
   
   });  //request
 
-  }, 15000); // 3 minutos antes 15000
+  }, 10000); // 3 minutos antes 15000
   //}, 8000); // 3 minutos
 
 
@@ -245,8 +242,4 @@ io.sockets.on('disconnect', function(){
 
 }
 
-
-console.log("acaaaa fuera de chequeo- sacar control");
-
-//server.listen(5000);
  server.listen(process.env.PORT || 5000);

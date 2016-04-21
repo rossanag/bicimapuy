@@ -944,8 +944,7 @@ var $bebederos = $('input:radio[id="berb"] ');
       mapa.off('click', fn_ant);
       mapa.on('click', nearestBebederosEvent); 
       fn_ant = nearestBebederosEvent;
-      //loadCicloVias();        
-      //nearestCicloVia(); 
+     
     }
 });
 
