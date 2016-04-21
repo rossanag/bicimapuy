@@ -111,12 +111,6 @@ nav:not(.mm-menu)
  
 }
 
-/*.html.mm-opening .mm-slideout {
-  -webkit-transform: translate(64%, 0) !important;
-  -moz-transform: translate(54%, 0) !important;
-  -ms-transform: translate(54%, 0) !important;
-  -o-transform: translate(54%, 0) !important;
-  transform: translate(54%,0) !important; }*/
 
 html.mm-opening .mm-slideout {
   -webkit-transform: translate(80%, 0);
@@ -126,13 +120,24 @@ html.mm-opening .mm-slideout {
   transform: translate(80%, 0); }
 
 @media all and (max-width: 175px) {
+.mm-menu {  
+  width: 145% !important;	
+  background: #0A7A26 !important; 
+ 
+}
   html.mm-opening .mm-slideout {
     -webkit-transform: translate(140px, 0);
     -moz-transform: translate(140px, 0);
     -ms-transform: translate(140px, 0);
     -o-transform: translate(140px, 0);
     transform: translate(140px, 0); } }
+    
 @media all and (min-width: 550px) {
+.mm-menu {  
+  width: 445% !important;	
+  background: #0A7A26 !important; 
+ 
+}
   html.mm-opening .mm-slideout {
     -webkit-transform: translate(440px, 0);
     -moz-transform: translate(440px, 0);
