@@ -120,23 +120,26 @@ html.mm-opening .mm-slideout {
   
 @media all and (max-width: 175px) {
   .mm-menu{
-  height: 80% !important;
+      height: 70% !important;
   }
   html.mm-opening .mm-slideout {
-    -webkit-transform: translate(190px, 0) ;
-    -moz-transform: translate(190px, 0) ;
-    -ms-transform: translate(190px, 0) ;
-    -o-transform: translate(190px, 0) ;
-    transform: translate(190px, 0) } 
+    -webkit-transform: translate(290px, 0) ;
+    -moz-transform: translate(290px, 0) ;
+    -ms-transform: translate(290px, 0) ;
+    -o-transform: translate(290px, 0) ;
+    transform: translate(290px, 0) } 
    }
 
 @media all and (min-width: 550px) {
+	.mm-menu{
+      height: 90% !important;
+  }
   html.mm-opening .mm-slideout {
-    -webkit-transform: translate(440px, 0);
-    -moz-transform: translate(440px, 0) ;
-    -ms-transform: translate(440px, 0) ;
-    -o-transform: translate(440px, 0) ;
-    transform: translate(440px, 0)}
+    -webkit-transform: translate(640px, 0);
+    -moz-transform: translate(640px, 0) ;
+    -ms-transform: translate(640px, 0) ;
+    -o-transform: translate(640px, 0) ;
+    transform: translate(640px, 0)}
 }  
 
 
