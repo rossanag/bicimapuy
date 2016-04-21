@@ -275,7 +275,7 @@ var $bicicleterias = $('input[name="bicv"]');
       //                   'left': 'auto',
       //                   'top': '10px'
       //                           });  
-console.log("biciiiis");
+
       borrarPath();
       var $bicicleteriasrb = $('input:radio[id="bvrb"] ');
 
@@ -289,9 +289,6 @@ console.log("biciiiis");
       }  
       else
       {
-        console.log("NOOOO biciiiis");
-        
-
         mapa.removeLayer(geoBicis);        
         $bicicleteriasrb.prop( "checked", false );
       }

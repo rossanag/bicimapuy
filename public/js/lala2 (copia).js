@@ -22,7 +22,7 @@ var lmarkesS =  null;
 var markerSugeridos = null;
 
 var markerGeoLoc = null; // da la geolocalización
-circulo = null;
+var circulo = null;
 var popup = null;
 
 var popupPN = null; // Peñarol
@@ -222,12 +222,14 @@ var brokenIcon = L.icon({
 
 var officeIcon = L.icon({
     iconUrl: 'imagenes/iconoffice.png',
-   
+    //shadowUrl: 'imagenes/bikeiconshadow.png',
+
     iconSize:     [20,34], // size of the icon    
     iconAnchor:   [8,34], // point of the icon which will correspond to marker's location
     popupAnchor:  [0,-18], // point from which the popup should open relative to the iconAnchor    
     
-    
+    //shadowSize:   [40,32], // size of the shadow
+    //shadowAnchor: [4,30]  // the same for the shadow    
 });
 
 var uniIcon = L.icon({
@@ -241,31 +243,37 @@ var uniIcon = L.icon({
 
 var cafeIcon = L.icon({
     iconUrl: 'imagenes/cafe2.png',    
-    
+    //shadowUrl: 'imagenes/bikeiconshadow.png',
 
     iconSize:     [32,32], // size of the icon    
     iconAnchor:   [20,32], // point of the icon which will correspond to marker's location
     popupAnchor:  [0,-18], // point from which the popup should open relative to the iconAnchor    
     
-   
+    //shadowSize:   [40,32] // size of the shadow
+    //shadowAnchor: [4,30]  // the same for the shadow    
 });      
 var semaforoIcon = L.icon({
     iconUrl: 'imagenes/semaforo2.png',    
-    
+    //shadowUrl: 'imagenes/bikeiconshadow.png',
+
     iconSize:     [32,32], // size of the icon    
     iconAnchor:   [20,32], // point of the icon which will correspond to marker's location
     popupAnchor:  [0,-18], // point from which the popup should open relative to the iconAnchor    
     
-   
+    //shadowSize:   [40,32] // size of the shadow
+    //shadowAnchor: [4,30]  // the same for the shadow    
 });      
 
 var alertaIcon = L.icon({
     iconUrl: 'imagenes/alerta.png',    
-  
+    //shadowUrl: 'imagenes/bikeiconshadow.png',
+
     iconSize:     [38,19], // size of the icon    
     iconAnchor:   [26,19], // point of the icon which will correspond to marker's location
     popupAnchor:  [0,-18], // point from which the popup should open relative to the iconAnchor    
     
+    //shadowSize:   [40,32] // size of the shadow
+    //shadowAnchor: [4,30]  // the same for the shadow    
 });   
 
 var patrimonioIcon = L.icon({
@@ -278,61 +286,74 @@ var patrimonioIcon = L.icon({
 
 var tallerIcon = L.icon({
     iconUrl: 'imagenes/tallerIcon.png',    
-  
+    //shadowUrl: 'imagenes/bikeiconshadow.png',
+
     iconSize:     [20,30], // size of the icon    
     iconAnchor:   [8,30], // point of the icon which will correspond to marker's location
     popupAnchor:  [0,-18], // point from which the popup should open relative to the iconAnchor    
     
+    //shadowSize:   [40,32] // size of the shadow
+    //shadowAnchor: [4,30]  // the same for the shadow    
 });      
 
 var banioIcon = L.icon({
     iconUrl: 'imagenes/bathroom.png',    
-   
+    //shadowUrl: 'imagenes/bikeiconshadow.png',
+
     iconSize:     [32,32], // size of the icon    
     iconAnchor:   [20,32], // point of the icon which will correspond to marker's location
     popupAnchor:  [0,-18], // point from which the popup should open relative to the iconAnchor    
     
-    
+    //shadowSize:   [40,32] // size of the shadow
+    //shadowAnchor: [4,30]  // the same for the shadow    
 });      
 
 var cineIcon = L.icon({
     iconUrl: 'imagenes/cine24.png',    
-   
+    //shadowUrl: 'imagenes/bikeiconshadow.png',
+
     iconSize:     [24,24], // size of the icon    
     iconAnchor:   [12,24], // point of the icon which will correspond to marker's location
     popupAnchor:  [0,-18], // point from which the popup should open relative to the iconAnchor    
     
-    
+    //shadowSize:   [40,32] // size of the shadow
+    //shadowAnchor: [4,30]  // the same for the shadow    
 });      
 
 var teatroIcon = L.icon({
     iconUrl: 'imagenes/teatro24.png',    
-  
+    //shadowUrl: 'imagenes/bikeiconshadow.png',
+
     iconSize:     [24,24], // size of the icon    
     iconAnchor:   [20,24], // point of the icon which will correspond to marker's location
     popupAnchor:  [0,-18], // point from which the popup should open relative to the iconAnchor    
     
-    
+    //shadowSize:   [40,32] // size of the shadow
+    //shadowAnchor: [4,30]  // the same for the shadow    
 });      
 
 var museoIcon = L.icon({
     iconUrl: 'imagenes/museo32.png',    
-  
+    //shadowUrl: 'imagenes/bikeiconshadow.png',
+
     iconSize:     [32,32], // size of the icon    
     iconAnchor:   [20,32], // point of the icon which will correspond to marker's location
     popupAnchor:  [0,-18] // point from which the popup should open relative to the iconAnchor    
     
-    
+    //shadowSize:   [40,32] // size of the shadow
+    //shadowAnchor: [4,30]  // the same for the shadow    
 });      
 
 var bebederoIcon = L.icon({
     iconUrl: 'imagenes/drink_24.png',    
-   
+    //shadowUrl: 'imagenes/bikeiconshadow.png',
+
     iconSize:     [24,24], // size of the icon    
     iconAnchor:   [12,24], // point of the icon which will correspond to marker's location
     popupAnchor:  [0,-18] // point from which the popup should open relative to the iconAnchor    
     
-   
+    //shadowSize:   [40,32] // size of the shadow
+    //shadowAnchor: [4,30]  // the same for the shadow    
 });      
 var bosqueIcon = L.icon({
     iconUrl: 'imagenes/bosque32.png',    
@@ -448,7 +469,12 @@ function cargarEstaciones()
 
 		latlngEstaciones.push(marker.getLatLng());
 
-		
+		// marker.on('mouseover', function (e) {
+		// 	this.openPopup();  
+		// });
+		// marker.on('mouseout', function (e) {
+		// 	this.closePopup();
+		// });	
 
 		marker.on('click', function (e) {
 			this.openPopup();  
@@ -483,75 +509,41 @@ function actualizarMapa()
     					actualizoMarkers(paradas);
 
   	});
-   
+    //actualizoMarkers(paradas);
     
 
   	socket.on('error',function () {	
   		$( "#aviso" ).html( "<p>Servidor fuera de servicio. Reintente luego</p>" );			
   					});
 
+	//$.getScript("http://localhost:5000/Mapas/paradas.js").done(function( script, textStatus ) {			
+	//$.getScript(/paradas.js").done(function( script, textStatus ) {//en public							
+
+	
+	//	actualizoMarkers(paradas);
+	//}).fail(function( jqxhr, settings, exception ) {
+		//alert("Servidor fuera de servicio. Reintente luego");
+		//$( "#aviso" ).html( "<p>Servidor fuera de servicio. Reintente luego</p>" );
+	//	});
+	
 
 };
 
 
 function obtenerDatos(timems)
 {	
-    actualizo = false; 
 
-	var fecha = new Date();
-    var h = fecha.getHours();
-
-    if ((h <= 21) && (h >= 7))
-    {
+	 // cada minuto y medio leo archivo y actualizo markers del mapa
+	 //idPM = setInterval(function(){ //COMENTADO MOMENTÁNEAMENTE para DEMO
+	 	//No es necesario setinterval porque actualiza el servidor
+	   //socket = io.connect("/localhost:5000");
+       //setInterval(function(){
+       //socket = io("http://bicimapuy.herokuapp.com");
        socket = io();
-       actualizarMapa();     // });  
-    }
-    else {
-
-            for (var i = 0; i < estaciones.length; i++) {
-            estacion = estaciones[i];
-
-            markerObj = markersArray[i];
-            if (i == (estaciones.length - 1))
-            {       
-
-                desc = "<b><centre>" + estacion[0] + "</centre></b>" + "<br>" +
-                        "Pérez Castellano 1492 esquina Cerrito" + "<br>" +
-                        "Lunes a Viernes: 9:00 a 18:00 hs.  Sábados: 10:00 a 14:00 hs"  
-                markerObj._marker.setIcon(officeIcon);      
-
-            }
-            else
-            {
-                desc = "<b><centre>" + estacion[0] + "</centre></b>" + "<br>" + 
-                "<centre>" + "FUERA DE SERVICIO" + "</centre>";
-                markerObj._marker.setIcon(brokenIcon);                          
-            }
-            markerObj._marker.setPopupContent(desc);            
-            
-        }   
-        actualizo = true;
-      }
-
-      if (actualizo == true)
-      { 
-                                
-            var markerObjCopia = $.extend( {}, markerObj);          
-            markersArrayAnt[i] = markerObjCopia;
-                                
-      } 
-      else
-      {
-        markerObj = markersArrayAnt[i];
-                
-      }
-      paradas_ant = paradas.slice();
-}
-
-       
+       actualizarMapa();     // }); 
      //},timems);
 //	actualizarMapa();
-
+}
 
 function actualizoMarkers(_paradas)
 {			
@@ -559,7 +551,7 @@ function actualizoMarkers(_paradas)
    
 	var markerObj = null;
 	var desc = '';
-	//var actualizo = false;
+	var actualizo = false;
 	var parada = [];
 	var paradant = [];
     
@@ -606,15 +598,12 @@ if ((h < 21) && (h >= 7))
 	for (var i = 0; i < paradas.length; i++)
 	{							    
 
-			parada = _paradas[0][i];  
-			   
-            console.log(parada);   
+			parada = _paradas[0][i];        
 			paradant = paradas_ant[i]; //viene cargada de cargar estaciones de PM
 			markerObj = markersArray[i];
-	console.log("paradas\n");
-        console.log(parada);
-        
-		if (parada[4] != 6)// es una estación válida		
+
+
+		if (parada[4] != 6)	// es una estación válida		
 		{				
 			if (parada[4] == -1) //&& (paradant[4] != -1))	
 			{
@@ -622,7 +611,8 @@ if ((h < 21) && (h >= 7))
 				desc = "<b><center>" + parada[0] + "</center></b>" + "<br>" +
 				"Calle Alzáibar 1321 - Lunes a Viernes: 9:00 a 18:00 h." + "<br>" + 
 				"Sábados: De 10:00 a 14:00 h";	
-				markerObj._marker.setIcon(officeIcon);																	
+				markerObj._marker.setIcon(officeIcon);														
+				//markerObj._marker.getPopup().setContent(desc);
 				markerObj._marker.setPopupContent(desc);
 
 				actualizo = true;				
@@ -2730,8 +2720,8 @@ function loadDatosIniciales()
                         
     });
     socket.on('paradas',function (data10) {        
-                         //paradas = data10;     
-                         paradas = data10;
+                        //paradas = data10;     
+                        paradas = data10;
                         
                         
     });
