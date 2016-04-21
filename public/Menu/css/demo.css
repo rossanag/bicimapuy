@@ -106,8 +106,7 @@ nav:not(.mm-menu)
 
 
 .mm-menu {  
-  width: 60% !important;
-  height: 90%!important;	  
+  width: 60% !important;  
   background: #0A7A26 !important;   
  
 }
@@ -120,12 +119,15 @@ html.mm-opening .mm-slideout {
   transform: translate(82%, 0) }
   
 @media all and (max-width: 175px) {
+  .mm-menu{
+  height: 80% !important;
+  }
   html.mm-opening .mm-slideout {
-    -webkit-transform: translate(140px, 0) ;
-    -moz-transform: translate(140px, 0) ;
-    -ms-transform: translate(140px, 0) ;
-    -o-transform: translate(140px, 0) ;
-    transform: translate(140px, 0) } 
+    -webkit-transform: translate(190px, 0) ;
+    -moz-transform: translate(190px, 0) ;
+    -ms-transform: translate(190px, 0) ;
+    -o-transform: translate(190px, 0) ;
+    transform: translate(190px, 0) } 
    }
 
 @media all and (min-width: 550px) {
