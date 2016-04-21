@@ -507,7 +507,7 @@ function obtenerDatos(timems)
        actualizarMapa();     // });  
     }
     else {
-
+           console.log("carga fuera hora");
             for (var i = 0; i < estaciones.length; i++) {
             estacion = estaciones[i];
 
