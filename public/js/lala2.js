@@ -501,7 +501,7 @@ function obtenerDatos(timems)
 	var fecha = new Date();
     var h = fecha.getHours();
 
-    if ((h <= 21) && (h >= 7))
+    if ((h < 21) && (h >= 7))
     {
        socket = io();
        actualizarMapa();     // });  

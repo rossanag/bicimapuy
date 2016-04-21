@@ -172,7 +172,7 @@ var d = new Date();
 var h = d.getHours();
 
 // Hora de de funcionamiento de las estaciones Plan Movete 7-21hs
-if ((h <= 21) && (h >= 7))
+if ((h < 21) && (h >= 7))
 {
   intReq = setInterval(function() { 
 
