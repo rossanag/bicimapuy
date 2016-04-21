@@ -121,22 +121,6 @@ html.mm-opening .mm-slideout {
   
 
 
-@media all and (max-width: 175px) {
-  html.mm-opening .mm-slideout {
-    -webkit-transform: translate(195px, 0) ;
-    -moz-transform: translate(195px, 0) ;
-    -ms-transform: translate(195px, 0) ;
-    -o-transform: translate(195px, 0) ;
-    transform: translate(195px, 0) } 
-   }
-
-@media all and (min-width: 550px) {
-  html.mm-opening .mm-slideout {
-    -webkit-transform: translate(600px, 0) !important;
-    -moz-transform: translate(600px, 0) !important;
-    -ms-transform: translate(600px, 0) !important;
-    -o-transform: translate(600px, 0) !important;
-    transform: translate(600px, 0) !important; }}
 
 
 
