@@ -118,14 +118,22 @@ html.mm-opening .mm-slideout {
   -o-transform: translate(82%, 0) ;
   transform: translate(82%, 0) }
   
-@media all and (max-width: 175px) {
+@media all and (max-width: 320px) {
+
+	.logo10 {
+		left: 80px;
+	}
+
+	.mm-menu change{
+		min-width: 256px !important;
+	} 
   
   html.mm-opening .mm-slideout {
-    -webkit-transform: translate(120x, 0) ;
-    -moz-transform: translate(120px, 0) ;
-    -ms-transform: translate(120px, 0) ;
-    -o-transform: translate(120px, 0) ;
-    transform: translate(120px, 0) } 
+    -webkit-transform: translate(250x, 0) ;
+    -moz-transform: translate(250px, 0) ;
+    -ms-transform: translate(250px, 0) ;
+    -o-transform: translate(250px, 0) ;
+    transform: translate(250px, 0); } 
    }
 
 

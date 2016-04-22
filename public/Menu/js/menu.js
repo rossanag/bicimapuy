@@ -5,7 +5,7 @@ $(function() {
 				{	
 					navbars		: [{
 						position: "top",	
-						//height 	: 1,
+						height 	: 0.5,
 						content : [ 
 							
 							'<a class="fa fa-info-circle fa-2x"></a>'
