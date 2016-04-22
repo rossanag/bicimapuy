@@ -121,14 +121,14 @@ html.mm-opening .mm-slideout {
 @media all and (max-width: 175px) {
   .mm-menu{
 	   width: 80% !important;	
-      height: 60% !important;
+      height: auto !important;
   }
   html.mm-opening .mm-slideout {
-    -webkit-transform: translate(290px, 0) ;
-    -moz-transform: translate(290px, 0) ;
-    -ms-transform: translate(290px, 0) ;
-    -o-transform: translate(290px, 0) ;
-    transform: translate(290px, 0) } 
+    -webkit-transform: translate(500x, 0) ;
+    -moz-transform: translate(500px, 0) ;
+    -ms-transform: translate(500px, 0) ;
+    -o-transform: translate(500px, 0) ;
+    transform: translate(500px, 0) } 
    }
 
 @media all and (min-width: 550px) {
