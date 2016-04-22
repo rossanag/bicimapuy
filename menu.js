@@ -28,9 +28,9 @@ $(function() {
         			navbar:{
         				title: "Inicio"        				
         			},
-        			 offCanvas: {
+        			/* offCanvas: {
                 		  zposition : "next"
-             		},
+             		}, */
              		clone: true
     	
 			});			
