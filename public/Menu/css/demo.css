@@ -142,6 +142,28 @@ html.mm-opening .mm-slideout {
   -o-transform: translate(100%, 0) ;
   transform: translate(100%,0);  }
   
+
+@media all and (max-width: 175px) {
+
+.mm-menu {  
+ 
+  min-width: 128px !important;  
+  
+} 
+
+.logo10 {
+		
+		transform: translateX(50%);
+		left: 80px;
+	}
+
+  html.mm-opening .mm-slideout {
+    -webkit-transform: translate(225x, 0) ;
+    -moz-transform: translate(225px, 0) ;
+    -ms-transform: translate(225px, 0) ;
+    -o-transform: translate(225px, 0) ;
+    transform: translate(225px, 0) } 
+ }
   
 @media all and (min-width: 320px) {
 
