@@ -124,7 +124,6 @@ html.mm-opening .mm-slideout {
  
   min-width: 256px !important;  /*256  */
   
- 
 }
 
 	.logo10 {
@@ -134,7 +133,7 @@ html.mm-opening .mm-slideout {
 	}
 
   
-  .html.mm-opening .mm-slideout {
+  html.mm-opening .mm-slideout {
     -webkit-transform: translate(280x, 0) ;
     -moz-transform: translate(280px, 0) ;
     -ms-transform: translate(280px, 0) ;
