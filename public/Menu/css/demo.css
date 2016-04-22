@@ -121,7 +121,7 @@ html.mm-opening .mm-slideout {
 @media all and (max-width: 320px) {
 
 	.logo10 {
-		left: 80px;
+		left: 120px;
 	}
 
 	.mm-menu change{
@@ -129,11 +129,11 @@ html.mm-opening .mm-slideout {
 	} 
   
   html.mm-opening .mm-slideout {
-    -webkit-transform: translate(250x, 0) ;
-    -moz-transform: translate(250px, 0) ;
-    -ms-transform: translate(250px, 0) ;
-    -o-transform: translate(250px, 0) ;
-    transform: translate(250px, 0); } 
+    -webkit-transform: translate(220x, 0) ;
+    -moz-transform: translate(220px, 0) ;
+    -ms-transform: translate(220px, 0) ;
+    -o-transform: translate(220px, 0) ;
+    transform: translate(220px, 0); } 
    }
 
 
