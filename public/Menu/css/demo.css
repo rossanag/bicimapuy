@@ -118,22 +118,21 @@ html.mm-opening .mm-slideout {
   -o-transform: translate(82%, 0) ;
   transform: translate(82%, 0) }
   
-@media all and (max-width: 320px) {
+@media all and (min-width: 320px) {
 
 .mm-menu {  
  
-  min-width: 175px !important;  /*256  */
+  min-width: 256px !important;  /*256  */
   
  
 }
 
 	.logo10 {
-		position: relative;
-		transform: translateY(-50%);
+		
+		transform: translateY(50%);
 		left: 100px;
 	}
 
-	
   
   .html.mm-opening .mm-slideout {
     -webkit-transform: translate(220x, 0) ;
