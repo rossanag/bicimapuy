@@ -118,7 +118,7 @@ html.mm-opening .mm-slideout {
   -o-transform: translate(82%, 0) ;
   transform: translate(82%, 0) }
   
-@media all and (max-width: 175px) {
+/*@media all and (max-width: 175px) {
   
   html.mm-opening .mm-slideout {
     -webkit-transform: translate(120x, 0) ;
@@ -127,6 +127,16 @@ html.mm-opening .mm-slideout {
     -o-transform: translate(120px, 0) ;
     transform: translate(120px, 0) } 
    }
+*/
+@media all and (max-width: 480px) {
+  
+  html.mm-opening .mm-slideout {
+    -webkit-transform: translate(425px, 0) ;
+    -moz-transform: translate(425px, 0) ;
+    -ms-transform: translate(425px, 0) ;
+    -o-transform: translate(425px, 0) ;
+    transform: translate(425px, 0) } 
+   }   
 
 @media all and (min-width: 550px) {
 	
