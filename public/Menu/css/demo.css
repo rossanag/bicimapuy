@@ -135,7 +135,7 @@ nav:not(.mm-menu)
  
 }
 
-html.mm-opening .mm-slideout {
+.html.mm-opening .mm-slideout {
   -webkit-transform: translate(75%, 0) ;
   -moz-transform: translate(75%, 0) ;
   -ms-transform: translate(75%, 0) ;
