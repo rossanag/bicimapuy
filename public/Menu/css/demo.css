@@ -136,11 +136,11 @@ nav:not(.mm-menu)
 }
 
 .html.mm-opening .mm-slideout {
-  -webkit-transform: translate(64%, 0) !important;
-  -moz-transform: translate(64%, 0) !important;
-  -ms-transform: translate(64%, 0) !important;
-  -o-transform: translate(64%, 0) !important;
-  transform: translate(64%,0) !important; }
+  -webkit-transform: translate(80%, 0) !important;
+  -moz-transform: translate(80%, 0) !important;
+  -ms-transform: translate(80%, 0) !important;
+  -o-transform: translate(80%, 0) !important;
+  transform: translate(80%,0) !important; }
   
   /*.mm-menu {  
  
