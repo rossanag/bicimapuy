@@ -158,7 +158,7 @@ html.mm-opening .mm-slideout {
 	}
 
   
-  html.mm-opening .mm-slideout {
+  html.mm-opening .mm-slideout { /*380 andaba arriba  */
     -webkit-transform: translate(395px, 0) ;
     -moz-transform: translate(395px, 0) ;
     -ms-transform: translate(395px, 0) ;
@@ -167,16 +167,38 @@ html.mm-opening .mm-slideout {
    }
 
 
-/*@media all and (min-width: 550px) 380 andaba arriba {
+@media all and (min-width: 550px)  {
+
+.mm-menu {  
+ 
+  min-width: 256px !important;  
+  
+} 
 	
   html.mm-opening .mm-slideout {
-    -webkit-transform: translate(500px, 0);
-    -moz-transform: translate(500px, 0) ;
-    -ms-transform: translate(500px, 0) ;
-    -o-transform: translate(500px, 0) ;
-    transform: translate(500px, 0)}
+    -webkit-transform: translate(700px, 0);
+    -moz-transform: translate(700px, 0) ;
+    -ms-transform: translate(700px, 0) ;
+    -o-transform: translate(700px, 0) ;
+    transform: translate(700px, 0);}
 }  
-*/
+
+@media all and (min-width: 480px)  {
+
+.mm-menu {  
+ 
+  min-width: 256px !important;  
+  
+} 
+	
+  html.mm-opening .mm-slideout {
+    -webkit-transform: translate(520px, 0);
+    -moz-transform: translate(520px, 0) ;
+    -ms-transform: translate(520px, 0) ;
+    -o-transform: translate(520px, 0) ;
+    transform: translate(520px, 0);}
+}  
+
 
 .header{  /* antes tb iba en #page */
  	background: #056E20 !important;
