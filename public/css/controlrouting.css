@@ -11,6 +11,7 @@
      position:absolute;
 }
 
+/*
 .btnBorrar {
     background:url(../imagenes/doblearrows32.png) no-repeat; 
     position:absolute;
@@ -28,7 +29,7 @@
     z-index: 10;
     
    
-}
+}  */
 
 
 .open-btnBorrar {
@@ -37,8 +38,7 @@
   left: auto
 }
 
-
-.close-btnBorrar{
+/*.close-btnBorrar{
    right:14px;  
    left:auto;
 }
@@ -47,7 +47,7 @@
     right:-44px;  
     left:auto;    
 }
-
+*/
 
 .results {
     background-color: white;

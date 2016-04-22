@@ -50,37 +50,36 @@ function esconderMostrar()
         {            
             routeControl.hide();   
             showControl = false;
-            $(".btnBorrar").css({ 
+            /*$(".btnBorrar").css({ 
                        'right': '11px', //antes 37% 6
                       'top': '70px' //antes 13%*  5
-                       });              
+                       });    */          
         }
         else
         {
             routeControl.show();   
             showControl = true;
-            $(".btnBorrar").css({ 
+            /*$(".btnBorrar").css({ 
                       'right': '27%', //antes 37% 6
                       'top': '70px' //antes 13%*  5
-                       });            
+                       }); */           
         }
 }
 
 
 function displayRoutingControl()
-{    
-    //$(".btnBorrar").toggleClass("open-btnBorrar");     
+{      
     
     if (routeControl == null)
     {
         
         crearControlRouting();  
 
-         $(".btnBorrar").css({ 
+         /*$(".btnBorrar").css({ 
                        'display': 'inline',
                        'right': '37%', //antes 37% 6
                       'top': '70px' //antes 13%*  5
-                       });            
+                       });        */    
         showControl = true;   
     }
 
@@ -93,12 +92,12 @@ function removeRouting()
     {    
         mapa.removeControl(routeControl);  //remueve el camino tb
         routeControl = null;        
-        $(".btnBorrar").css({ 
+        /*$(".btnBorrar").css({ 
                        'display': 'none', 
                        'right': '-44px', //antes 37% 6
                        'left': 'auto',
                       'top': '70px' //antes 13%*  5
-                       });                       
+                       });     */                  
     }    
 }
 
