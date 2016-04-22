@@ -120,10 +120,14 @@ html.mm-opening .mm-slideout {
   
 @media all and (max-width: 320px) {
 
-
+.mm-menu {  
+  width: 90% !important;  
+  background: #0A7A26 !important;   
+ 
+}
 
 	.logo10 {
-		left: 250px;
+		left: 100px;
 	}
 
 	.mm-menu change{

@@ -13,7 +13,7 @@ $(function() {
 						]
 					},
 					{
-			            position: "top", //bottom
+			            position: "bottom", //bottom
 	        		    content: [  	               			
 	        		    	'<a href="mailto:bicimapuy@gmail.com" class="fa fa-envelope"></a>',	        		    	
 	               			'<a class="fa fa-twitter"></a>',	               			
