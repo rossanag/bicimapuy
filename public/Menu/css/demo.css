@@ -122,7 +122,8 @@ html.mm-opening .mm-slideout {
 
 .mm-menu {  
   width: 90% !important;  
-  background: #0A7A26 !important;   
+  min-width: 256px !important;
+  
  
 }
 
@@ -130,11 +131,9 @@ html.mm-opening .mm-slideout {
 		left: 100px;
 	}
 
-	.mm-menu change{
-		min-width: 256px !important;
-	} 
+	
   
-  html.mm-opening .mm-slideout {
+  .html.mm-opening .mm-slideout {
     -webkit-transform: translate(120x, 0) ;
     -moz-transform: translate(120px, 0) ;
     -ms-transform: translate(120px, 0) ;
