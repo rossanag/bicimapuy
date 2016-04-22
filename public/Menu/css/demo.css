@@ -154,7 +154,7 @@ html.mm-opening .mm-slideout {
 .logo10 {
 		
 		transform: translateX(50%);
-		left: 80px;
+		left: 120px;
 	}
 
   html.mm-opening .mm-slideout {
@@ -162,7 +162,7 @@ html.mm-opening .mm-slideout {
     -moz-transform: translate(200px, 0) ;
     -ms-transform: translate(200px, 0) ;
     -o-transform: translate(200px, 0) ;
-    transform: translate(200px, 0) } 
+    transform: translate(200px, 0); } 
  }
   
 @media all and (min-width: 320px) {
