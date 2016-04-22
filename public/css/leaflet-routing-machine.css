@@ -2,7 +2,7 @@
     width: 320px;
     background-color: white;
     padding-top: 4px;
-    top: 90px;  /* mio para que no interfiera con el del menú ex a 60*/
+    top: 60px;  /* mio para que no interfiera con el del menú ex a 60*/
     transition: all 0.2s ease;
     box-sizing: border-box;
 }
