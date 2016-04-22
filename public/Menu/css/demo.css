@@ -122,13 +122,13 @@ html.mm-opening .mm-slideout {
 
 .mm-menu {  
  
-  min-width: 256px !important;
+  min-width: 175px !important;  /*256  */
   
  
 }
 
 	.logo10 {
-		position:absolute;
+		position: relative;
 		left: 100px;
 	}
 
