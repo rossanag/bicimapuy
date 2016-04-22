@@ -105,6 +105,30 @@ nav:not(.mm-menu)
 }
 
 
+
+/*
+@media all and (max-width: 175px) {
+
+  html.mm-opening .mm-slideout {
+    -webkit-transform: translate(120x, 0) ;
+    -moz-transform: translate(120px, 0) ;
+    -ms-transform: translate(120px, 0) ;
+    -o-transform: translate(120px, 0) ;
+    transform: translate(120px, 0) } 
+   }
+
+
+@media all and (min-width: 550px) {
+
+  html.mm-opening .mm-slideout {
+    -webkit-transform: translate(500px, 0);
+    -moz-transform: translate(500px, 0) ;
+    -ms-transform: translate(500px, 0) ;
+    -o-transform: translate(500px, 0) ;
+    transform: translate(500px, 0)}
+}  
+*/
+
 .mm-menu {  
   width: 77% !important;  
   background: #0A7A26 !important;   
@@ -120,11 +144,11 @@ html.mm-opening .mm-slideout {
   
 @media all and (min-width: 320px) {
 
-.mm-menu {  
+/*.mm-menu {  
  
-  min-width: 256px !important;  /*256  */
+  min-width: 256px !important;  
   
-}
+}  */
 
 	.logo10 {
 		
