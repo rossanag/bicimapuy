@@ -129,6 +129,7 @@ html.mm-opening .mm-slideout {
 
 	.logo10 {
 		position: relative;
+		transform: translateY(-50%);
 		left: 100px;
 	}
 
