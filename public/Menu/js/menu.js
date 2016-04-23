@@ -66,7 +66,7 @@ $(function() {
         });
 		
 		$( window ).load(function() {
-			
+			$(".loader").fadeOut("slow");
 
   			var $ruteo = $('input[name="ruteo"');
   			$ruteo.click(function() {  				
@@ -85,15 +85,10 @@ $(function() {
 	  			}
   				
   			});
-  			//Pendientes
-  			$(".pendientes").click(function(){
-  				borrarPath();
-    			routing = false;
-      			loadPendientes();  
-      			      		      		
+  			
       		API.close();	 
          
   			});
   			
   			  			
-});
+//});

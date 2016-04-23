@@ -464,17 +464,12 @@ function cargarEstaciones()
 			desc = "<b><centre>" + estacion[0] + "</centre></b>";
 			marker = L.marker([lat,lng], {icon: normalIcon, title: "Estación Plan Movete" }).bindPopup(desc);			
 				
-				//Agrego a objetos				
+						
 		}
 
 		latlngEstaciones.push(marker.getLatLng());
 
-		// marker.on('mouseover', function (e) {
-		// 	this.openPopup();  
-		// });
-		// marker.on('mouseout', function (e) {
-		// 	this.closePopup();
-		// });	
+		
 
 		marker.on('click', function (e) {
 			this.openPopup();  
@@ -598,8 +593,7 @@ if ((h < 21) && (h >= 7))
 		if (parada[4] != 6)	// es una estación válida		
 		{				
 			if (parada[4] == 100) //&& (paradant[4] != -1))	
-			{
-                console.log(parada[0]];
+			{                
 				desc = "<b><center>" + parada[0] + "</center></b>" + "<br>" +
 				"Calle Alzáibar 1321 - Lunes a Viernes: 9:00 a 18:00 h." + "<br>" + 
 				"Sábados: De 10:00 a 14:00 h";	
