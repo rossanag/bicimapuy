@@ -229,7 +229,7 @@ label.mm-toggle:before {
 }
 
 /* íconos del footer del menú */
-.fa.fa-twitter, .fa.fa-envelope, .fa.fa-facebook, .fa-info-circle{
+.fa.fa-twitter, .fa.fa-envelope, .fa.fa-facebook, .fa-info-circle, .fa fa-globe{
 	color: #DCF285 !important;   /*antes #D3EDD9*/
 }
 
