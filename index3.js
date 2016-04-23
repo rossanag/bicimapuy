@@ -208,7 +208,7 @@ if ((h < 21) && (h >= 7))
     
       socket.emit('paradas', paradas1);
      
-   },2000); 
+   },12000); //antes 2000
   }
   else
     console.log("paradas vacias");

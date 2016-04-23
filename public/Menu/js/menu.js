@@ -66,6 +66,7 @@ $(function() {
         });
 		
 		$( window ).load(function() {
+			$(".loader").fadeOut("slow");
 
   			var $ruteo = $('input[name="ruteo"');
   			$ruteo.click(function() {  				
