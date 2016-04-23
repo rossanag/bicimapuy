@@ -602,12 +602,7 @@ function nearestTalleresEvent(e)
 
 function loadPOISCercanos() {
   
-  // if (markerGeoLoc == null)
-  // { 
-  //    mapa.locate({setView: true, maxZoom: 16}); //Usa geolocalización
-  //    mapa.on('locationfound', onLocationFound);
-    
-  // }
+  
   //Bicisendas
   var $bicisendas = $('input:radio[id="bsrb"] ');
   $bicisendas.click(function() {  
@@ -626,12 +621,11 @@ function loadPOISCercanos() {
       borrarPath();      
       if (!$bicisendaschk.is( ':checked' ))     
       {
-        loadBiciSendas();      
-        nearestBiciSenda();              
+        loadBiciSendas();              
         $bicisendaschk.prop( "checked", true );
       }      
         
-
+	  nearestBiciSenda();              	
       mapa.off('click', fn_ant);
       mapa.on('click', nearestBicisendaEvent); 
       fn_ant = nearestBicisendaEvent;
@@ -643,11 +637,7 @@ function loadPOISCercanos() {
   //Ciclovías
   var $ciclovias = $('input:radio[id="cvrb"] ');
   $ciclovias.click(function() {  
-    /*$(".btnBorrar").css({'right':'-44px',
-                        'display': 'none', 
-                        'left': 'auto',
-                        'top': '10px'
-                                });  */
+    
 
     routing = false; 
     var $cicloviaschk    = $('input[name="ciclov"');
