@@ -584,14 +584,14 @@ if ((h < 21) && (h >= 7))
             console.log("\n");
             
 			parada = _paradas[0][i];        
-			console.log(parada);
+			
 			paradant = paradas_ant[i]; //viene cargada de cargar estaciones de PM
 			markerObj = markersArray[i];
 
 
 		if (parada[4] != 6)	// es una estación válida		
 		{				
-			if (parada[4] == 100) //&& (paradant[4] != -1))	
+			if (parada[4] == -1)//&& (paradant[4] != -1))	
 			{                
 				desc = "<b><center>" + parada[0] + "</center></b>" + "<br>" +
 				"Calle Alzáibar 1321 - Lunes a Viernes: 9:00 a 18:00 h." + "<br>" + 
