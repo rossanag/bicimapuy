@@ -266,14 +266,13 @@ var semaforoIcon = L.icon({
 
 var alertaIcon = L.icon({
     iconUrl: 'imagenes/alerta.png',    
-    //shadowUrl: 'imagenes/bikeiconshadow.png',
+   
 
     iconSize:     [38,19], // size of the icon    
     iconAnchor:   [26,19], // point of the icon which will correspond to marker's location
     popupAnchor:  [0,-18], // point from which the popup should open relative to the iconAnchor    
     
-    //shadowSize:   [40,32] // size of the shadow
-    //shadowAnchor: [4,30]  // the same for the shadow    
+        
 });   
 
 var patrimonioIcon = L.icon({
@@ -352,8 +351,7 @@ var bebederoIcon = L.icon({
     iconAnchor:   [12,24], // point of the icon which will correspond to marker's location
     popupAnchor:  [0,-18] // point from which the popup should open relative to the iconAnchor    
     
-    //shadowSize:   [40,32] // size of the shadow
-    //shadowAnchor: [4,30]  // the same for the shadow    
+       
 });      
 var bosqueIcon = L.icon({
     iconUrl: 'imagenes/bosque32.png',    
@@ -500,6 +498,7 @@ function actualizarMapa()
                         var paradas = [];                 
                         paradas2= data;    
                         JSON.parse('['+paradas2.split("'").join('"')+']').forEach(function(paradas3){paradas.push(paradas3)});                                                                    
+                        console.log(paradas);
     					actualizoMarkers(paradas);
 
   	});
