@@ -184,7 +184,7 @@ if ((h < 21) && (h >= 7))
       /* Con esta exp reg obtengo solo el vector, índice 2 del array */
 
       var re = /(var\s*paradas\s*=(\s*\[(.*?)\]));/;  //Funciona!! 
-
+ 
 
       var res = re.exec(html);  //obtenemos un string
       // res[0] - todo el string var paradas = [..]
@@ -193,14 +193,18 @@ if ((h < 21) && (h >= 7))
       //saco [] más externos
       var paradas1 = res[2].trim();
       var paradas1 = paradas1.slice(0,res[2].length-1);  //desde 1 y mo 0
-
+		
       var pos1 = 0;
       var pos2 = 0;
-
-          
+      
+      paradas1 = paradas1.replace('-1', '100');
+      /*console.log("ACAAAAAA\n");  
+	  console.log(paradas1);
+	 console.log("\n");      */
       io.sockets.emit('paradas', paradas1);  
       io.sockets.on('connection', function (socket) {
-  
+
+
 
    if (paradas1.length > 0)   
   {
