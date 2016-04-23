@@ -134,10 +134,7 @@ function loadPOI() {
   //Seccionales Policiales
   var $seccionales    = $('input[name="sec"');
   $seccionales.click(function() {
-      // $(".btnBorrar").css({'right':'-44px', //boton de routing
-      //                   'left': 'auto',
-      //                   'top': '10px'
-      //                           });  
+     
 
       borrarPath();
       var $seccionalesrb = $('input:radio[id="serb"] ');
@@ -145,13 +142,11 @@ function loadPOI() {
       if ($seccionales.is( ':checked' ))
       {        
         if (!$seccionalesrb.is( ':checked' ))
-         { 
-          console.log("carga seccionales");
+        {          
           loadSeccionales();  
           mapa.addLayer(lmarkersS);
-        }
-        else
-        console.log("NOOO carga seccionales");       
+	    }	
+        
       }  
       else
       {
@@ -384,16 +379,12 @@ var $talleres = $('input[name="bicr"');
 
 // Baños
 var $banios = $('input[name="bn"');
-  $banios.click(function() {
-      // $(".btnBorrar").css({'right':'-44px', //boton de routing
-      //                   'left': 'auto',
-      //                   'top': '10px'
-      //                           });  
+  $banios.click(function() {     
 
       borrarPath();
       var $baniosrb = $('input:radio[id="bnrb"] ');
       if ($banios.is( ':checked' ))
-      {
+      {console.log("baniooooooooooo");
         if (!$baniosrb.is( ':checked' ))
         {
             loadBanios();
@@ -410,13 +401,12 @@ var $banios = $('input[name="bn"');
 
   //Repechos
 var $repechos = $('input[name="rep"');
-$repechos.click(function() {
-     console.log("en rep");
+$repechos.click(function() {     
       borrarPath();
       
       if ($repechos.is( ':checked' ))
       {
-        console.log("carga rep");
+        
             loadRepechos();
             mapa.addLayer(geoRepechos);
             

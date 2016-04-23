@@ -946,14 +946,12 @@ function loadBanios()
  				desc = desc + "<br>" + "Observaciones: " + feature.properties.OBSERVACIO;
 
  				
-
         	var marker = L.marker(latlng, { icon: banioIcon}).bindPopup(desc).addTo(mapa);
 			
 			marker.on('click', function() {
 					this.openPopup();			
     		});	   
-    		 					
-			//latlngBiciPuntos.push(L.latLng(feature.geometry.coordinates[1],feature.geometry.coordinates[0]));
+    		 							
     		return marker;
     	}	
 	});	
