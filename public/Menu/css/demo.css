@@ -118,15 +118,7 @@ nav:not(.mm-menu)
    }
 
 
-@media all and (min-width: 550px) {
-
-  html.mm-opening .mm-slideout {
-    -webkit-transform: translate(500px, 0);
-    -moz-transform: translate(500px, 0) ;
-    -ms-transform: translate(500px, 0) ;
-    -o-transform: translate(500px, 0) ;
-    transform: translate(500px, 0)}
-}  
+ 
 */
 
 .mm-menu {  
