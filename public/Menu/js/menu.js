@@ -61,13 +61,12 @@ $(function() {
   				autoOpen: false,
   				position: { my: "right top", at: "right top", of: window }
 			});
-
+			$('#loading').hide();
 			
         });
 		
-		$( window ).load(function() {
-			$(".loader").fadeOut("slow");
-
+		$( window ).load(function() {			
+			
   			var $ruteo = $('input[name="ruteo"');
   			$ruteo.click(function() {  				
   				borrarPath();
@@ -87,7 +86,7 @@ $(function() {
   			});
   			
       		API.close();	 
-         
+			
   			});
   			
   			  			
