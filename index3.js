@@ -187,7 +187,7 @@ if ((h < 21) && (h >= 7))
       var paradas1 = paradas1.slice(0,res[2].length-1);  //desde 1 y mo 0
 		
                  
-      io.sockets.emit('paradas', paradas1);  
+      //io.sockets.emit('paradas', paradas1);  
       io.sockets.on('connection', function (socket) {
 
 
