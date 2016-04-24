@@ -63,7 +63,7 @@ var intReq, intSend;
         }       
         
         bicipuntos = data3;
-        //console.log(data2);     
+           
     });
   fs.readFile('public/Mapas/bicicleterias.js', 'utf8', function (err,data4) {
       
