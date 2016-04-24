@@ -4,10 +4,7 @@ var request = require('request');
 var express = require('express'),
       app = express(),
       server = require('http').createServer(app),
-      //io = require('socket.io').listen(server), funciona
-
-      //messages = [],
-      //sockets = [],
+   
       elemParadas = [],
       paradas = [];
 
