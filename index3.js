@@ -13,10 +13,6 @@ var paradasant = [];
 var io = require('socket.io')(server);  //funciona
 
 
-//     io.set('transports', ['xhr-polling']);
-//    io.set("polling duration", 10);  
-
-
 app.use( express.static(__dirname + '/public'));
 
 app.use(function(req,res,next) {
@@ -57,9 +53,8 @@ var intReq, intSend;
         }       
         
         infladores = data2;
-        //console.log(data2);     
+       
     });
-
   
   fs.readFile('public/Mapas/bicipuntos.js', 'utf8', function (err,data3) {
       
