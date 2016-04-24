@@ -196,7 +196,7 @@ if ((h < 21) && (h >= 7))
 		
       var pos1 = 0;
       var pos2 = 0;
-      
+      console.log(paradas1);
       //paradas1 = paradas1.replace('-1', '100');
       /*console.log("ACAAAAAA\n");  
 	  console.log(paradas1);

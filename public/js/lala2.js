@@ -516,17 +516,55 @@ function actualizarMapa()
 
 function obtenerDatos(timems)
 {	
+    actualizo = false; 
 
-	 // cada minuto y medio leo archivo y actualizo markers del mapa
-	 //idPM = setInterval(function(){ //COMENTADO MOMENTÁNEAMENTE para DEMO
-	 	//No es necesario setinterval porque actualiza el servidor
-	   //socket = io.connect("/localhost:5000");
-       //setInterval(function(){
-       //socket = io("http://bicimapuy.herokuapp.com");
+	var fecha = new Date();
+    var h = fecha.getHours();
+
+    if ((h < 21) && (h >= 7))
+    {
        socket = io();
-       actualizarMapa();     // }); 
-     //},timems);
-//	actualizarMapa();
+       actualizarMapa();     // });  
+    }
+    else {           
+            for (var i = 0; i < estaciones.length; i++) {
+            estacion = estaciones[i];
+
+            markerObj = markersArray[i];
+            if (i == (estaciones.length - 1))
+            {       
+
+                desc = "<b><centre>" + estacion[0] + "</centre></b>" + "<br>" +
+                        "Pérez Castellano 1492 esquina Cerrito" + "<br>" +
+                        "Lunes a Viernes: 9:00 a 18:00 hs.  Sábados: 10:00 a 14:00 hs"  
+                markerObj._marker.setIcon(officeIcon);      
+
+            }
+            else
+            {
+                desc = "<b><centre>" + estacion[0] + "</centre></b>" + "<br>" + 
+                "<centre>" + "FUERA DE SERVICIO" + "</centre>";
+                markerObj._marker.setIcon(brokenIcon);                          
+            }
+            markerObj._marker.setPopupContent(desc);            
+            
+        }   
+        actualizo = true;
+      }
+
+      if (actualizo == true)
+      { 
+                                
+            var markerObjCopia = $.extend( {}, markerObj);          
+            markersArrayAnt[i] = markerObjCopia;
+                                
+      } 
+      else
+      {
+        markerObj = markersArrayAnt[i];
+                
+      }
+      //paradas_ant = paradas.slice();
 }
 
 function actualizoMarkers(_paradas)
@@ -579,15 +617,14 @@ if ((h < 21) && (h >= 7))
     }
    } 
       
-	for (var i = 0; i < paradas.length; i++)
+	for (var i = 0; i < _paradas.length; i++)
 	{							    
-            console.log("\n");
+            
             
 			parada = _paradas[0][i];        
 			
-			paradant = paradas_ant[i]; //viene cargada de cargar estaciones de PM
+			//paradant = paradas_ant[i]; //viene cargada de cargar estaciones de PM
 			markerObj = markersArray[i];
-
 
 		if (parada[4] != 6)	// es una estación válida		
 		{				
@@ -596,8 +633,7 @@ if ((h < 21) && (h >= 7))
 				desc = "<b><center>" + parada[0] + "</center></b>" + "<br>" +
 				"Calle Alzáibar 1321 - Lunes a Viernes: 9:00 a 18:00 h." + "<br>" + 
 				"Sábados: De 10:00 a 14:00 h";	
-				markerObj._marker.setIcon(officeIcon);														
-				//markerObj._marker.getPopup().setContent(desc);
+				markerObj._marker.setIcon(officeIcon);																		
 				markerObj._marker.setPopupContent(desc);
 
 				actualizo = true;				
