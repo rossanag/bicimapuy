@@ -81,7 +81,7 @@ var intReq, intSend;
         }       
         
         repechos = data5;
-        //console.log(data2);     
+        
     });
   fs.readFile('public/Mapas/seccionales.js', 'utf8', function (err,data6) {
       
