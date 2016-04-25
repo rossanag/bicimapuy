@@ -78,8 +78,7 @@ var intReq, intSend;
       
         if (err) {
           return console.log(err);
-        }       
-        
+        }               
         repechos = data5;
         
     });
@@ -186,11 +185,13 @@ if ((h < 21) && (h >= 7))
       var paradas1 = res[2].trim();
       var paradas1 = paradas1.slice(0,res[2].length-1);  //desde 1 y mo 0
 		
-                 
+      var n = paradas1.lastIndexOf("[") - 1;           
+      paradas1 = paradas1.substring(0,n) + "]";
+      console.log(paradas1);
       //io.sockets.emit('paradas', paradas1);  
       io.sockets.on('connection', function (socket) {
-
-
+           
+		io.sockets.emit('paradas', paradas1);  
 
    if (paradas1.length > 0)   
   {
@@ -214,6 +215,8 @@ if ((h < 21) && (h >= 7))
  
       
     }
+    else
+		console.log("sin datos");
   
   });  //request
 
