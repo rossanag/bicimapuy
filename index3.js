@@ -162,16 +162,14 @@ var h = d.getHours();
 // Hora de de funcionamiento de las estaciones Plan Movete 7-21hs
 if ((h < 21) && (h >= 7))
 {
-  intReq = setInterval(function() { 
+
+   intReq = setInterval(function() { 
 
     request('http://movete.montevideo.gub.uy/index.php?option=com_content&view=article&id=1&Itemid=2', function (error, response, html) {
     if (!error && response.statusCode == 200) {
       html = html.replace(/(\n|\r)/g,''); 
 
-      
-      //var re = /(var\s*paradas\s*=\s*\[([^;]+)\]);/i;  //Funciona!! re objeto exp reg
-      //var re = /(var\s*paradas\s*=\s*\[(.*?)\]);/;  //Funciona!!
-
+           
       /* Con esta exp reg obtengo solo el vector, índice 2 del array */
 
       var re = /(var\s*paradas\s*=(\s*\[(.*?)\]));/;  //Funciona!! 
@@ -185,30 +183,28 @@ if ((h < 21) && (h >= 7))
       var paradas1 = res[2].trim();
       var paradas1 = paradas1.slice(0,res[2].length-1);  //desde 1 y mo 0
 		
-      var n = paradas1.lastIndexOf("[") - 1;           
-      paradas1 = paradas1.substring(0,n) + "]";
-      console.log(paradas1);
-      //io.sockets.emit('paradas', paradas1);  
+      
+          
       io.sockets.on('connection', function (socket) {
            
 		io.sockets.emit('paradas', paradas1);  
 
-   if (paradas1.length > 0)   
-  {
-    intSend = setInterval(function() {
-    
-      socket.emit('paradas', paradas1);
-     
-   },2000); 
-  }
-  else
-    console.log("paradas vacias");
+	   if (paradas1.length > 0)   
+	  {
+		intSend = setInterval(function() {
+		
+		  socket.emit('paradas', paradas1);
+		 
+	   },2000); 
+	  }
+	  else
+		console.log("paradas vacias");
 
- io.sockets.on('error', function() {
-  io.connect(host, {
-    'force new connection': true
-  }); 
- });   
+	 io.sockets.on('error', function() {
+	  io.connect(host, {
+		'force new connection': true
+	  }); 
+	 });   
   
     
  });   
@@ -222,7 +218,7 @@ if ((h < 21) && (h >= 7))
 
   }, 10000); // 3 minutos antes 15000
   //}, 8000); // 3 minutos
-
+} //if hora
 
 
 
@@ -233,6 +229,6 @@ io.sockets.on('disconnect', function(){
 
 
 
-}
+
 
  server.listen(process.env.PORT || 5000);
