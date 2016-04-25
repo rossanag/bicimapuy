@@ -510,8 +510,7 @@ function obtenerDatos(timems)
 
 function actualizoMarkers(_paradas)
 {			
-    console.log("paradas");
-    console.log(paradas);   console.log("\n");
+       
 	var markerObj = null;
 	var desc = '';
 	var actualizo = false;
