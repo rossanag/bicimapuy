@@ -188,7 +188,7 @@ label.mm-toggle:before {
 .mm-menu label.mm-check:before {  
 	
   opacity: 1 !important;   
-  border-color: rgba(235 , 250, 237, 0.6 ) !important; }    
+  border-color: rgba(229 , 232, 223, 0.6 ) !important; }    
   
 .mm-menu input.mm-check:checked  ~ label.mm-check {    
    
