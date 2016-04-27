@@ -180,15 +180,23 @@ label.mm-toggle:before {
 
 /* Color cuando se corre para seleccionar  */
 .mm-menu input.mm-toggle:checked ~ label.mm-toggle {
-  background: #12C93D !important; 
+  background: #12C93D !important;   
 
 }   
 
-.mm-menu label.mm-check:before {
-  border-color: rgba(235, 255, 237, 1.0) !important; }    
+
+.mm-menu label.mm-check:before {  
+	
+  opacity: 1 !important;   
+  border-color: rgba(235 , 250, 237, 0.6 ) !important; }    
+  
+.mm-menu input.mm-check:checked  ~ label.mm-check {    
+   
+   background: rgba(98, 179, 91,0.6) !important;
+   }      
   
 
-
+ 
 /*titulo del menú*/
 .mm-title{  
 	font-family: "Trebuchet MS", Helvetica, sans-serif !important;
