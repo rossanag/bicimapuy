@@ -1929,22 +1929,7 @@
                 "name": "120110 - MON - ESTACIÓN INDEPENDENCIA S.R.L.",
                 "description": "Malvín\nAvda. Gral. Rivera 5259 y Alejandro Gallinal"
             }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -56.11695436189339,
-                    -34.89690037799819,
-                    0
-                ]
-            },
-            "properties": {
-                "name": "120020 - MON - SERVICAP S.R.L. (CERRADA)",
-                "description": "Malvçin Nuevo\nRbla. Rep. De Chile 4409 y 9 de Junio"
-            }
-        },
+        },        
         {
             "type": "Feature",
             "geometry": {
@@ -2085,14 +2070,14 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -56.15738486333401,
-                    -34.91780337748093,
+					-56.16164,
+					-34.91367, 					  
                     0
                 ]
             },
             "properties": {
-                "name": "420340 - MON - GASOLINERA EL ENTREVERO (CERRADA)",
-                "description": "Punta Carretas\n21 DE SETIEMBRE 2753 Y LUIS DE LA TORRE"
+                "name": "Simanor",
+                "description": "21 DE SETIEMBRE 2489 Tel: 2710 6345\n 24hs Minimarket"
             }
         },
         {
@@ -3519,22 +3504,7 @@
                 "name": "108010 - FLS - XIVILLIER HNOS. S.R.L.",
                 "description": "Trinidad\nAlfredo J. Puig 661 y Santísima Trinidad"
             }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -56.8952101496678,
-                    -33.51555677215758,
-                    0
-                ]
-            },
-            "properties": {
-                "name": "408010 - FLS - BEROT Y BEROIS S.R.L. (CERRADA)",
-                "description": "TRINIDAD\nJ.B. Y ORDOÑEZ Y GRAL. FLORES"
-            }
-        },
+        },        
         {
             "type": "Feature",
             "geometry": {
