@@ -466,6 +466,51 @@
                 "description": "Villa Española\nAvda. Ing. José Serrato 3250 y Avda. Dámaso Antonio Larrañaga"
             }
         },
+         {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -56.149497628211975,
+					-34.838927932900944,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Ferrari S.R.L.",
+                "description": "Gral.Flores 5049 Tel.: 2215 6790 "
+            }
+        },
+         {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -56.15686297416686,
+					-34.92403168891302,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Misurol S.A. [4]",
+                "description": "Solano García 2576 Pta. Carretas Shopping. Tel.: 2712 6922"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -56.155554056167595,
+					-34.90346902733199,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Genta S.R.L. y Cía.",
+                "description": "Gabriel Pereira 2708 esq. Rivera, Ciudad Tel: 2709 9311"
+            }
+        },
         {
             "type": "Feature",
             "geometry": {
@@ -494,6 +539,66 @@
             "properties": {
                 "name": "120270 - MON - ERGUS S.R.L.",
                 "description": "Palermo\nRbla. Rep. Argentina s/n y Ejido"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+					-56.149717569351196,
+					-34.90802453317547,                   
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Bolfin S.A.",
+                "description": "José Ellauri 1287 esq.G. Pereira\n Tel.: 2707 03 79"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+					-56.134005188941956,
+					-34.865548002603894,					                 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Cobral S.A.",
+                "description": "8 de Octubre 4354 esq. Cno Corrales\n Tel: 2508 8608"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+					-56.18716657161713,
+					-34.87798124987325,				                 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Colben S.A.",
+                "description": "Av. Millán 2600 esq. Guadalupe\n Tel: 2209 0376"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+					-56.16345047950744,
+					-34.90678614689513,									                
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Deflores S.A.",
+                "description": "Br. Artigas 1150 esq. Canelones\n Tel: 2708 0052"
             }
         },
         {
@@ -2070,14 +2175,14 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-					-56.16164,
-					-34.91367, 					  
+					-56.1615514755249,
+					-34.913736705537715,							 
                     0
                 ]
             },
             "properties": {
                 "name": "Simanor",
-                "description": "21 DE SETIEMBRE 2489 Tel: 2710 6345\n 24hs Minimarket"
+                "description": "21 DE SETIEMBRE 2489 Tel: 2710 6345 - 24hs Minimarket"
             }
         },
         {
