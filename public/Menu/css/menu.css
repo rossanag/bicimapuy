@@ -190,12 +190,10 @@ label.mm-toggle:before {
   opacity: 1 !important;   
   border-color: rgba(229 , 232, 223, 0.6 ) !important; }    
   
-.mm-menu input.mm-check:checked  ~ label.mm-check {    
-   
-   background: rgba(98, 179, 91,0.6) !important;
+.mm-menu input.mm-check:checked  ~ label.mm-check:before {       
+   border-color: rgba(246, 255, 246,1) !important;
+   opacity: 1 !important;
    }      
-  
-
  
 /*titulo del menú*/
 .mm-title{  
