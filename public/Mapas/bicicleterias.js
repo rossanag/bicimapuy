@@ -283,22 +283,7 @@
           -34.8772
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nombre":"Urubike",
-        "Direc":"Av. Brasil 3109, Pocitos",
-        "Ciudad":"Montevideo", 
-                     "Telef":"27090139"},
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -56.1527591,
-          -34.9099636
-        ]
-      }
-    },  
+    },   
     {
       "type": "Feature",
       "properties": {

@@ -21,23 +21,7 @@ app.use(function(req,res,next) {
 }
   )
 
-var arrayRecorridos = [["Cordón a Sayago","public/Recorridos/CordonSayago.js"],					   
-					   ["Sayago a Cordón","public/Recorridos/sayagoCordon.js"],
-					   ["Reducto a FIng","public/Recorridos/reductoFing.js"],
-					   ["Toledo a FIng","public/Recorridos/toledoFing.js"],					   
-					   ["Comercial a Pcio. Legislativo","public/Recorridos/comercialPcioLeg.js"],
-					   ["Comercial a CV","public/Recorridos/ComercialCV.js"],
-					   ["Prado a Ciudad Vieja","public/Recorridos/pradoCVieja.js"],
-					   ["Pque Rodó a Ciudad Vieja","public/Recorridos/prcv.js"],					   					  
-					   ["Ciudad Vieja a Pque Rodó","public/Recorridos/cvpr.js"],					   					  
-					   ["Pque Rodó a Prado","public/Recorridos/pqeRodoPrado.js"],					   					   					
-					   ["Ciudad Vieja a Prado","public/Recorridos/cViejaPrado.js"],					   
-					   ["Ciudad Vieja a Obelisco","public/Recorridos/cvObelisco.js"],					   
-					   ["Pocitos a Ciudad Vieja","public/Recorridos/pocitosCVieja.js"],
-					   ["CVieja a Pocitos","public/Recorridos/cViejaPocitos.js"],					   
-					   
-					   ];
-					   
+
 var intReq, intSend;
 
 //provisorio
@@ -147,19 +131,6 @@ var intReq, intSend;
      
     });
   
-  var recorridos = []
-  for (var i = 0; i < arrayRecorridos.length; i++)
-  {	 
-	  fs.readFile(arrayRecorridos[i][1], 'utf8', function (err,data) {
-      
-        if (err) {
-          return console.log(err);
-        }       
-        
-        recorridos[i] = data
-     
-    });
-  }  
 
   io.sockets.on('connection', function (socket) {
     socket.emit('biciamigos', biciamigos);
@@ -173,12 +144,7 @@ var intReq, intSend;
     socket.emit('paseoPeniarol',paseoPeniarol);
     socket.emit('paseoPrado',paseoPrado);
     
-    //Recorridos
-    socket.on("recorridos", function(data){
-		var index = data;
-		socket.emit("recorridos",recorridos[index]);
-	});
-     
+  
     io.sockets.on('error', function() {
       io.connect(host, {
           'force new connection': true
