@@ -9,6 +9,9 @@ var express = require('express'),
       paradas = [];
 
 var paradasant = [];
+var _recorridos = [];
+
+done = false;
 
 var io = require('socket.io')(server);  //funciona
 
@@ -21,21 +24,21 @@ app.use(function(req,res,next) {
 }
   )
 
-var arrayRecorridos = [["Cordón a Sayago","public/Recorridos/CordonSayago.js"],					   
-					   ["Sayago a Cordón","public/Recorridos/sayagoCordon.js"],
-					   ["Reducto a FIng","public/Recorridos/reductoFing.js"],
-					   ["Toledo a FIng","public/Recorridos/toledoFing.js"],					   
-					   ["Comercial a Pcio. Legislativo","public/Recorridos/comercialPcioLeg.js"],
-					   ["Comercial a CV","public/Recorridos/ComercialCV.js"],
-					   ["Prado a Ciudad Vieja","public/Recorridos/pradoCVieja.js"],
-					   ["Pque Rodó a Ciudad Vieja","public/Recorridos/prcv.js"],					   					  
-					   ["Ciudad Vieja a Pque Rodó","public/Recorridos/cvpr.js"],					   					  
-					   ["Pque Rodó a Prado","public/Recorridos/pqeRodoPrado.js"],					   					   					
-					   ["Ciudad Vieja a Prado","public/Recorridos/cViejaPrado.js"],					   
-					   ["Ciudad Vieja a Obelisco","public/Recorridos/cvObelisco.js"],					   
-					   ["Pocitos a Ciudad Vieja","public/Recorridos/pocitosCVieja.js"],
-					   ["CVieja a Pocitos","public/Recorridos/cViejaPocitos.js"],					   
-					   
+var arrayRecorridos = [
+						   ["Cordón a Sayago","public/Recorridos/CordonSayago.js"],					   
+						   ["Sayago a Cordón","public/Recorridos/sayagoCordon.js"],
+						   ["Reducto a FIng","public/Recorridos/reductoFing.js"],
+						   ["Toledo a FIng","public/Recorridos/toledoFing.js"],					   
+						   ["Ciudad Vieja a Prado","public/Recorridos/cViejaPrado.js"],					   
+						   ["Prado a Ciudad Vieja","public/Recorridos/pradoCVieja.js"],
+						   ["Pque Rodó a Prado","public/Recorridos/pqeRodoPrado.js"],					   					   					
+						   ["Ciudad Vieja a Pque Rodó","public/Recorridos/cvpr.js"],					   					  
+						   ["Pque Rodó a Ciudad Vieja","public/Recorridos/prcv.js"],
+						   ["Pocitos a Ciudad Vieja","public/Recorridos/pocitosCVieja.js"],	
+						   ["CVieja a Pocitos","public/Recorridos/cViejaPocitos.js"],					   				   					  
+						   ["Ciudad Vieja a Obelisco","public/Recorridos/cvObelisco.js"],					   					   					  
+						   ["Comercial a Pcio. Legislativo","public/Recorridos/comercialPcioLeg.js"],
+						   ["Comercial a CV","public/Recorridos/ComercialCV.js"]
 					   ];
 					   
 var intReq, intSend;
@@ -122,11 +125,10 @@ var intReq, intSend;
       
         if (err) {
           return console.log(err);
-        }       
-        
-        paseoRambla = data8;
-        //console.log(data2);     
+        }               
+        paseoRambla = data8;   
     });
+    
   fs.readFile('public/Mapas/paseoPeniarol.js', 'utf8', function (err,data9) {
       
         if (err) {
@@ -147,20 +149,7 @@ var intReq, intSend;
      
     });
   
-  var recorridos = []
-  for (var i = 0; i < arrayRecorridos.length; i++)
-  {	 
-	  fs.readFile(arrayRecorridos[i][1], 'utf8', function (err,data) {
-      
-        if (err) {
-          return console.log(err);
-        }       
-        
-        recorridos[i] = data
-     
-    });
-  }  
-
+  
   io.sockets.on('connection', function (socket) {
     socket.emit('biciamigos', biciamigos);
     socket.emit('bicipuntos', bicipuntos);
@@ -173,12 +162,7 @@ var intReq, intSend;
     socket.emit('paseoPeniarol',paseoPeniarol);
     socket.emit('paseoPrado',paseoPrado);
     
-    //Recorridos
-    socket.on("recorridos", function(data){
-		var index = data;
-		socket.emit("recorridos",recorridos[index]);
-	});
-     
+            
     io.sockets.on('error', function() {
       io.connect(host, {
           'force new connection': true
@@ -187,7 +171,189 @@ var intReq, intSend;
   
     
   });
-//
+
+ //Recorridos
+ 
+ // enviar recorrido
+ 
+ fs.readFile(arrayRecorridos[13][1], 'utf8', function (err,data) {        
+        if (err) {
+          return console.log(err);
+        }  
+        _recorridos[13] = data;             
+     });
+ 
+ fs.readFile(arrayRecorridos[12][1], 'utf8', function (err,data) {        
+        if (err) {
+          return console.log(err);
+        }       
+        _recorridos[12] = data;
+     });
+     
+fs.readFile(arrayRecorridos[11][1], 'utf8', function (err,data) {        
+        if (err) {
+          return console.log(err);
+        }       
+        _recorridos[11] = data;
+		
+     }); 
+     
+fs.readFile(arrayRecorridos[10][1], 'utf8', function (err,data) {        
+        if (err) {
+          return console.log(err);
+        }       
+        _recorridos[10] = data;
+		
+     });          
+fs.readFile(arrayRecorridos[9][1], 'utf8', function (err,data) {        
+        if (err) {
+          return console.log(err);
+        }       
+        _recorridos[9] = data;
+		
+     });               
+ 
+ fs.readFile(arrayRecorridos[8][1], 'utf8', function (err,data) {        
+        if (err) {
+          return console.log(err);
+        }       
+        _recorridos[8] = data;
+		
+     });
+     
+fs.readFile(arrayRecorridos[7][1], 'utf8', function (err,data) {        
+        if (err) {
+          return console.log(err);
+        }       
+        _recorridos[7] = data;
+		
+     }); 
+         
+fs.readFile(arrayRecorridos[6][1], 'utf8', function (err,data) {        
+        if (err) {
+          return console.log(err);
+        }       
+        _recorridos[6] = data;
+    		
+     }); 
+     
+fs.readFile(arrayRecorridos[5][1], 'utf8', function (err,data) {        
+        if (err) {
+          return console.log(err);
+        }       
+        _recorridos[5] = data;
+		
+ });      
+
+fs.readFile(arrayRecorridos[4][1], 'utf8', function (err,data) {        
+        if (err) {
+          return console.log(err);
+        }       
+        _recorridos[4] = data;
+		
+ });  
+ 
+ fs.readFile(arrayRecorridos[3][1], 'utf8', function (err,data) {        
+        if (err) {
+          return console.log(err);
+        }       
+        _recorridos[3] = data;
+		
+ });  
+ 
+ fs.readFile(arrayRecorridos[2][1], 'utf8', function (err,data) {        
+        if (err) {
+          return console.log(err);
+        }       
+        _recorridos[2] = data;
+		
+ });  
+             
+fs.readFile(arrayRecorridos[1][1], 'utf8', function (err,data) {        
+        if (err) {
+          return console.log(err);
+        }       
+        _recorridos[1] = data;
+		
+     });         
+
+fs.readFile(arrayRecorridos[0][1], 'utf8', function (err,data) {        
+        if (err) {
+          return console.log(err);
+        }       
+        _recorridos[0] = data;
+		
+     });     
+ 
+
+io.sockets.on("connection", function(socket) {
+   
+   socket.on("recorridos0", function(data0){	  
+      
+      socket.emit("recorridos0", _recorridos[0]);
+    
+     }); 
+     
+     socket.on("recorridos1", function(data1){    
+		        
+        socket.emit("recorridos1",_recorridos[1]);
+          
+    });
+    
+    socket.on("recorridos2", function(data2){
+		socket.emit("recorridos2",_recorridos[2]);
+    });
+    
+    socket.on("recorridos3", function(data3){
+		socket.emit("recorridos3",_recorridos[3]);
+    });
+    
+    socket.on("recorridos4", function(data4){
+		socket.emit("recorridos4",_recorridos[4]);
+    });
+    
+    socket.on("recorridos5", function(data5){
+		socket.emit("recorridos5",_recorridos[5]);
+    });
+    
+    socket.on("recorridos6", function(data6){
+		socket.emit("recorridos6",_recorridos[6]);
+    });
+
+	socket.on("recorridos7", function(data7){
+		socket.emit("recorridos7",_recorridos[7]);
+    });	
+    
+    socket.on("recorridos8", function(data8){
+		socket.emit("recorridos8",_recorridos[8]);
+    });
+    
+    socket.on("recorridos9", function(data9){
+		socket.emit("recorridos9",_recorridos[9]);
+    });
+    
+    socket.on("recorridos10", function(data10){
+		socket.emit("recorridos10",_recorridos[10]);
+    });
+    
+    socket.on("recorridos11", function(data11){
+		socket.emit("recorridos11",_recorridos[11]);
+    });
+    
+    socket.on("recorridos12", function(data12){
+             
+     socket.emit("recorridos12",_recorridos[12]);
+    });
+    
+    socket.on("recorridos13", function(data13){
+           
+        socket.emit("recorridos13",_recorridos[13]);
+    
+    });
+        
+        
+  });  
+//});
 
 
 var d = new Date();
