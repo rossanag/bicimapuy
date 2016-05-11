@@ -717,6 +717,53 @@
           -34.9178455
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nombre": "Panadería La Confianza",
+        "Direc": "Lorenzo Pérez 3013 esq. Cipriano Payán",
+        "Ciudad": "Montevideo",
+        "Desc": "Dejan entrar la bici",
+        "Telef": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.14889144897461,
+          -34.90531677624637
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "Nombre": "Bar y cantina El Mirador",
+        "Direc": "Bartolito Mitre 2615",
+        "Ciudad": "Montevideo",
+        "Desc": "Dejan entrar la bici",
+        "Telef": "-"},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.15672081708908,
+          -34.907195278353925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"Nombre": "Librería Papacito",
+        "Direc": "18 de Julio frente a la IMM",
+        "Ciudad": "Montevideo",
+        "Desc": "Dejan entrar la bici",
+        "Telef": "-"},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.186432,
+          -34.905561
+        ]
+      }
     }              
   ]
 }
