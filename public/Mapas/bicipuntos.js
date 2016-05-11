@@ -6,7 +6,7 @@
       "properties": {"Nombre":"Tres Cruces",
                      "Direc":"Bvar. Artigas y 8 de octubre",
                      "Horario": "24hs", 
-                     "Desc": "Fuera de servicio",
+                     "Desc": "Estacionamiento y caja de herramientas para primeros auxilios",
                      "Telef":""
                      },
       "geometry": {
