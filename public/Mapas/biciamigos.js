@@ -5,30 +5,30 @@
       "type": "Feature",
       "properties": {"Nombre":"BOOKSHOP CASA CENTRAL",
                      "Direc":"José Enrique Rodó 1671",
-                     "Ciudad": "Montevideo", 
+                     "Ciudad": "Montevideo",
                      "Desc": "Lunes a Viernes 9-18:30hs Sábados 9-13:30hs",
                      "Telef":"2401-1010"
                      },
       "geometry": {
         "type": "Point",
         "coordinates": [
-           -56.180405, 
-           -34.905827          
+           -56.180405,
+           -34.905827
         ]
       }
     },
-    {      
+    {
       "type": "Feature",
       "properties": {"Nombre":"Montevideo Aikido",
                      "Direc":"Acevedo Díaz 1084",
-                     "Ciudad":"Montevideo", 
+                     "Ciudad":"Montevideo",
                      "Desc": "",
                      "Telef":""},
       "geometry": {
         "type": "Point",
         "coordinates": [
-         -56.165704, 
-         -34.908467      
+         -56.165704,
+         -34.908467
         ]
       }
     },
@@ -41,13 +41,13 @@
         "Telef":"24034713"},
       "geometry": {
         "type": "Point",
-        "coordinates": [  
+        "coordinates": [
           -56.169963,
-          -34.908757             
+          -34.908757
         ]
       }
     },
-    {      
+    {
       "type": "Feature",
       "properties": {
         "Nombre": "Peluqueria Pablo",
@@ -58,11 +58,11 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -56.14946, -34.907283      
+          -56.14946, -34.907283
         ]
       }
     },
-    {      
+    {
       "type": "Feature",
       "properties": {
         "Nombre":"SINERGIA COWORKING",
@@ -72,45 +72,45 @@
           "Telef":"(+598) 2412 1877"},
       "geometry": {
         "type": "Point",
-        "coordinates": [         
-          -56.178578, 
-          -34.912421        
+        "coordinates": [
+          -56.178578,
+          -34.912421
         ]
       }
     },
-    {      
+    {
       "type": "Feature",
       "properties": {
         "Nombre":"Espacio de Arte Contemporáneo",
         "Direc":"Arenal Grande 1930",
         "Desc":"Sáb. de 14-20h Dom. de 11-17hs",
-        "Ciudad":"Montevideo", 
+        "Ciudad":"Montevideo",
                      "Telef":"2929 20 66"},
       "geometry": {
         "type": "Point",
         "coordinates": [
-           -56.181003, 
-           -34.894538        
+           -56.181003,
+           -34.894538
         ]
       }
     },
-    {      
+    {
       "type": "Feature",
       "properties": {
         "Nombre":"Kalima Boliche",
-        "Direc":"Durazno 1952 esquina Jackson",        
+        "Direc":"Durazno 1952 esquina Jackson",
         "Desc":"",
         "Ciudad": "Montevideo",
                      "Telef":"2411 0760"},
       "geometry": {
         "type": "Point",
         "coordinates": [
-         -56.172774, 
-         -34.909901         
+         -56.172774,
+         -34.909901
         ]
       }
     },
-    {       
+    {
       "type": "Feature",
       "properties": {
         "Nombre":"Purpúrea",
@@ -122,7 +122,7 @@
         "type": "Point",
         "coordinates": [
           -56.19469,
-          -34.905902      
+          -34.905902
         ]
       }
     },
@@ -138,7 +138,7 @@
         "type": "Point",
         "coordinates": [
          -56.162249,
-         -34.90822         
+         -34.90822
         ]
       }
     },
@@ -154,7 +154,7 @@
         "type": "Point",
         "coordinates": [
           -56.19348,
-          -34.90382              
+          -34.90382
         ]
       }
     },
@@ -170,7 +170,7 @@
         "type": "Point",
         "coordinates": [
           -56.1667829,
-          -34.9001474          
+          -34.9001474
         ]
       }
     },
@@ -186,7 +186,7 @@
         "type": "Point",
         "coordinates": [
           -56.1592287,
-          -34.915747          
+          -34.915747
         ]
       }
     },
@@ -202,10 +202,10 @@
         "type": "Point",
         "coordinates": [
           -56.159344,
-          -34.915774          
+          -34.915774
         ]
       }
-    },   
+    },
     {
       "type": "Feature",
       "properties": {
@@ -217,11 +217,11 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -56.20223, 
-          -34.908533         
+          -56.20223,
+          -34.908533
         ]
       }
-    },    
+    },
     {
       "type": "Feature",
       "properties": {
@@ -233,8 +233,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -56.201473, 
-          -34.90648         
+          -56.201473,
+          -34.90648
         ]
       }
     },
@@ -249,8 +249,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -56.158424, 
-          -34.907565        
+          -56.158424,
+          -34.907565
         ]
       }
     },
@@ -265,8 +265,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-           -56.127777, 
-           -34.889328      
+           -56.127777,
+           -34.889328
         ]
       }
     },
@@ -281,8 +281,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-           -56.062428, 
-           -34.881011  
+           -56.062428,
+           -34.881011
         ]
       }
     },
@@ -297,8 +297,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-           -56.133807, 
-           -34.890138   
+           -56.133807,
+           -34.890138
         ]
       }
     },
@@ -313,7 +313,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-            -56.171898, 
+            -56.171898,
             -34.893459
         ]
       }
@@ -329,7 +329,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-            -56.206135, 
+            -56.206135,
             -34.905052
         ]
       }
@@ -345,7 +345,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-            -56.206135, 
+            -56.206135,
             -34.905052
         ]
       }
@@ -361,7 +361,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-            -56.207857, 
+            -56.207857,
             -34.907349
         ]
       }
@@ -377,8 +377,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-            -56.208002, 
-            -34.908313            
+            -56.208002,
+            -34.908313
         ]
       }
     },
@@ -393,8 +393,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-            -56.208002, 
-            -34.908313            
+            -56.208002,
+            -34.908313
         ]
       }
     },
@@ -409,8 +409,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-            -56.15814, 
-            -34.916251      
+            -56.15814,
+            -34.916251
         ]
       }
     },
@@ -426,7 +426,7 @@
         "type": "Point",
         "coordinates": [
             -56.17522,
-            -34.913086 
+            -34.913086
         ]
       }
     },
@@ -457,7 +457,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-            -56.208801, 
+            -56.208801,
             -34.909549
         ]
       }
@@ -473,7 +473,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-            -56.163687, 
+            -56.163687,
             -34.894766
         ]
       }
@@ -493,7 +493,7 @@
             -34.908775
         ]
       }
-    },    
+    },
     {
       "type": "Feature",
       "properties": {
@@ -505,7 +505,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-            -56.211129, 
+            -56.211129,
             -34.905695
         ]
       }
@@ -521,7 +521,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-            -56.100869, 
+            -56.100869,
             -34.885667
         ]
       }
@@ -537,7 +537,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-            -56.181942, 
+            -56.181942,
             -34.905321
         ]
       }
@@ -553,7 +553,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-            -56.181942, 
+            -56.181942,
             -34.905321
         ]
       }
@@ -601,7 +601,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-            -56.204789, 
+            -56.204789,
             -34.906777
         ]
       }
@@ -617,7 +617,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-            -56.204789, 
+            -56.204789,
             -34.906777
         ]
       }
@@ -649,7 +649,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-           -56.210271, 
+           -56.210271,
            -34.908027
         ]
       }
@@ -665,7 +665,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -56.1598563, 
+          -56.1598563,
           -34.9281023
         ]
       }
@@ -682,7 +682,7 @@
         "type": "Point",
         "coordinates": [
           -56.16282,
-          -34.92384          
+          -34.92384
         ]
       }
     },
@@ -698,7 +698,7 @@
         "type": "Point",
         "coordinates": [
           -56.19972,
-          -34.90844          
+          -34.90844
         ]
       }
     },
@@ -764,6 +764,20 @@
           -34.905561
         ]
       }
-    }                
+    },
+    {
+      "type": "Feature",
+      "properties": {"Nombre": "Pera de Goma <br> Espacio de arte autogestionado",
+        "Direc": "Soriano esq. Ciudadela",
+        "Ciudad": "Montevideo",
+        "Desc": "Dejan entrar la bici",
+        "Telef": "-"},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.19982123374939,
+          -34.90846665234968
+        ]
+      }
   ]
 }
