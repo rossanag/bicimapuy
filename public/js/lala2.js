@@ -59,6 +59,11 @@ var geoRepechos = null;
 
 var markersInf = null;
 var layerParking = null;
+
+//recorridos
+geoRecorrido = null;
+recorridos = [];
+geoRecorridos = [];
  
 
 markersLayerP = [];
@@ -157,11 +162,12 @@ var policeIcon = L.icon({
 
 var gasIcon = L.icon({
     iconUrl: 'imagenes/gasstation.png',
+    //iconUrl: 'imagenes/gas-station-pin.png',
    
-    iconSize:     [32,37], // size of the icon    
-    iconAnchor:   [20,37], // point of the icon which will correspond to marker's location
+    iconSize:     [32,32], // size of the icon    
+    iconAnchor:   [20,32], // point of the icon which will correspond to marker's location
     popupAnchor:  [0,-18] // point from which the popup should open relative to the iconAnchor    
-           
+            
 });  
 
 var emptyIcon = L.icon({
@@ -258,8 +264,8 @@ var patrimonioIcon = L.icon({
 var tallerIcon = L.icon({
     iconUrl: 'imagenes/tallerIcon.png',    
 
-    iconSize:     [20,30], // size of the icon    
-    iconAnchor:   [8,30], // point of the icon which will correspond to marker's location
+    iconSize:     [32,32], // size of the icon    
+    iconAnchor:   [20,32], // point of the icon which will correspond to marker's location
     popupAnchor:  [0,-18], // point from which the popup should open relative to the iconAnchor    
      
 });      
@@ -340,6 +346,25 @@ var infoPatIcon = L.icon({
     iconUrl: 'imagenes/info_blue3_32.png',    
   
 
+    iconSize:     [32,32], // size of the icon    
+    iconAnchor:   [20,32], // point of the icon which will correspond to marker's location
+    popupAnchor:  [0,-18] // point from which the popup should open relative to the iconAnchor    
+        
+});   
+
+var iniGreenIcon = L.icon({
+    iconUrl: 'imagenes/marker-green.png',    
+  
+
+    iconSize:     [32,32], // size of the icon    
+    iconAnchor:   [20,32], // point of the icon which will correspond to marker's location
+    popupAnchor:  [0,-18] // point from which the popup should open relative to the iconAnchor    
+        
+});   
+
+var finRedIcon = L.icon({
+    iconUrl: 'imagenes/marker-red.png',    
+  
     iconSize:     [32,32], // size of the icon    
     iconAnchor:   [20,32], // point of the icon which will correspond to marker's location
     popupAnchor:  [0,-18] // point from which the popup should open relative to the iconAnchor    
@@ -2198,6 +2223,84 @@ function resetHighlight(e) {
 };
 
 
+function loadRecorrido(i){
+	                  
+		        
+     
+          function style(feature) {
+            return {
+                weight: 4,
+                opacity: 1,
+                color: '#F71E2C',
+                dashArray: '5',
+                fillOpacity: 0.7,
+                fillColor: 'red'
+               
+            }
+		  }
+        
+		function resetHighlight(e) {
+	   
+			geoRecorridos[i].resetStyle(e.target);
+				
+		}
+    
+		function highlightFeature(e) {
+			var layer = e.target;
+
+		
+	   };   
+			
+		function zoomToFeature(e) {
+			mapa.fitBounds(e.target.getBounds());
+		}
+		
+		function onEachFeature(feature, layer) {		   
+			layer.on({
+				mouseover: highlightFeature,
+				mouseout: resetHighlight,
+				click: zoomToFeature
+			})
+		}   
+        
+        geoRecorridos[i] = L.geoJson(recorridos[i], {        
+                style: style,
+                onEachFeature: onEachFeature,
+                
+                pointToLayer: function(feature, latlng) {   
+                 
+                    if (feature.properties.tipo == "inicio")
+                    {
+						
+                        var marker = L.marker(latlng, { icon: iniGreenIcon}).bindPopup("Inicio").addTo(mapa);           
+                    }
+                    else
+                    {
+						if (feature.properties.tipo == "final")
+                            var marker = L.marker(latlng, { icon: finRedIcon}).bindPopup("Final").addTo(mapa);         
+                        else
+                        {             
+							
+							var marker = L.marker(latlng, { icon: infoPatIcon}).bindPopup(feature.properties.Info).openPopup().addTo(mapa);                                            
+                        }        
+                    }
+            
+                    marker.on('click', function() {
+                        this.openPopup();           
+                    });    
+                                        
+            
+                    return marker;
+                }   
+
+            }).addTo(mapa); 
+   
+         //geoRecorridos[i] = geoRecorrido;  
+        //});  
+
+} //funcion
+
+
 function loadDatosIniciales()
 {   
      
@@ -2265,9 +2368,45 @@ function loadDatosIniciales()
                       
                         
     });  
-                       
-                              
+   /* 
+    socket.emit("recorridos12",12);
+    socket.on("recorridos12",function (data) {      
+		console.log("recibiendo"  );
+        recorridos[12] = jQuery.parseJSON(data);
+		console.log(recorridos[12]);
+					                                                           
+    });  
+     
+    socket.emit("recorridos0",0);
+    socket.on("recorridos0",function (data) {      
+		console.log("recibiendo");
+                        recorridos[0] = jQuery.parseJSON(data);
+						console.log(recorridos[0]);
+					                                                           
+    });  
+    
+    socket.emit("recorridos1",1);
+    socket.on("recorridos1",function (data) {      
+		console.log("recibiendo");
+        recorridos[1] = jQuery.parseJSON(data);
+		console.log(recorridos[1]);					                                                           
+    }); 
+    
 
+	socket.emit("recorridos0",0);
+    socket.on("recorridos0",function (data) {      
+		console.log("recibiendo"  );
+                        recorridos[0] = jQuery.parseJSON(data);
+						console.log(recorridos[0]);					                                                           
+    }); 
+    
+    socket.emit("recorridos12",12);
+    socket.on("recorridos12",function (data) {      
+		console.log("recibiendo"  );
+                        recorridos[12] = jQuery.parseJSON(data);
+						console.log(recorridos[12]);					                                                           
+    }); */
+                                                    
     socket.on('error',function () { 
         $( "#aviso" ).html( "<p>Servidor fuera de servicio. Reintente luego</p>" );         
                     });
