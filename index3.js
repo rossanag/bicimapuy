@@ -54,6 +54,7 @@ var intReq, intSend;
   var paseoRambla = null;
   var paseoPeniarol = null;
   var paseoPrado = null;  
+  var curvasNivel = null;  
   
 
   fs.readFile('public/Mapas/biciamigos.js', 'utf8', function (err,data1) {
@@ -148,7 +149,7 @@ var intReq, intSend;
         paseoPrado = data10;
      
     });
-  
+         
   
   io.sockets.on('connection', function (socket) {
     socket.emit('biciamigos', biciamigos);
@@ -160,7 +161,7 @@ var intReq, intSend;
     socket.emit('seccionales',seccionales);
     socket.emit('paseoRambla',paseoRambla);
     socket.emit('paseoPeniarol',paseoPeniarol);
-    socket.emit('paseoPrado',paseoPrado);
+    socket.emit('paseoPrado',paseoPrado);    
     
             
     io.sockets.on('error', function() {
