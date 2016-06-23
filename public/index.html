@@ -1,592 +1,550 @@
 <!DOCTYPE html>
 <html>
-	<head>
-  		<meta charset="utf-8" />
-		<meta name="Rossana Guerra" content="bicimapuy" />
-		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
-
-		<title>bicimap.uy</title>
-
-
-		<link rel="stylesheet" href="leaflet.css" />
-
-	   <link rel="stylesheet" type="text/css" href="css/controlrouting.css" />
-        <link rel="stylesheet" href="css/Control.Geocoder.css" />
-        <link rel="stylesheet" href="css/leaflet-routing-machine.css" />
-
-        <link type="text/css" rel="stylesheet" href="Menu/css/demo.css" />
-       <link type="text/css" rel="stylesheet" href="Menu/css/menu.css" />
-       <link type="text/css" rel="stylesheet" href="css/fa/css/font-awesome.min.css" />
-        <link rel="stylesheet" href="css/twitter.css">
-        <link type="text/css" rel="stylesheet" href="css/mapa.css" />
-        <script src="js/jquery203.js" type="text/javascript"></script>
-        <script src="js/jquery-ui.min.js" type="text/javascript"></script>
-        <link href="css/jquery-ui.min.css" type="text/css" rel="stylesheet" />        
-        <script src="leaflet.js"></script>
-	   <link href="Menu/css/jquery.mmenu.all.css" type="text/css" rel="stylesheet" />
-	   <script src="Menu/js/jquery.mmenu.min.all.js" type="text/javascript"></script>
-	   <script src="js/leaflet-routing-machine.js" type="text/javascript"></script>
-	   <script src="js/leaflet.geometryutil.js" type="text/javascript"></script>
-	   	<script src="js/leaflet-knn.js" type="text/javascript"></script>
-	   	<script src="js/Control.Geocoder.js" type="text/javascript"></script>
-       <script src="Menu/js/menu.js" type="text/javascript"></script>
-       <script src="js/socket.io.js" type="text/javascript"></script>
-
-	</head>
+<head>
+<meta charset=utf-8 />
+<meta name="Rossana Guerra" content=bicimapuy />
+<meta name=viewport content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+<title>bicimap.uy</title>
+<link rel=stylesheet href=leaflet.css />
+<link rel=stylesheet type=text/css href=css/controlrouting.css />
+<link rel=stylesheet href=css/Control.Geocoder.css />
+<link rel=stylesheet href=css/leaflet-routing-machine.css />
+<link type=text/css rel=stylesheet href=Menu/css/demo.css />
+<link type=text/css rel=stylesheet href=Menu/css/menu.css />
+<link type=text/css rel=stylesheet href=css/fa/css/font-awesome.min.css />
+<link rel=stylesheet href=css/twitter.css>
+<link type=text/css rel=stylesheet href=css/mapa.css />
+<script src=js/jquery203.js type=text/javascript></script>
+<script src=js/jquery-ui.min.js type=text/javascript></script>
+<link href=css/jquery-ui.min.css type=text/css rel=stylesheet />
+<script src=leaflet.js></script>
+<link href=Menu/css/jquery.mmenu.all.css type=text/css rel=stylesheet />
+<script src=Menu/js/jquery.mmenu.min.all.js type=text/javascript></script>
+<script src=js/leaflet-routing-machine.js type=text/javascript></script>
+<script src=js/leaflet.geometryutil.js type=text/javascript></script>
+<script src=js/leaflet-knn.js type=text/javascript></script>
+<script src=js/Control.Geocoder.js type=text/javascript></script>
+<script src=Menu/js/menu.js type=text/javascript></script>
+<script src=js/socket.io.js type=text/javascript></script>
+</head>
 <body>
-		<script src="js/lala2.js" type="text/javascript"></script>
-		              
-        <script src="Mapas/bebederos.js"></script>
-        <script src="Mapas/bicicletarios.js"></script>        
-        <script src="Mapas/banios.js"></script>
-        <script src="Mapas/patrimonio.js"></script>
-        <script src="Mapas/cultura.js"></script>
-        <script src="Mapas/bicicircuitos.js"></script>
-        <script src="Mapas/espacios_libres.js"></script>                                
-        <script src="Mapas/curva2l.js"></script>                                
-		<script src="js/controlrouting.js" type="text/javascript"></script>
-		<script src="js/initmapa.js" type="text/javascript"></script>
-		<script src="js/adminmenus.js" type="text/javascript"></script>
-				
-			
-		<div id="map"></div>		
-
-		<div id="twitter">
-                <a class="twitter-timeline" href="https://twitter.com/bicimapuy" data-widget-id="659144567510474752" >
-                    </a>
-                 <script>
-                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-                        if(!d.getElementById(id))
-                        {
-                            js=d.createElement(s);
-                            js.id=id;
-                            js.src=p+"://platform.twitter.com/widgets.js";
-                            fjs.parentNode.insertBefore(js,fjs);
-                        }
-                    }(document,"script","twitter-wjs");
-                </script>
-
-        </div>
-        <script>$('#twitter').hide()</script>        
-        <script>(function(d,e,j,h,f,c,b){d.GoogleAnalyticsObject=f;d[f]=d[f]||function(){(d[f].q=d[f].q||[]).push(arguments)},d[f].l=1*new Date();c=e.createElement(j),b=e.getElementsByTagName(j)[0];c.async=1;c.src=h;b.parentNode.insertBefore(c,b)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create","UA-77414313-1","auto");ga("send","pageview");</script>
-		<div id="page">
-
-			<div class="header">
-				<a href="#menu"></a>				
-				<span><p class="navmenu">&nbsp;&nbsp;&nbsp;</p><img class="logo10" src="imagenes/bicimap2-32.png" /></span>
-			</div>			
-			
-			<nav id="menu">
-				<ul>					
-					<li class="pois" id="ptosi">
-         				<span><img src="imagenes/pois.png">&nbsp;&nbsp;Puntos de interés</span>
-	        				 <ul>
-								<li>
-									<span><img src="imagenes/bicicirc_24.png">&nbsp;&nbsp;Bici circuitos</span>
-									<ul>
-										<li><span>
-		            						<img src="imagenes/bicisenda.png"><a href="#pi/Bicesendas">&nbsp;&nbsp;Bicisendas</a>
-		            						<input id="bicisenda" type="checkbox" name="bic" value="Bicisenda" class="Toggle">
-		            						</span>
-		            					</li>
-		            					<li>
-	            							<span>
-	            							<img src="imagenes/ciclovia.png"><a href="#pi/Ciclovias">&nbsp;&nbsp;Ciclovías</a>
-	            							<input id="ciclovia" type="checkbox" name="ciclov" value="Ciclovia" class="Toggle">
-	            							</span>
-	            						</li>
-	            						<li>
-			            					<span>
-			            						<img src="imagenes/z30_10.png"><a href="#pi/Zona30">&nbsp;&nbsp;Zona 30</a>
-			            						<input id="zona30" type="checkbox" name="z30" value="Zona30" class="Toggle">
-			            					</span>
-	            						</li>
-	            					</ul>	
-	            				</li>	            				
-	            				<li><span><img src="imagenes/park24.png">&nbsp;&nbsp;Bicicletarios/Estaciones</span>
-	            					<ul>
-			            				<li>
-			            					<span>
-			            						<img src="imagenes/pm2.png"><a href="#pi/PM">&nbsp;&nbsp;Plan Movete</a>
-			            						<input id="planm" type="checkbox" name="pm" value="PlanM" class="Toggle">
-			            					</span>
-			            				</li>
-			            				<li>
-			            					<span>
-			            						<img src="imagenes/bicipunto2.png"><a href="#pi/Bicipuntos">&nbsp;&nbsp;Bicipuntos</a>
-			            						<input id="bicipunto" type="checkbox" name="bp" value="Bicipunto" class="Toggle">
-			            					</span>
-			            				</li>
-			            				<li>
-			            					<span>
-			            						<img src="imagenes/bike_rack3.png"><a href="#pi/Bicicletarios">&nbsp;&nbsp;Bicicletarios</a>
-			            						<input id="bicicletario" type="checkbox" name="bicic" value="Bicicletario" class="Toggle">
-			            					</span>
-			            				</li>
-	            				</ul>
-	            			   </li>
-	            				<li>
-	            					<span>
-	            						<img src="imagenes/bicici2.png"><a href="#pi/Bicicleterias">&nbsp;&nbsp;Bicicleterías</a>
-	            						<input id="bicicleteria" type="checkbox" name="bicv" value="Bicicleteria" class="Toggle">
-	            					</span>
-	            				</li>
-	            				<li>
-	            					<span>
-	            						<img src="imagenes/bicipunto2.png"><a href="#pi/Reparacion">&nbsp;&nbsp;Talleres de reparación</a>
-	            						<input id="taller" type="checkbox" name="bicr" value="Taller" class="Toggle">
-	            					</span>
-	            				</li>
-	            				<li>
-	            					<span>
-	            						<img src="imagenes/gasolinera.png"><a href="#pi/Gasolinera">&nbsp;&nbsp;Estaciones de servicio</a>
-	            						<input id="gasolinera" type="checkbox" name="gas" value="Gasolinera" class="Toggle">
-	            					</span>
-	            				</li>
-	            				<li>
-	            					<span>
-	            						<img src="imagenes/biciamigo3.png"><a href="#pi/Biciamigos">&nbsp;&nbsp;Biciamigos</a>
-	            						<input id="biciamigo" type="checkbox" name="ba" value="Biciamigo" class="Toggle">
-	            					</span>
-	            				</li>
-	            				<li>
-	            					<span>
-	            						<img src="imagenes/secpolicial.png"><a href="#pi/Seccionales">&nbsp;&nbsp;Seccionales de policía</a>
-	            						<input id="seccionales" type="checkbox" name="sec" value="Seccional" class="Toggle">
-	            					</span>
-	            				</li>
-	            				<li>
-	            					<span>
-	            						<img src="imagenes/drink2_24.png"><a href="#pi/Bebederos">&nbsp;&nbsp;Bebederos</a>
-	            						<input id="bebederos" type="checkbox" name="be" value="Bebedero" class="Toggle">
-	            					</span>
-	            				</li>
-	            				<li>
-	            					<span>
-	            						<img src="imagenes/bathroom24.png"><a href="#pi/Banios">&nbsp;&nbsp;Baños</a>
-	            						<input id="banio" type="checkbox" name="bn" value="Banio" class="Toggle">
-	            					</span>
-	            				</li>	
-	            				<li>
-	            					<span>
-	            						<img src="imagenes/pendiente2.png"><a href="#pi/Repechos">&nbsp;&nbsp;Repechos</a>
-	            						<input id="repe" type="checkbox" name="rep" value="Repechos" class="Toggle">
-	            					</span>
-	            				</li>	            					            				
-	            			</ul>
-	            			<li class="poisc" id="ptosi">
-         					<span>
-            					<img src="imagenes/gps24.png">&nbsp;&nbsp;Puntos de interés cercanos
-        				 	</span>
-	        				 <ul>
-	        				 	<li><span><img src="imagenes/bicicirc_24.png">&nbsp;&nbsp;Bici circuitos</span>
-	        				 		<ul>
-										<li>
-											<span>
-			            						<img src="imagenes/bicisenda.png"><a href="#pic/Bicesendas">&nbsp;&nbsp;Bicisendas</a>
-			            						<input id="bsrb" type="radio" name="poic" value="Bicisenda2" class="Check">
-			            					</span>
-			            				</li>
-			            				<li>
-			            					<span>
-			            						<img src="imagenes/ciclovia.png"><a href="#pic/Ciclovias">&nbsp;&nbsp;Ciclovías</a>
-			            						<input id="cvrb" type="radio" name="poic" value="Ciclovia2" class="Check">
-			            					</span>
-			            				</li>
-			            				<li>
-			            					<span>
-			            						<img src="imagenes/z30_10.png"><a href="#pic/Zona30">&nbsp;&nbsp;Zona 30</a>
-			            						<input id="z30rb" type="radio" name="poic" value="Zona302" class="Check">
-			            					</span>
-			            				</li>
-			            			</ul>	
-			            		</li>	
-			            		<li><span><img src="imagenes/park24.png">&nbsp;&nbsp;Bicicletarios/Estaciones</span>
-				            		<ul>	
-			            				<li>	            					
-			            					<span>
-			            						<img src="imagenes/pm2.png"><a href="#pic/Plan Movete">&nbsp;&nbsp;Plan Movete</a>
-			            						<input id="pmrb" type="radio" name="poic" value="PlanM2" class="Check">
-			            					</span>
-			            				</li>
-			            				<li>
-			            					<span>
-			            						<img src="imagenes/bicipunto2.png"><a href="#pic/Bicipuntos">&nbsp;&nbsp;Bicipuntos</a>
-			            						<input id="bprb" type="radio" name="poic" value="Bicipunto2" class="Check">
-			            					</span>
-			            				</li>
-			            				<li>
-			            					<span>
-			            						<img src="imagenes/bike_rack3.png"><a href="#pic/Bicicletarios">&nbsp;&nbsp;Bicicletarios</a>
-			            						<input id="bcrb" type="radio" name="poic" value="Bicicletario2" class="Check">
-			            					</span>
-			            				</li>
-		            				</ul>
-		            			</li>	
-	            				<li>
-	            					<span>
-	            						<img src="imagenes/bicici2.png"><a href="#pic/Bicicleterias">&nbsp;&nbsp;Bicicleterías</a>
-	            						<input id="bvrb" type="radio" name="poic" value="Bicicleteria2" class="Check">
-	            					</span>
-	            				</li>
-	            				<li>
-	            					<span>
-	            						<img src="imagenes/bicipunto2.png"><a href="#pic/Reparacion">&nbsp;&nbsp;Talleres de reparación</a>
-	            						<input id="brrb" type="radio" name="poic" value="Taller2" class="Check">
-	            					</span>
-	            				</li>
-	            				<li>
-	            					<span>
-	            						<img src="imagenes/gasolinera.png"><a href="#pic/Gasolinera">&nbsp;&nbsp;Estaciones de servicio</a>
-	            						<input id="gasrb" type="radio" name="poic" value="Gasolinera2" class="Check">
-	            					</span>
-	            				</li>
-	            				<li>
-	            					<span>
-	            						<img src="imagenes/biciamigo3.png"><a href="#pic/Biciamigos">&nbsp;&nbsp;Biciamigos</a>
-	            						<input id="barb" type="radio" name="poic" value="Biciamigo2" class="Check">
-	            					</span>
-	            				</li>
-	            				<li>
-	            					<span>
-	            						<img src="imagenes/secpolicial.png"><a href="#pic/Seccionales">&nbsp;&nbsp;Seccionales de policía</a>
-	            						<input id="serb" type="radio" name="poic" value="Seccional2" class="Check">
-	            					</span>
-	            				</li>
-	            				<li>
-	            					<span>
-	            						<img src="imagenes/drink2_24.png"><a href="#pic/Bebederos">&nbsp;&nbsp;Bebederos</a>
-	            						<input id="berb"type="radio" name="poic" value="Bebedero2" class="Check">
-	            					</span>
-	            				</li>
-	            				<li>
-	            					<span>
-	            						<img src="imagenes/bathroom24.png"><a href="#pic/Banios">&nbsp;&nbsp;Baños</a>
-	            						<input id="bnrb" type="radio" name="poic" value="Banio2" class="Check">
-	            					</span>
-	            				</li>
-	            			</ul>
-							<li class="rutear"><span><img src="imagenes/ruteo2.png" />
-	            					<a href="#" class="ruteo">&nbsp;&nbsp;Ir de A a B</a></span>
-	            					<input type="checkbox" name="ruteo" class="Toggle">
-	            			</li>							
-	            			<li><span><img src="imagenes/turism.png">
-	            					&nbsp;&nbsp;Paseos turísticos</span>
-	            				<ul>
-	            					<li>
-	            						<a href="#pt/CVyRambla">Ciudad Vieja y rambla</a>
-	            						<input type="checkbox" name="pcvr" value="rambla" class="Toggle">
-	            					</li>
-	            					<li>
-	            						<span>
-	            						<a href="#pt/Peniarol">Barrio Peñarol</a>
-	            						<input type="checkbox" name="ppen" value="peniarol" class="Toggle">
-	            						</span>
-	            					</li>
-	            					<li><span>
-	            						<a href="#pt/Prado">Paso romántico - Prado</a>
-	            						<input type="checkbox" name="prom" value="prado" class="Toggle">
-	            					</span>
-	            					</li>
-	            					<li>
-		            					<span>
-		            						<img src="imagenes/patrimonio2.png" /--><a href="#pt/Patrimonio">&nbsp;&nbsp;Lugares patrimoniales</a>
-		            						<input type="checkbox" name="ppat" value="patrimonio" class="Toggle">
-		            					</span>
-	            					</li>
-	            					<li>
-		            					<span>
-		            						<img src="imagenes/greentrees2.png"><a href="#pt/EspVerdes">&nbsp;&nbsp;Espacios verdes</a>
-		            						<input type="checkbox" name="pver" value="espverdes" class="Toggle">
-		            					</span>
-	            					</li>
-	            					<li>
-		            					<span>
-		            						<img src="imagenes/people2_24.png"><a href="#pt/Museos">&nbsp;&nbsp;Espacios culturales/Museos</a>
-		            						<input type="checkbox" name="pmus" value="museos" class="Toggle">
-		            					</span>
-	            					</li>
-	            					<li>
-		            					<span>
-		            						<img src="imagenes/movie1.png"><a href="#pt/Cines">&nbsp;&nbsp;Cines</a>
-		            						<input type="checkbox" name="pcin" value="cines" class="Toggle">
-		            					</span>
-	            					</li>
-	            					<li>
-		            					<span>
-		            						<img src="imagenes/two_2_24.png"><a href="#pt/Teatros">&nbsp;&nbsp;Teatros/Auditorios</a>
-		            						<input type="checkbox" name="ptea" value="teatros" class="Toggle">
-		            					</span>
-	            					</li>
-	            				</ul>
-	            			</li>	            			
-	            			<li class="recorridos" id="idRec">
-         				<span><img src="imagenes/ruta24a.png">&nbsp;&nbsp;Rutas sugeridas</span>
-	        				 <ul>
-								<li><span>Rápidas</span>
-									<ul>
-										<li><span><a href="#idRec">&nbsp;Cordón a Sayago</a>
-		            						<input id="corsay" type="checkbox" name="csy" value="Rapida" class="Toggle">
-		            						</span>
-		            					</li>
-		            					<li>
-	            							<span><a href="#idRec">&nbsp;Sayago a Cordón</a>
-	            							<input id="saycor" type="checkbox" name="sayc" value="Rapida" class="Toggle">
-	            							</span>
-	            						</li>
-	            						<li>
-	            							<span>
-	            							<a href="#idRec">&nbsp;Toledo a Fac. de Ingeniería</a>
-	            							<input id="toleFing" type="checkbox" name="tolFing" value="Rapida" class="Toggle">
-	            							</span>
-	            						</li>
-	            						<li>
-	            							<span>
-	            							<a href="#idRec">&nbsp;Reducto a Fac. de Ingeniería</a>
-	            							<input id="reduFing" type="checkbox" name="redFing" value="Rapida" class="Toggle">
-	            							</span>
-	            						</li>
-	            						<li>
-			            					<span>
-			            						<a href="#idRec">&nbsp;Ciudad Vieja a Prado</a>
-			            						<input id="cviPra" type="checkbox" name="cvPra" value="Rapida" class="Toggle">
-			            					</span>
-	            						</li>
-	            						<li>
-			            					<span>
-			            						<a href="#idRec">&nbsp;Prado a Ciudad Vieja</a>
-			            						<input id="pradCV" type="checkbox" name="praCV" value="Rapida" class="Toggle">
-			            					</span>
-	            						</li>
-	            						<li>
-			            					<span>
-			            						<a href="#idRec">&nbsp;Pque Rodó a Prado</a>
-			            						<input id="pqePra" type="checkbox" name="pqPra" value="Rapida" class="Toggle">
-			            					</span>
-	            						</li>
-	            						<li>
-			            					<span>
-			            						<a href="#idRec">&nbsp;Ciudad Vieja a Pque. Rodó</a>
-			            						<input id="cviPque" type="checkbox" name="cvPque" value="Rapida" class="Toggle">
-			            					</span>
-	            						</li>
-	            						<li>
-			            					<span>
-			            						<a href="#idRec">&nbsp;Pque. Rodó a Ciudad Vieja</a>
-			            						<input id="pqeCV" type="checkbox" name="pqCV" value="Rapida" class="Toggle">
-			            					</span>
-	            						</li>
-	            						<li>
-			            					<span>
-			            						<a href="#idRec">&nbsp;Pocitos a Ciudad Vieja</a>
-			            						<input id="pociCV" type="checkbox" name="pocCV" value="Rapida" class="Toggle">
-			            					</span>
-	            						</li>
-	            						<li>
-			            					<span>
-			            						<a href="#idRec">&nbsp;Ciudad Vieja a Pocitos</a>
-			            						<input id="CVPoci" type="checkbox" name="CVPoc" value="Rapida" class="Toggle">
-			            					</span>
-	            						</li>
-	            					</ul>	
-	            				</li>	            				
-	            				<li><span>Dificultad intermedia</span>
-	            					<ul>
-			            				<li>
-			            					<span>
-			            						<a href="">&nbsp;Ciudad Vieja a Obelisco</a>
-			            						<input id="cvOb" type="checkbox" name="cvOb" value="Intermedio" class="Toggle">
-			            					</span>
-			            				</li>
-			            				
-	            				    </ul>
-	            			    </li>
-	            			</ul>
-</li>	
-	            			<li><span><img src="imagenes/friends.png">&nbsp;&nbsp;Amigos de la bici</span>
-								<ul>
-									<li><span>
-									<a href="https://www.facebook.com/groups/urubike/?fref=ts" target="_blank">Urubike
-									</a><i class="fa fa-facebook"></i></span>
-									<li><span>
-										<a href="https://www.facebook.com/Unibiciur/?fref=ts" target="_blank">Unibiciur</a>
-										<i class="fa fa-facebook"></i></span>
-									</li>
-									<li><span>
-										<a href="https://www.facebook.com/Libera-tu-bicicleta-Uruguay-611146365578804/?fref=ts" target="_blank">Liberá tu bici</a>
-										<i class="fa fa-facebook"></i></span>
-									</li>
-									<li><span>
-										<a href="http://www.liberatubicicleta.org/" target="_blank">Liberá tu bici</a>
-										<i class="fa fa-globe"></i></span>
-									</li>
-
-									<li><span>
-										<a href="https://www.facebook.com/masacriticamvd/?fref=ts" target="_blank">Masa Crítica</a>
-										<i class="fa fa-facebook"></i></span>
-									</li>
-									<li><span>
-										<a href="https://www.facebook.com/BICICLETAS-VINTAGE-URUGUAY-228618817200904/?fref=ts" target="_blank">Bicicletas vintage</a>
-										<i class="fa fa-facebook"></i></span>
-									</li>
-									<li><span>
-										<a href="http://www.bicitourmontevideo.uy/" target="_blank">Bicitour Mvd</a>
-										<i class="fa fa-globe"></i></span>
-									</li>
-									<li><span><a href="https://www.facebook.com/ciclovidaonline/?fref=ts" target="_blank">Ciclovida</a>
-										<i class="fa fa-facebook"></i></span>
-									</li>
-									<li><span><a href="https://www.facebook.com/Espacio-Bici-amigo-101158023376308/?fref=ts" target="_blank">Espacio Bici Amigo</a>
-										<i class="fa fa-facebook"></i></span>
-									</li>									
-									<li><span><a href="https://www.facebook.com/MVDEnBici/?fref=ts" target="_blank">Montevideo en bici</a>
-										<i class="fa fa-facebook"></i></span>
-									</li>
-									<li><span><a href="http://radiopedal.uy/" target="_blank">Radio Pedal</a>
-										<i class="fa fa-globe"></i></span>
-									</li>
-									
-									<li><span><a href="https://www.workaway.info/511331214456-es.html" target="_blank"> Casa abierta del cicloturista</a>
-										<i class="fa fa-globe"></i></span>
-									</li>
-
-								</ul>
-							</li>
-							<li><span><img src="imagenes/pf2.png">&nbsp;&nbsp;P + F</span>
-								<ul>
-									<ul><li><span>Bicisicicruitos y Puntos de interés</span>
-										<li><span>¿Qué son las bicisendas?</span>
-										<ul><li>
-										 <p class="texto">Carril sobre la vereda destinado al tránsito de bicicletas.</p></li></ul>
-										</li>
-										<li><span>¿Qué son las ciclovías?</span>
-										<ul><li>
-											<p class="texto">Carriles marcados en la calle para tránsito exclusivo de bicicletas.</p>
-										</li></ul>
-										</li>
-										<li><span>¿Qué es la Zona 30?</span>
-											<ul><li>
-												<p class="texto">
-	                                            	Calles donde la máxima velocidad permitida es de 30km/h para favorecer la convivencia entre automotores y ciclistas.
-	                                        	</p>
-	                                    	</li></ul>
-										</li>
-										<li><span>¿Qué son los bicipuntos?</span>
-											<ul><li>
-												<p class="texto">
-	                                            	Centros de Urubike que ofrecen gratuitamente caja de herramientas y un porta bici para reparación ligera
-	                                        	</p>
-	                                    	</li></ul>
-										</li>
-										<li><span>¿Qué son los biciamigos?</span>
-											<ul><li>
-												<p class="texto">Locales comerciales en todas sus variantes que cuentan con facilidades como estacionamiento, herramientas para mantenimiento, etc <b>para quienes concurren al lugar en bicicleta. No son públicos necesariamente</b>, eso dependerá de la política de cada lugar.</p>
-	                                    	</li></ul>
-										</li>
-										<li><span>Plan Movete</span>
-											<ul><li>
-												<p class="texto"> Estaciones para el alquiler de bicicletas de la IMM </p>
-	                                    	</li></ul>
-										</li>
-										</li>
-										<li><span>Diferencia entre bicicletería y taller de reparación</span>
-										<ul><li>
-											<p class="texto">Una bicicletería vende accesorios y bicicletas pero no necesariamente repara, un taller de reparación sí lo hace. <br>
-												Hay casos donde una bicicletería también es taller de reparación.  En ese caso figura en ambas categorías.</p>
-										</li></ul>
-									</li>
-									<li><span>¿Cómo sé el sentido de un repecho?</span>
-										<ul><li>
-											<p class="texto">El sentido está indicado por un marcador al comienzo del repecho que indica el largo del mismo (no la elevación).<br>										
-												Algunos repechos podrán ser mas difíciles o no dependiendo del ciclista, pero está bueno señalarlos.
-												 </p>
-										</li></ul> 
-									</li>
-								</ul>
-									<ul><li><span>Ruteo y Geolocalización></span>
-										<li><span>¿Qué tan exacto es el ruteo?</span>
-											<ul><li>
-											<p class="texto">
-	                                        Es un estimativo eficaz del camino mas corto entre dos puntos, no el más rápido, ni más cómodo necesariamente. <br>Esto último depende de aspectos como el volúmen de tránsito en esa ruta, el estado y tipo de camino, cantidad de semáforos, tipo de bicicleta, etc.<br>
-	                                        No siempre el camino contempla los bicicircuitos (será mejorado).
-	                                        <br><br>
-	                                        El objetivo es darte a conocer un camino correcto entre varios que respete el sentido de las calles, y que tu experiencia si es posible haga el resto.</p>
-											</li></ul>
-										</li>
-										li><span>¿Cómo evitar caminos en el ruteo?</span>
-											<ul><li>
-											<p class="texto">De momento no es posible, pero podés<br>indicar qué calles deseás incluir en tu recorrido.<br><b>Antes de seleccionar el destino</b> con el signo "+" agregás las calles por las cuales deseás pasar.</p>
-											</li></ul>
-										</li>
-										<li><span>Sobre los puntos de interés más cercanos</span>
-											<ul><li>
-												<p class="texto">Toman como base tu geolocalización, pero moviendo el marcador podés cambiar el lugar que deseás tomar como referencia para encontrar los puntos cercanos de tu interés.</p>
-											</li></ul></li>	
-										<li><span>No funciona la geolocalización</span>
-											<ul><li>
-												<p class="texto">En ese caso, para encontra el punto<br> más cercano, marcá en el mapa (aparece un marcador azul) <br> el lugar que deseás tener como referencia para tu búsqueda.
-											    </p>
-											</li></ul></li>		
-									</li></ul>									
-									
-									<li><span>¿Puedo dejar la bici en los parkings?</span>
-										<ul><li>
-											<p class="texto">De acuerdo al <a class="link" href="http://normativa.montevideo.gub.uy/articulos/87984#articulo_87986" target="_blank" id="dec"> Decreto de la Junta Departamental de Montevideo Nº 34.837</a> cada 5 automóviles debe haber un espacio para bicicletas a cambio de una contraprestación económica regulada que no supere el 10% de la tarifa para automóviles.<br><b> En revisión.</b></p>
-										</li></ul>
-									</li>
-									<li><span>¿Con qué frecuencia se actualizan los datos?</span>
-										<ul><li>
-											<p class="texto">Se chequea regularmente todas las semanas (o menos) la vigencia de los mismos. Los datos están actualizados de acuerdo a la información que brinda la IMM (ciclovías, bicisendas, zona30, mobiliario urbano, etc). <br> Unibici (ciclovías), Urubike (bicipuntos) y Ciclovida (biciamigos) y algunos otros que personalmente recolecté y agregué a los anteriores.<br><br>
-											Podés colaborar corrigiendo o agregando datos que no figuren aún en la app/web a través del formulario que está en el ítem <b>Sugerencias</b> del menú para ese fin.</p>
-										</li></ul>
-									</li>
-								</ul>
-							</li>
-						<!--/ul-->
-
-						<li><span><a href="https://docs.google.com/forms/d/1WJC7QVbtDAS6HTX78Cs5QnppZspIxlswdENkmS7OH1A/viewform?usp=send_form" target="_blank">
-							<img src="imagenes/sugerencia.png">&nbsp;&nbsp;Sugerencias</a></span>
-							
-						</li>
-						<li><span><img src="imagenes/info5.png">&nbsp;&nbsp;Curvas de nivel (alturas)</span>
-							<ul>
-								<li><span><a href="#idcvNivel">&nbsp;&nbsp;Elevaciones</a>
-									<input id="cvNivel" type="checkbox" name="cvNivel" value="cNivel" class="Toggle">					
-												</span>
-								</li>        					
-							</ul>
-        				</li>
-        				<li><span><img src="imagenes/info5.png">&nbsp;&nbsp;Acerca de</span>
-        				<ul>
-        					<li><p class=texto><b>bicimap.uy</b> es una web y app <i>colaborativa</i> desde su inicio, muchas personas, entes y organizaciones dieron ideas e información para hacerla. Están invitados a colaborar para mejorar su contenido accediendo al Item "Sugerencias" del menú.<br>
-							Es una <i>versión beta</i> (en mejora/corrección permanente) funcional que reune la información mímima necesaria para que los ciclistas urbanos (turistas o locales) sepan con qué cuentan en la ciudad y los haga sentir más acompañados al subirse a la bici.<br><br>
-							Actualmente sólo incluye a la ciudad de Montevideo, está en mis planes incluir otras ciudades en un futuro, que espero, sea cercano.<br><br>
-							Versión 1.0 beta :) <br><b>Puede visualizarse en la mayoría de celulares/tablets , se irá corrigiendo a todos los dispositivos móviles, y además la app</b><br><br>
-        					Diseño del logo: <span><a href="http://www.fyslab.net/" target="_blank">
-							<b>Fabian Barros</b></a></span>
-							<br><br>
-        						Desarrollo: <b>Rossana Guerra</b> </p>
-        					</li>
-        				</ul>
-        				</li>
-      			</ul>      			
-			</nav>						
-		</div>
-		<div id="dialogo" title="Info">										
-  			<p><font color="#3410E8">Bicisendas&nbsp;&nbsp;▬▬</font></p>
-      		<p><font color="#098731">Ciclovías&nbsp;&nbsp;&nbsp;  ▬▬</font></p>
-      		<p><font color="#F28124">Zona 30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    ▬▬</font></p>      		
-      		<p><font color="#E31246">Repechos &nbsp;▬▬</font></p>      		
-      		      		
-      		<br> 
-      		<span></span><img src="imagenes/espverdes.png"><img src="imagenes/patrimonio.png"></span><br>
-      		Para mostrar los <b>espacios verdes y lugares patrimoniales</b> hacé click sobre el mapa y te mostrará los más cercanos a la zona donde se encuentra el marcador.<br><br>
-			<img src=imagenes/info2_16.png><br>
-			Hacé click sobre el ícono del menú para mostrar/esconder la ventana de información.<br><br><img src=imagenes/twitter_16.png></i><br>
-			Hacé click sobre el ícono del menú para mostrar/esconder el timeline de Twitter.      		      	
-		</div>
-		<script type="text/javascript">loadData()</script>		
-		<button class="btnBorrar" onclick="esconderMostrar()"></button>
-
-	</body>
+<script src=js/lala2.js type=text/javascript></script>
+<script src=Mapas/bebederos.js></script>
+<script src=Mapas/bicicletarios.js></script>
+<script src=Mapas/banios.js></script>
+<script src=Mapas/patrimonio.js></script>
+<script src=Mapas/cultura.js></script>
+<script src=Mapas/bicicircuitos.js></script>
+<script src=Mapas/espacios_libres.js></script>
+<script src=js/controlrouting.js type=text/javascript></script>
+<script src=js/initmapa.js type=text/javascript></script>
+<script src=js/adminmenus.js type=text/javascript></script>
+<div id=map></div>
+<div id=twitter>
+<a class=twitter-timeline href=https://twitter.com/bicimapuy data-widget-id=659144567510474752>
+</a>
+<script>!function(f,a,g){var e,b=f.getElementsByTagName(a)[0],c=/^http:/.test(f.location)?"http":"https";if(!f.getElementById(g)){e=f.createElement(a);e.id=g;e.src=c+"://platform.twitter.com/widgets.js";b.parentNode.insertBefore(e,b)}}(document,"script","twitter-wjs");</script>
+</div>
+<script>$("#twitter").hide();</script>
+<script>(function(m,l,g,i,k,n,a){m.GoogleAnalyticsObject=k;m[k]=m[k]||function(){(m[k].q=m[k].q||[]).push(arguments)},m[k].l=1*new Date();n=l.createElement(g),a=l.getElementsByTagName(g)[0];n.async=1;n.src=i;a.parentNode.insertBefore(n,a)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create","UA-77414313-1","auto");ga("send","pageview");</script>
+<div id=page>
+<div class=header>
+<a href=#menu></a>
+<span><p class=navmenu>&nbsp;&nbsp;&nbsp;</p><img class=logo10 src=imagenes/bicimap2-32.png /></span>
+</div>
+<nav id=menu>
+<ul>
+<li class=pois id=ptosi>
+<span><img src=imagenes/pois.png>&nbsp;&nbsp;Puntos de interés</span>
+<ul>
+<li>
+<span><img src=imagenes/bicicirc_24.png>&nbsp;&nbsp;Bici circuitos</span>
+<ul>
+<li><span>
+<img src=imagenes/bicisenda.png><a href=#pi/Bicesendas>&nbsp;&nbsp;Bicisendas</a>
+<input id=bicisenda type=checkbox name=bic value=Bicisenda class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/ciclovia.png><a href=#pi/Ciclovias>&nbsp;&nbsp;Ciclovías</a>
+<input id=ciclovia type=checkbox name=ciclov value=Ciclovia class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/z30_10.png><a href=#pi/Zona30>&nbsp;&nbsp;Zona 30</a>
+<input id=zona30 type=checkbox name=z30 value=Zona30 class=Toggle>
+</span>
+</li>
+</ul>
+</li>
+<li><span><img src=imagenes/park24.png>&nbsp;&nbsp;Bicicletarios/Estaciones</span>
+<ul>
+<li>
+<span>
+<img src=imagenes/pm2.png><a href=#pi/PM>&nbsp;&nbsp;Plan Movete</a>
+<input id=planm type=checkbox name=pm value=PlanM class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/bicipunto2.png><a href=#pi/Bicipuntos>&nbsp;&nbsp;Bicipuntos</a>
+<input id=bicipunto type=checkbox name=bp value=Bicipunto class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/bike_rack3.png><a href=#pi/Bicicletarios>&nbsp;&nbsp;Bicicletarios</a>
+<input id=bicicletario type=checkbox name=bicic value=Bicicletario class=Toggle>
+</span>
+</li>
+</ul>
+</li>
+<li>
+<span>
+<img src=imagenes/bicici2.png><a href=#pi/Bicicleterias>&nbsp;&nbsp;Bicicleterías</a>
+<input id=bicicleteria type=checkbox name=bicv value=Bicicleteria class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/bicipunto2.png><a href=#pi/Reparacion>&nbsp;&nbsp;Talleres de reparación</a>
+<input id=taller type=checkbox name=bicr value=Taller class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/gasolinera.png><a href=#pi/Gasolinera>&nbsp;&nbsp;Estaciones de servicio</a>
+<input id=gasolinera type=checkbox name=gas value=Gasolinera class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/biciamigo3.png><a href=#pi/Biciamigos>&nbsp;&nbsp;Biciamigos</a>
+<input id=biciamigo type=checkbox name=ba value=Biciamigo class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/secpolicial.png><a href=#pi/Seccionales>&nbsp;&nbsp;Seccionales de policía</a>
+<input id=seccionales type=checkbox name=sec value=Seccional class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/drink2_24.png><a href=#pi/Bebederos>&nbsp;&nbsp;Bebederos</a>
+<input id=bebederos type=checkbox name=be value=Bebedero class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/bathroom24.png><a href=#pi/Banios>&nbsp;&nbsp;Baños</a>
+<input id=banio type=checkbox name=bn value=Banio class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/pendiente2.png><a href=#pi/Repechos>&nbsp;&nbsp;Repechos</a>
+<input id=repe type=checkbox name=rep value=Repechos class=Toggle>
+</span>
+</li>
+</ul>
+<li class=poisc id=ptosi>
+<span>
+<img src=imagenes/gps24.png>&nbsp;&nbsp;Puntos de interés cercanos
+</span>
+<ul>
+<li><span><img src=imagenes/bicicirc_24.png>&nbsp;&nbsp;Bici circuitos</span>
+<ul>
+<li>
+<span>
+<img src=imagenes/bicisenda.png><a href=#pic/Bicesendas>&nbsp;&nbsp;Bicisendas</a>
+<input id=bsrb type=radio name=poic value=Bicisenda2 class=Check>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/ciclovia.png><a href=#pic/Ciclovias>&nbsp;&nbsp;Ciclovías</a>
+<input id=cvrb type=radio name=poic value=Ciclovia2 class=Check>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/z30_10.png><a href=#pic/Zona30>&nbsp;&nbsp;Zona 30</a>
+<input id=z30rb type=radio name=poic value=Zona302 class=Check>
+</span>
+</li>
+</ul>
+</li>
+<li><span><img src=imagenes/park24.png>&nbsp;&nbsp;Bicicletarios/Estaciones</span>
+<ul>
+<li>
+<span>
+<img src=imagenes/pm2.png><a href="#pic/Plan Movete">&nbsp;&nbsp;Plan Movete</a>
+<input id=pmrb type=radio name=poic value=PlanM2 class=Check>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/bicipunto2.png><a href=#pic/Bicipuntos>&nbsp;&nbsp;Bicipuntos</a>
+<input id=bprb type=radio name=poic value=Bicipunto2 class=Check>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/bike_rack3.png><a href=#pic/Bicicletarios>&nbsp;&nbsp;Bicicletarios</a>
+<input id=bcrb type=radio name=poic value=Bicicletario2 class=Check>
+</span>
+</li>
+</ul>
+</li>
+<li>
+<span>
+<img src=imagenes/bicici2.png><a href=#pic/Bicicleterias>&nbsp;&nbsp;Bicicleterías</a>
+<input id=bvrb type=radio name=poic value=Bicicleteria2 class=Check>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/bicipunto2.png><a href=#pic/Reparacion>&nbsp;&nbsp;Talleres de reparación</a>
+<input id=brrb type=radio name=poic value=Taller2 class=Check>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/gasolinera.png><a href=#pic/Gasolinera>&nbsp;&nbsp;Estaciones de servicio</a>
+<input id=gasrb type=radio name=poic value=Gasolinera2 class=Check>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/biciamigo3.png><a href=#pic/Biciamigos>&nbsp;&nbsp;Biciamigos</a>
+<input id=barb type=radio name=poic value=Biciamigo2 class=Check>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/secpolicial.png><a href=#pic/Seccionales>&nbsp;&nbsp;Seccionales de policía</a>
+<input id=serb type=radio name=poic value=Seccional2 class=Check>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/drink2_24.png><a href=#pic/Bebederos>&nbsp;&nbsp;Bebederos</a>
+<input id="berb"type=radio name=poic value=Bebedero2 class=Check>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/bathroom24.png><a href=#pic/Banios>&nbsp;&nbsp;Baños</a>
+<input id=bnrb type=radio name=poic value=Banio2 class=Check>
+</span>
+</li>
+</ul>
+<li class=rutear><span><img src=imagenes/ruteo2.png />
+<a href=# class=ruteo>&nbsp;&nbsp;Ir de A a B</a></span>
+<input type=checkbox name=ruteo class=Toggle>
+</li>
+<li><span><img src=imagenes/turism.png>
+&nbsp;&nbsp;Paseos turísticos</span>
+<ul>
+<li>
+<a href=#pt/CVyRambla>Ciudad Vieja y rambla</a>
+<input type=checkbox name=pcvr value=rambla class=Toggle>
+</li>
+<li>
+<span>
+<a href=#pt/Peniarol>Barrio Peñarol</a>
+<input type=checkbox name=ppen value=peniarol class=Toggle>
+</span>
+</li>
+<li><span>
+<a href=#pt/Prado>Paso romántico - Prado</a>
+<input type=checkbox name=prom value=prado class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/patrimonio2.png /--><a href=#pt/Patrimonio>&nbsp;&nbsp;Lugares patrimoniales</a>
+<input type=checkbox name=ppat value=patrimonio class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/greentrees2.png><a href=#pt/EspVerdes>&nbsp;&nbsp;Espacios verdes</a>
+<input type=checkbox name=pver value=espverdes class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/people2_24.png><a href=#pt/Museos>&nbsp;&nbsp;Espacios culturales/Museos</a>
+<input type=checkbox name=pmus value=museos class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/movie1.png><a href=#pt/Cines>&nbsp;&nbsp;Cines</a>
+<input type=checkbox name=pcin value=cines class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<img src=imagenes/two_2_24.png><a href=#pt/Teatros>&nbsp;&nbsp;Teatros/Auditorios</a>
+<input type=checkbox name=ptea value=teatros class=Toggle>
+</span>
+</li>
+</ul>
+</li>
+<li class=recorridos id=idRec>
+<span><img src=imagenes/ruta24a.png>&nbsp;&nbsp;Rutas sugeridas</span>
+<ul>
+<li><span>Rápidas</span>
+<ul>
+<li><span><a href=#idRec>&nbsp;Cordón a Sayago</a>
+<input id=corsay type=checkbox name=csy value=Rapida class=Toggle>
+</span>
+</li>
+<li>
+<span><a href=#idRec>&nbsp;Sayago a Cordón</a>
+<input id=saycor type=checkbox name=sayc value=Rapida class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<a href=#idRec>&nbsp;Toledo a Fac. de Ingeniería</a>
+<input id=toleFing type=checkbox name=tolFing value=Rapida class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<a href=#idRec>&nbsp;Reducto a Fac. de Ingeniería</a>
+<input id=reduFing type=checkbox name=redFing value=Rapida class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<a href=#idRec>&nbsp;Ciudad Vieja a Prado</a>
+<input id=cviPra type=checkbox name=cvPra value=Rapida class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<a href=#idRec>&nbsp;Prado a Ciudad Vieja</a>
+<input id=pradCV type=checkbox name=praCV value=Rapida class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<a href=#idRec>&nbsp;Pque Rodó a Prado</a>
+<input id=pqePra type=checkbox name=pqPra value=Rapida class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<a href=#idRec>&nbsp;Ciudad Vieja a Pque. Rodó</a>
+<input id=cviPque type=checkbox name=cvPque value=Rapida class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<a href=#idRec>&nbsp;Pque. Rodó a Ciudad Vieja</a>
+<input id=pqeCV type=checkbox name=pqCV value=Rapida class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<a href=#idRec>&nbsp;Pocitos a Ciudad Vieja</a>
+<input id=pociCV type=checkbox name=pocCV value=Rapida class=Toggle>
+</span>
+</li>
+<li>
+<span>
+<a href=#idRec>&nbsp;Ciudad Vieja a Pocitos</a>
+<input id=CVPoci type=checkbox name=CVPoc value=Rapida class=Toggle>
+</span>
+</li>
+</ul>
+</li>
+<li><span>Dificultad intermedia</span>
+<ul>
+<li>
+<span>
+<a href>&nbsp;Ciudad Vieja a Obelisco</a>
+<input id=cvOb type=checkbox name=cvOb value=Intermedio class=Toggle>
+</span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span><img src=imagenes/friends.png>&nbsp;&nbsp;Amigos de la bici</span>
+<ul>
+<li><span>
+<a href="https://www.facebook.com/groups/urubike/?fref=ts" target=_blank>Urubike
+</a><i class="fa fa-facebook"></i></span>
+<li><span>
+<a href="https://www.facebook.com/Unibiciur/?fref=ts" target=_blank>Unibiciur</a>
+<i class="fa fa-facebook"></i></span>
+</li>
+<li><span>
+<a href="https://www.facebook.com/Libera-tu-bicicleta-Uruguay-611146365578804/?fref=ts" target=_blank>Liberá tu bici</a>
+<i class="fa fa-facebook"></i></span>
+</li>
+<li><span>
+<a href=http://www.liberatubicicleta.org/ target=_blank>Liberá tu bici</a>
+<i class="fa fa-globe"></i></span>
+</li>
+<li><span>
+<a href="https://www.facebook.com/masacriticamvd/?fref=ts" target=_blank>Masa Crítica</a>
+<i class="fa fa-facebook"></i></span>
+</li>
+<li><span>
+<a href="https://www.facebook.com/BICICLETAS-VINTAGE-URUGUAY-228618817200904/?fref=ts" target=_blank>Bicicletas vintage</a>
+<i class="fa fa-facebook"></i></span>
+</li>
+<li><span>
+<a href=http://www.bicitourmontevideo.uy/ target=_blank>Bicitour Mvd</a>
+<i class="fa fa-globe"></i></span>
+</li>
+<li><span><a href="https://www.facebook.com/ciclovidaonline/?fref=ts" target=_blank>Ciclovida</a>
+<i class="fa fa-facebook"></i></span>
+</li>
+<li><span><a href="https://www.facebook.com/Espacio-Bici-amigo-101158023376308/?fref=ts" target=_blank>Espacio Bici Amigo</a>
+<i class="fa fa-facebook"></i></span>
+</li>
+<li><span><a href="https://www.facebook.com/MVDEnBici/?fref=ts" target=_blank>Montevideo en bici</a>
+<i class="fa fa-facebook"></i></span>
+</li>
+<li><span><a href=http://radiopedal.uy/ target=_blank>Radio Pedal</a>
+<i class="fa fa-globe"></i></span>
+</li>
+<li><span><a href=https://www.workaway.info/511331214456-es.html target=_blank> Casa abierta del cicloturista</a>
+<i class="fa fa-globe"></i></span>
+</li>
+</ul>
+</li>
+<li><span><img src=imagenes/pf2.png>&nbsp;&nbsp;P + F</span>
+<ul>
+<ul><li><span>Bicisicicruitos y Puntos de interés</span>
+<li><span>¿Qué son las bicisendas?</span>
+<ul><li>
+<p class=texto>Carril sobre la vereda destinado al tránsito de bicicletas.</p></li></ul>
+</li>
+<li><span>¿Qué son las ciclovías?</span>
+<ul><li>
+<p class=texto>Carriles marcados en la calle para tránsito exclusivo de bicicletas.</p>
+</li></ul>
+</li>
+<li><span>¿Qué es la Zona 30?</span>
+<ul><li>
+<p class=texto>
+Calles donde la máxima velocidad permitida es de 30km/h para favorecer la convivencia entre automotores y ciclistas.
+</p>
+</li></ul>
+</li>
+<li><span>¿Qué son los bicipuntos?</span>
+<ul><li>
+<p class=texto>
+Centros de Urubike que ofrecen gratuitamente caja de herramientas y un porta bici para reparación ligera
+</p>
+</li></ul>
+</li>
+<li><span>¿Qué son los biciamigos?</span>
+<ul><li>
+<p class=texto>Locales comerciales en todas sus variantes que cuentan con facilidades como estacionamiento, herramientas para mantenimiento, etc <b>para quienes concurren al lugar en bicicleta. No son públicos necesariamente</b>, eso dependerá de la política de cada lugar.</p>
+</li></ul>
+</li>
+<li><span>Plan Movete</span>
+<ul><li>
+<p class=texto> Estaciones para el alquiler de bicicletas de la IMM </p>
+</li></ul>
+</li>
+</li>
+<li><span>Diferencia entre bicicletería y taller de reparación</span>
+<ul><li>
+<p class=texto>Una bicicletería vende accesorios y bicicletas pero no necesariamente repara, un taller de reparación sí lo hace. <br>
+Hay casos donde una bicicletería también es taller de reparación. En ese caso figura en ambas categorías.</p>
+</li></ul>
+</li>
+<li><span>¿Cómo sé el sentido de un repecho?</span>
+<ul><li>
+<p class=texto>El sentido está indicado por un marcador al comienzo del repecho que indica el largo del mismo (no la elevación).<br>
+Algunos repechos podrán ser mas difíciles o no dependiendo del ciclista, pero está bueno señalarlos.
+</p>
+</li></ul>
+</li>
+</ul>
+<ul><li><span>Ruteo y Geolocalización></span>
+<li><span>¿Qué tan exacto es el ruteo?</span>
+<ul><li>
+<p class=texto>
+Es un estimativo eficaz del camino mas corto entre dos puntos, no el más rápido, ni más cómodo necesariamente. <br>Esto último depende de aspectos como el volúmen de tránsito en esa ruta, el estado y tipo de camino, cantidad de semáforos, tipo de bicicleta, etc.<br>
+No siempre el camino contempla los bicicircuitos (será mejorado).
+<br><br>
+El objetivo es darte a conocer un camino correcto entre varios que respete el sentido de las calles, y que tu experiencia si es posible haga el resto.</p>
+</li></ul>
+</li>
+li><span>¿Cómo evitar caminos en el ruteo?</span>
+<ul><li>
+<p class=texto>De momento no es posible, pero podés<br>indicar qué calles deseás incluir en tu recorrido.<br><b>Antes de seleccionar el destino</b> con el signo "+" agregás las calles por las cuales deseás pasar.</p>
+</li></ul>
+</li>
+<li><span>Sobre los puntos de interés más cercanos</span>
+<ul><li>
+<p class=texto>Toman como base tu geolocalización, pero moviendo el marcador podés cambiar el lugar que deseás tomar como referencia para encontrar los puntos cercanos de tu interés.</p>
+</li></ul></li>
+<li><span>No funciona la geolocalización</span>
+<ul><li>
+<p class=texto>En ese caso, para encontra el punto<br> más cercano, marcá en el mapa (aparece un marcador azul) <br> el lugar que deseás tener como referencia para tu búsqueda.
+</p>
+</li></ul></li>
+</li></ul>
+<li><span>¿Puedo dejar la bici en los parkings?</span>
+<ul><li>
+<p class=texto>De acuerdo al <a class=link href=http://normativa.montevideo.gub.uy/articulos/87984#articulo_87986 target=_blank id=dec> Decreto de la Junta Departamental de Montevideo Nº 34.837</a> cada 5 automóviles debe haber un espacio para bicicletas a cambio de una contraprestación económica regulada que no supere el 10% de la tarifa para automóviles.<br><b> En revisión.</b></p>
+</li></ul>
+</li>
+<li><span>¿Con qué frecuencia se actualizan los datos?</span>
+<ul><li>
+<p class=texto>Se chequea regularmente todas las semanas (o menos) la vigencia de los mismos. Los datos están actualizados de acuerdo a la información que brinda la IMM (ciclovías, bicisendas, zona30, mobiliario urbano, etc). <br> Unibici (ciclovías), Urubike (bicipuntos) y Ciclovida (biciamigos) y algunos otros que personalmente recolecté y agregué a los anteriores.<br><br>
+Podés colaborar corrigiendo o agregando datos que no figuren aún en la app/web a través del formulario que está en el ítem <b>Sugerencias</b> del menú para ese fin.</p>
+</li></ul>
+</li>
+</ul>
+</li>
+<li><span><a href="https://docs.google.com/forms/d/1WJC7QVbtDAS6HTX78Cs5QnppZspIxlswdENkmS7OH1A/viewform?usp=send_form" target=_blank>
+<img src=imagenes/sugerencia.png>&nbsp;&nbsp;Sugerencias</a></span>
+</li>
+<li><span><img src=imagenes/info5.png>&nbsp;&nbsp;Acerca de</span>
+<ul>
+<li><p class=texto><b>bicimap.uy</b> es una web y app <i>colaborativa</i> desde su inicio, muchas personas, entes y organizaciones dieron ideas e información para hacerla. Están invitados a colaborar para mejorar su contenido accediendo al Item "Sugerencias" del menú.<br>
+Es una <i>versión beta</i> (en mejora/corrección permanente) funcional que reune la información mímima necesaria para que los ciclistas urbanos (turistas o locales) sepan con qué cuentan en la ciudad y los haga sentir más acompañados al subirse a la bici.<br><br>
+Actualmente sólo incluye a la ciudad de Montevideo, está en mis planes incluir otras ciudades en un futuro, que espero, sea cercano.<br><br>
+Versión 1.0 beta :) <br><b>Puede visualizarse en la mayoría de celulares/tablets , se irá corrigiendo a todos los dispositivos móviles, y además la app</b><br><br>
+Diseño del logo: <span><a href=http://www.fyslab.net/ target=_blank>
+<b>Fabian Barros</b></a></span>
+<br><br>
+Desarrollo: <b>Rossana Guerra</b> </p>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+<div id=dialogo title=Info>
+<p><font color=#3410E8>Bicisendas&nbsp;&nbsp;▬▬</font></p>
+<p><font color=#098731>Ciclovías&nbsp;&nbsp;&nbsp; ▬▬</font></p>
+<p><font color=#F28124>Zona 30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ▬▬</font></p>
+<p><font color=#E31246>Repechos &nbsp;▬▬</font></p>
+<br>
+<span></span><img src=imagenes/espverdes.png><img src=imagenes/patrimonio.png></span><br>
+Para mostrar los <b>espacios verdes y lugares patrimoniales</b> hacé click sobre el mapa y te mostrará los más cercanos a la zona donde se encuentra el marcador.<br><br>
+<img src=imagenes/info2_16.png><br>
+Hacé click sobre el ícono del menú para mostrar/esconder la ventana de información.<br><br><img src=imagenes/twitter_16.png></i><br>
+Hacé click sobre el ícono del menú para mostrar/esconder el timeline de Twitter.
+</div>
+<script type=text/javascript>loadData();</script>
+<button class=btnBorrar onclick=esconderMostrar()></button>
+</body>
 </html>
