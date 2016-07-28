@@ -18,28 +18,29 @@ var io = require('socket.io')(server);  //funciona
 
 app.use( express.static(__dirname + '/public'));
 
-app.use(function(req,res,next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "X-Requested-Width");
-  // Nuevo
+// app.use(function(req,res,next) {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header("Access-Control-Allow-Headers", "X-Requested-Width");
+//   // Nuevo
+//
+//   if (req.header('x-forwarded-proto') !== 'https') {
+//     console.log("holaaa");
+//     res.redirect(301, 'https://www.bicimap.uy');
+//     //return;
+//   }
+//   else
+//    console.log("no es https");
+//   //next();
+//   console.log("holaaa2");
+//   //if (req.headers['x-forwarded-proto'] !== 'https') {
+//   //
+//   //      console.log(req.get('Host'));
+//   //      return res.redirect(['https://', req.get('Host'), req.url].join(''));
+//   //  }
+//   //next();
+// }
+//   )
 
-  if (req.headers('x-forwarded-proto') !== 'https') {
-    console.log("holaaa");
-    res.redirect(301, 'https://www.bicimap.uy');
-    //return;
-  }
-  else
-   console.log("no es https");
-  //next();
-  console.log("holaaa2");
-  //if (req.headers['x-forwarded-proto'] !== 'https') {
-  //
-  //      console.log(req.get('Host'));
-  //      return res.redirect(['https://', req.get('Host'), req.url].join(''));
-  //  }
-  //next();
-}
-  )
 // Redireccionamiento a https
   // Enable reverse proxy support in Express. This causes the
   // the "X-Forwarded-Proto" header field to be trusted so its
@@ -51,6 +52,17 @@ app.use(function(req,res,next) {
   // http://expressjs.com/api#req.secure). This allows us
   // to know whether the request was via http or https.
   app.use (function (req, res, next) {
+          res.header("Access-Control-Allow-Origin", "*");
+          res.header("Access-Control-Allow-Headers", "X-Requested-Width");
+
+          // if (req.header('x-forwarded-proto') !== 'https') {
+          //   console.log("holaaa");
+          //   res.redirect(301, 'https://www.bicimap.uy');
+          //   //return;
+          // }
+          // else
+          //  console.log("no es https");
+          //
           if (req.secure) {
                   // request was via https, so do no special handling
                   next();
