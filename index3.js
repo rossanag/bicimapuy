@@ -68,9 +68,9 @@ app.use( express.static(__dirname + '/public'));
                   next();
           } else {
                   // request was via http, so redirect to https
-                  console.log(req.headers.host);
-                  console.log('\n');
-                  console.log(req.url);
+                  console.trace(req.headers.host);
+                  console.trace('\n');
+                  console.trace(req.url);
                   res.redirect('https://' + req.headers.host + req.url);
           }
   });
