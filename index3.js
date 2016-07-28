@@ -78,7 +78,7 @@ app.use( express.static(__dirname + '/public'));
   });
 
   // set up a route to redirect http to https
-http.get('*',function(req,res){
+server.get('*',function(req,res){
     res.redirect('https://www.bicimap.uy');
 
 })
