@@ -63,18 +63,30 @@ app.use( express.static(__dirname + '/public'));
           // else
           //  console.log("no es https");
           //
-          if (req.secure) {
-                  // request was via https, so do no special handling
-                  next();
-          } else {
-                  // request was via http, so redirect to https
-                  console.trace(req.headers.host);
-                  console.trace('\n');
-                  console.trace(req.url);
-                  res.redirect('https://' + req.headers.host + req.url);
-          }
+
+          //Otra forma
+          // if (req.secure) {
+          //         // request was via https, so do no special handling
+          //         next();
+          // } else {
+          //         // request was via http, so redirect to https
+          //         console.trace(req.headers.host);
+          //         console.trace('\n');
+          //         console.trace(req.url);
+          //         res.redirect('https://' + req.headers.host + req.url);
+          // }
   });
 
+  // set up a route to redirect http to https
+http.get('*',function(req,res){
+    res.redirect('https://www.bicimap.uy');
+
+})
+
+// set up a route to redirect http to https
+//http.get('*',function(req,res){
+    //res.redirect('https://mydomain.com'+req.url)
+//})
 
 
 var arrayRecorridos = [
