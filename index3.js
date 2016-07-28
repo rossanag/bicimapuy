@@ -23,15 +23,15 @@ app.use(function(req,res,next) {
   res.header("Access-Control-Allow-Headers", "X-Requested-Width");
   // Nuevo
 
-  // if (req.header('x-forwarded-proto') == 'http') {
-  //   res.redirect(301, 'https://' + 'www.bicumap.uy' + req.url);
-  //   return;
-  // }
-  //next();
-  if (req.headers['x-forwarded-proto'] !== 'https') {
-        return res.redirect(['https://', req.get('Host'), req.url].join(''));
-    }
+  if (req.header('x-forwarded-proto') == 'http') {
+    res.redirect(301, 'https://' + 'www.bicumap.uy' + req.url);
+    return;
+  }
   next();
+  // if (req.headers['x-forwarded-proto'] !== 'https') {
+  //       return res.redirect(['https://', req.get('Host'), req.url].join(''));
+  //   }
+  // next();
 }
   )
 // Redireccionamiento a https
@@ -50,6 +50,9 @@ app.use(function(req,res,next) {
                   next();
           } else {
                   // request was via http, so redirect to https
+                  console.log(req.headers.host);
+                  console.log('\n');
+                  console.log(req.url);
                   res.redirect('https://' + req.headers.host + req.url);
           }
   });
