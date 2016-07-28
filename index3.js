@@ -28,7 +28,8 @@ app.use(function(req,res,next) {
   //   return;
   // }
   // next();
-  if (req.headers['x-forwarded-proto'] !== 'https') {
+  //if (req.headers['x-forwarded-proto'] !== 'https') {
+  if (req.header['x-forwarded-proto'] != 'https') {
         console.log(req.get('Host'));
         return res.redirect(['https://', req.get('Host'), req.url].join(''));
     }
