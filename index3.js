@@ -23,12 +23,14 @@ app.use(function(req,res,next) {
   res.header("Access-Control-Allow-Headers", "X-Requested-Width");
   // Nuevo
 
-  if (req.header('x-forwarded-proto') == 'http') {
+  if (req.headers('x-forwarded-proto') !== 'https') {
     console.log("holaaa");
     res.redirect(301, 'https://www.bicimap.uy');
-    return;
+    //return;
   }
-  next();
+  else
+   console.log("no es https");
+  //next();
   console.log("holaaa2");
   //if (req.headers['x-forwarded-proto'] !== 'https') {
   //
