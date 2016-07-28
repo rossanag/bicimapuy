@@ -78,11 +78,13 @@ app.use( express.static(__dirname + '/public'));
   });
 
   // set up a route to redirect http to https
-server.get('*',function(req,res){
-    res.redirect('https://www.bicimap.uy');
-
-})
-
+  /* At the top, with other redirect methods before other routes */
+  app.get('*',function(req,res,next){
+    if(req.headers['x-forwarded-proto']!='https')
+      res.redirect('https://www.bicimap.uy'+req.url)
+    else
+      next() /* Continue to other routes if we're not redirecting */
+  })
 // set up a route to redirect http to https
 //http.get('*',function(req,res){
     //res.redirect('https://mydomain.com'+req.url)
