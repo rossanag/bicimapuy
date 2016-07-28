@@ -24,10 +24,12 @@ app.use(function(req,res,next) {
   // Nuevo
 
   if (req.header('x-forwarded-proto') == 'http') {
+    console.log("holaaa");
     res.redirect(301, 'https://www.bicimap.uy');
     return;
   }
   next();
+  console.log("holaaa2");
   //if (req.headers['x-forwarded-proto'] !== 'https') {
   //
   //      console.log(req.get('Host'));
