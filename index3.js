@@ -15,12 +15,6 @@ done = false;
 
 var io = require('socket.io')(server);  //funciona
 
-app.use('/*', function(req, res){
-  if(req.headers['x-forwarded-proto']!=='https'){
-    res.redirect(301, 'https://www.bicimap.uy'+req.url);
-  }
-  res.sendFile(__dirname + '/index.html');
-});
 
 
 app.use( express.static(__dirname + '/public'));
@@ -31,6 +25,12 @@ app.use( express.static(__dirname + '/public'));
 
   });
 
+  app.use('/*', function(req, res){
+    if(req.headers['x-forwarded-proto']!=='https'){
+      res.redirect(301, 'https://www.bicimap.uy'+req.url);
+    }
+    res.sendFile(__dirname + '/index.html');
+  });
 
 var arrayRecorridos = [
 						   ["Cordón a Sayago","public/Recorridos/CordonSayago.js"],
