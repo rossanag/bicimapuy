@@ -18,77 +18,11 @@ var io = require('socket.io')(server);  //funciona
 
 app.use( express.static(__dirname + '/public'));
 
-// app.use(function(req,res,next) {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header("Access-Control-Allow-Headers", "X-Requested-Width");
-//   // Nuevo
-//
-//   if (req.header('x-forwarded-proto') !== 'https') {
-//     console.log("holaaa");
-//     res.redirect(301, 'https://www.bicimap.uy');
-//     //return;
-//   }
-//   else
-//    console.log("no es https");
-//   //next();
-//   console.log("holaaa2");
-//   //if (req.headers['x-forwarded-proto'] !== 'https') {
-//   //
-//   //      console.log(req.get('Host'));
-//   //      return res.redirect(['https://', req.get('Host'), req.url].join(''));
-//   //  }
-//   //next();
-// }
-//   )
-
-// Redireccionamiento a https
-  // Enable reverse proxy support in Express. This causes the
-  // the "X-Forwarded-Proto" header field to be trusted so its
-  // value can be used to determine the protocol. See
-  // http://expressjs.com/api#app-settings for more details.
-  app.enable('trust proxy');
-
-  // Add a handler to inspect the req.secure flag (see
-  // http://expressjs.com/api#req.secure). This allows us
-  // to know whether the request was via http or https.
   app.use (function (req, res, next) {
           res.header("Access-Control-Allow-Origin", "*");
           res.header("Access-Control-Allow-Headers", "X-Requested-Width");
 
-          // if (req.header('x-forwarded-proto') !== 'https') {
-          //   console.log("holaaa");
-          //   res.redirect(301, 'https://www.bicimap.uy');
-          //   //return;
-          // }
-          // else
-          //  console.log("no es https");
-          //
-
-          //Otra forma
-          // if (req.secure) {
-          //         // request was via https, so do no special handling
-          //         next();
-          // } else {
-          //         // request was via http, so redirect to https
-          //         console.trace(req.headers.host);
-          //         console.trace('\n');
-          //         console.trace(req.url);
-          //         res.redirect('https://' + req.headers.host + req.url);
-          // }
   });
-
-  // set up a route to redirect http to https
-  /* At the top, with other redirect methods before other routes */
-  app.get('*',function(req,res,next){
-    if(req.headers['x-forwarded-proto']!='https')
-      res.redirect('https://www.bicimap.uy'+req.url)
-    else
-      next() /* Continue to other routes if we're not redirecting */
-  })
-// set up a route to redirect http to https
-//http.get('*',function(req,res){
-    //res.redirect('https://mydomain.com'+req.url)
-//})
 
 
 var arrayRecorridos = [
