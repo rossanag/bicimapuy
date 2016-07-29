@@ -29,7 +29,7 @@ app.use( express.static(__dirname + '/public'));
     if(req.headers['x-forwarded-proto']!=='https'){
       res.redirect(301, 'https://www.bicimap.uy'+req.url);
     }
-    res.sendFile(__dirname + '/index.html');
+    //res.sendFile(__dirname + '/index.html');
   });
 
 var arrayRecorridos = [
