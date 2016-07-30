@@ -16,7 +16,6 @@ done = false;
 var io = require('socket.io')(server);  //funciona
 
 
-
 app.use( express.static(__dirname + '/public'));
 
   app.use (function (req, res, next) {
@@ -24,7 +23,7 @@ app.use( express.static(__dirname + '/public'));
           res.header("Access-Control-Allow-Headers", "X-Requested-Width");
 
           if (req.headers['x-forwarded-proto'] == 'http') {
-            return resp.redirect(301, 'https://' + req.headers.host + '/');
+            return resp.redirect(301, 'https://www.' + req.headers.host.replace("www.","") + '/');
           } else {
             return next();
           }
