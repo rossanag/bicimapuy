@@ -22,7 +22,7 @@ app.use( express.static(__dirname + '/public'));
           res.header("Access-Control-Allow-Origin", "*");
           res.header("Access-Control-Allow-Headers", "X-Requested-Width");
 
-          if (req.headers['x-forwarded-proto'] == 'http') {
+          if (req.headers['x-forwarded-proto'] === 'http') {
             return resp.redirect(301, 'https://www.' + req.headers.host.replace("www.","") + '/');
           } else {
             return next();
