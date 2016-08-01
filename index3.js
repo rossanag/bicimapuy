@@ -21,26 +21,8 @@ var HTTP_PORT  =  process.env.PORT || 5000;
 var HTTPS_PORT = 443;
 
 
-app.set('port', HTTP_PORT);
 
-
-app.all('/*', function(req, res, next) {
-  if (/^http$/.test(req.protocol)) {
-    var host = req.headers.host.replace(/:[0-9]+$/g, ""); // strip the port # if any
-    if ((HTTPS_PORT != null) && HTTPS_PORT !== 443) {
-      return res.redirect("https://" + host + ":" + HTTPS_PORT + req.url, 301);
-    } else {
-      return res.redirect("https://" + host + req.url, 301);
-    }
-  } else {
-    return next();
-  }
-});
-
-
-
-
-app.use( express.static(__dirname + '/public'));
+//app.use( express.static(__dirname + '/public'));
 
   app.use (function (req, res, next) {
           res.header("Access-Control-Allow-Origin", "*");
@@ -48,7 +30,23 @@ app.use( express.static(__dirname + '/public'));
 
   });
 
+  app.set('port', HTTP_PORT);
 
+
+  app.all('/*', function(req, res, next) {
+    if (/^http$/.test(req.protocol)) {
+      var host = req.headers.host.replace(/:[0-9]+$/g, ""); // strip the port # if any
+      if ((HTTPS_PORT != null) && HTTPS_PORT !== 443) {
+        return res.redirect("https://" + host + ":" + HTTPS_PORT + req.url, 301);
+      } else {
+        return res.redirect("https://" + host + req.url, 301);
+      }
+    } else {
+      return next();
+    }
+  });
+
+app.use( express.static(__dirname + '/public'));
   // if (req.headers['x-forwarded-proto'] === 'http') {
   //   return resp.redirect(301, 'https://www.' + req.headers.host.replace("www.","") + '/');
   // } else {
