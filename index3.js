@@ -8,6 +8,8 @@ var express = require('express'),
       elemParadas = [],
       paradas = [];
 
+var enforce = require('express-sslify');
+
 var paradasant = [];
 var _recorridos = [];
 
@@ -15,11 +17,12 @@ done = false;
 
 var io = require('socket.io')(server);  //funciona
 
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
+
 //Nuevo
 //var HTTP_PORT  = 80;
-var HTTP_PORT  =  process.env.PORT || 5000;
-var HTTPS_PORT = 443;
-
+// var HTTPS_PORT = 443;
+// var HTTP_PORT  =  process.env.PORT || 5000;
 
 
 app.use( express.static(__dirname + '/public'));
@@ -30,23 +33,23 @@ app.use( express.static(__dirname + '/public'));
 
   });
 
-  app.set('port', HTTP_PORT);
-
-
-  app.all('/*', function(req, res, next) {
-    if (/^http$/.test(req.protocol)) {
-      var host = req.headers.host.replace(/:[0-9]+$/g, ""); // strip the port # if any
-      if ((HTTPS_PORT != null) && HTTPS_PORT !== 443) {
-        //return res.redirect("https://" + host + ":" + HTTPS_PORT + req.url, 301);
-        return res.redirect("https://" + host + ":" + HTTPS_PORT, 301);
-      } else {
-        //return res.redirect("https://" + host + req.url, 301);
-        return res.redirect("https://" + host, 301);
-      }
-    } else {
-      return next();
-    }
-  });
+  // app.set('port', HTTP_PORT);
+  //
+  //
+  // app.all('/*', function(req, res, next) {
+  //   if (/^http$/.test(req.protocol)) {
+  //     var host = req.headers.host.replace(/:[0-9]+$/g, ""); // strip the port # if any
+  //     if ((HTTPS_PORT != null) && HTTPS_PORT !== 443) {
+  //       //return res.redirect("https://" + host + ":" + HTTPS_PORT + req.url, 301);
+  //       return res.redirect("https://" + host + ":" + HTTPS_PORT, 301);
+  //     } else {
+  //       //return res.redirect("https://" + host + req.url, 301);
+  //       return res.redirect("https://" + host, 301);
+  //     }
+  //   } else {
+  //     return next();
+  //   }
+  // });
 
 
   // if (req.headers['x-forwarded-proto'] === 'http') {
