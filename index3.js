@@ -15,6 +15,30 @@ done = false;
 
 var io = require('socket.io')(server);  //funciona
 
+//Nuevo
+//var HTTP_PORT  = 80;
+var HTTP_PORT  =  process.env.PORT || 5000;
+var HTTPS_PORT = 443;
+
+
+app.set('port', HTTP_PORT);
+
+
+app.all('/*', function(req, res, next) {
+  if (/^http$/.test(req.protocol)) {
+    var host = req.headers.host.replace(/:[0-9]+$/g, ""); // strip the port # if any
+    if ((HTTPS_PORT != null) && HTTPS_PORT !== 443) {
+      return res.redirect("https://" + host + ":" + HTTPS_PORT + req.url, 301);
+    } else {
+      return res.redirect("https://" + host + req.url, 301);
+    }
+  } else {
+    return next();
+  }
+});
+
+
+
 
 app.use( express.static(__dirname + '/public'));
 
@@ -22,28 +46,6 @@ app.use( express.static(__dirname + '/public'));
           res.header("Access-Control-Allow-Origin", "*");
           res.header("Access-Control-Allow-Headers", "X-Requested-Width");
 
-  });
-
-  //Nuevo
-  //var HTTP_PORT  = 80;
-  var HTTP_PORT  =  process.env.PORT || 5000;
-  var HTTPS_PORT = 443;
-
-
-  app.set('port', HTTP_PORT);
-
-
-  app.all('/*', function(req, res, next) {
-    if (/^http$/.test(req.protocol)) {
-      var host = req.headers.host.replace(/:[0-9]+$/g, ""); // strip the port # if any
-      if ((HTTPS_PORT != null) && HTTPS_PORT !== 443) {
-        return res.redirect("https://" + host + ":" + HTTPS_PORT + req.url, 301);
-      } else {
-        return res.redirect("https://" + host + req.url, 301);
-      }
-    } else {
-      return next();
-    }
   });
 
 
