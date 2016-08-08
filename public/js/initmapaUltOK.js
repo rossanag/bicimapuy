@@ -4,8 +4,9 @@ var mapa = null;
 var latlngmap = -1;
 var baselayer = null;
 
-var SO = [-34.93661, -56.31711];
-var NE = [-35.99578538642032, -60.66650390624999];
+var SO = [-35.99578538642032, -60.66650390624999];
+var NE = [-26.175158990178122,-49.482421875];
+
 
 
 function onLocationError(e) {
@@ -57,8 +58,8 @@ function loadMapa()
 }).addTo(mapa);
 
 
-	//mapa.locate({setView: true, maxZoom: 16});
-	mapa.locate();
+	mapa.locate({setView: true, maxZoom: 16});
+	//mapa.locate();
 
 
 	mapa.on('click', onMapClick);
