@@ -1,4 +1,4 @@
-#loading {
+/*#loading { anterior
    width: 100%;
    height: 100%;
    top: 0px;
@@ -16,4 +16,15 @@
   top: 100px;
   left: 240px;
   z-index: 100;
+}*/
+
+.loading
+{
+ position: fixed;
+ left: 0px;
+ top: 0px;
+ width: 100%;
+ height: 100%;
+ z-index: 9999;
+ background: url('imagenes/rueda32.gif') 50% 50% no-repeat rgb(249,249,249);
 }
