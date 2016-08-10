@@ -1,6 +1,1 @@
-$(document).ready(function(){
-  if($('#loading-image').on())
-  {
-    $('#loading-image').fadeOut();
-  }
-});
+$(document).ready(function(){$("#loading-image").on()&&$("#loading-image").fadeOut()});
