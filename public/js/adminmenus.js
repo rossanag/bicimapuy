@@ -1123,6 +1123,408 @@ function espaciosVerdesEvent(e)
 
 }
 
+
+//Recorridos
+function loadRecorridos(){
+
+	 socket = io();
+	 socket.emit("recorridos0",0);
+	 socket.on("recorridos0", function (data){
+
+				recorridos[0] = jQuery.parseJSON(data);
+
+       });
+
+    socket.emit("recorridos1",1);
+	 socket.on("recorridos1", function (data){
+
+				recorridos[1] = jQuery.parseJSON(data);
+
+       });
+
+    socket.emit("recorridos2",2);
+	 socket.on("recorridos2", function (data){
+
+				recorridos[2] = jQuery.parseJSON(data);
+       });
+
+    socket.emit("recorridos3",3);
+	 socket.on("recorridos3", function (data){
+
+				recorridos[3] = jQuery.parseJSON(data);
+       });
+
+    socket.emit("recorridos4",4);
+	 socket.on("recorridos4", function (data){
+
+				recorridos[4] = jQuery.parseJSON(data);
+       });
+
+    socket.emit("recorridos5",5);
+	 socket.on("recorridos5", function (data){
+
+				recorridos[5] = jQuery.parseJSON(data);
+       });
+
+    socket.emit("recorridos6",6);
+	 socket.on("recorridos6", function (data){
+
+				recorridos[6] = jQuery.parseJSON(data);
+       });
+    socket.emit("recorridos7",7);
+	 socket.on("recorridos7", function (data){
+
+				recorridos[7] = jQuery.parseJSON(data);
+       });
+
+	socket.emit("recorridos8",8);
+	 socket.on("recorridos8", function (data){
+
+				recorridos[8] = jQuery.parseJSON(data);
+       });
+
+    socket.emit("recorridos9",9);
+	 socket.on("recorridos9", function (data){
+
+				recorridos[9] = jQuery.parseJSON(data);
+       });
+
+    socket.emit("recorridos10",10);
+	 socket.on("recorridos10", function (data){
+
+				recorridos[10] = jQuery.parseJSON(data);
+       });
+
+    socket.emit("recorridos11",11);
+	 socket.on("recorridos11", function (data){
+
+				recorridos[11] = jQuery.parseJSON(data);
+       });
+
+     socket.emit("recorridos12",12);
+	 socket.on("recorridos12", function (data){
+
+				recorridos[12] = jQuery.parseJSON(data);
+       });
+
+     socket.emit("recorridos13",13);
+	 socket.on("recorridos13", function (data){
+
+				recorridos[13] = jQuery.parseJSON(data);
+       });
+
+
+    var $recorrido0 = $('input[name="rec0"]');
+    $recorrido0.click(function() {
+    	borrarPath();
+            socket = io();
+
+           socket.emit("recorridos0",0);
+           socket.on("recorridos0", function (data){
+
+				recorridos[0] = jQuery.parseJSON(data);
+
+       });
+
+          if ($recorrido0.is( ':checked' ))
+          {
+            loadRecorrido(0);
+            mapa.addLayer(geoRecorridos[0]);
+
+          }
+          else
+          {
+            mapa.removeLayer(geoRecorridos[0]);
+           }
+     });
+
+    var $recorrido1 = $('input[name="rec1"]');
+    $recorrido1.click(function() {
+    	borrarPath();
+           socket = io();
+           socket.emit("recorridos1",1);
+           socket.on("recorridos1", function (data){
+			recorridos[1] = jQuery.parseJSON(data);
+			});
+
+          if ($recorrido1.is( ':checked' ))
+          {
+            loadRecorrido(1);
+            mapa.addLayer(geoRecorridos[1]);
+
+          }
+          else
+          {
+            mapa.removeLayer(geoRecorridos[1]);
+           }
+
+     });
+
+    var $recorrido2 = $('input[name="rec2"]');
+    $recorrido2.click(function() {
+    	borrarPath();
+
+        socket = io();
+        socket.emit("recorridos2",2);
+        socket.on("recorridos2", function (data){
+			recorridos[2] = jQuery.parseJSON(data);
+			});
+
+          if ($recorrido2.is( ':checked' ))
+          {
+            loadRecorrido(2);
+            mapa.addLayer(geoRecorridos[2]);
+
+          }
+          else
+          {
+            mapa.removeLayer(geoRecorridos[2]);
+           }
+
+     });
+
+	var $recorrido3 = $('input[name="rec3"]');
+    $recorrido3.click(function() {
+    	borrarPath();
+
+          socket = io();
+          socket.emit("recorridos3",3);
+          socket.on("recorridos3", function (data){
+			recorridos[3] = jQuery.parseJSON(data);
+			});
+
+          if ($recorrido3.is( ':checked' ))
+          {
+            loadRecorrido(3);
+            mapa.addLayer(geoRecorridos[3]);
+
+          }
+          else
+          {
+            mapa.removeLayer(geoRecorridos[3]);
+           }
+     });
+
+    var $recorrido4 = $('input[name="rec4"]');
+    $recorrido4.click(function() {
+    	borrarPath();
+        socket = io();
+        socket.emit("recorridos4",4);
+        socket.on("recorridos4", function (data){
+			recorridos[4] = jQuery.parseJSON(data);
+			});
+
+          if ($recorrido4.is( ':checked' ))
+          {
+            loadRecorrido(4);
+            mapa.addLayer(geoRecorridos[4]);
+
+          }
+          else
+          {
+            mapa.removeLayer(geoRecorridos[4]);
+           }
+     });
+
+    var $recorrido5 = $('input[name="rec5"]');
+    $recorrido5.click(function() {
+    	borrarPath();
+        socket = io();
+        socket.emit("recorridos5",5);
+        socket.on("recorridos5", function (data){
+			recorridos[5] = jQuery.parseJSON(data);
+			});
+
+          if ($recorrido5.is( ':checked' ))
+          {
+            loadRecorrido(5);
+            mapa.addLayer(geoRecorridos[5]);
+
+          }
+          else
+          {
+            mapa.removeLayer(geoRecorridos[5]);
+           }
+     });
+
+    var $recorrido6 = $('input[name="rec6"]');
+    $recorrido6.click(function() {
+    	borrarPath();
+
+    	socket = io();
+    	socket.emit("recorridos6",6);
+    	socket.on("recorridos6", function (data){
+			recorridos[6] = jQuery.parseJSON(data);
+			});
+
+          if ($recorrido6.is( ':checked' ))
+          {
+            loadRecorrido(6);
+            mapa.addLayer(geoRecorridos[6]);
+
+          }
+          else
+          {
+            mapa.removeLayer(geoRecorridos[6]);
+           }
+     });
+
+
+     var $recorrido7 = $('input[name="rec7"]');
+    $recorrido7.click(function() {
+    	borrarPath();
+
+    	socket = io();
+    	socket.emit("recorridos7",7);
+    	socket.on("recorridos7", function (data){
+			recorridos[7] = jQuery.parseJSON(data);
+			});
+
+          if ($recorrido7.is( ':checked' ))
+          {
+            loadRecorrido(7);
+            mapa.addLayer(geoRecorridos[7]);
+
+          }
+          else
+          {
+            mapa.removeLayer(geoRecorridos[7]);
+           }
+     });
+
+     var $recorrido8 = $('input[name="rec8"]');
+    $recorrido8.click(function() {
+    	borrarPath();
+
+        socket = io();
+    	socket.emit("recorridos8",8);
+    	socket.on("recorridos8", function (data){
+			recorridos[8] = jQuery.parseJSON(data);
+			});
+
+          if ($recorrido8.is( ':checked' ))
+          {
+            loadRecorrido(8);
+            mapa.addLayer(geoRecorridos[8]);
+
+          }
+          else
+          {
+            mapa.removeLayer(geoRecorridos[8]);
+           }
+     });
+
+    var $recorrido9 = $('input[name="rec9"]');
+    $recorrido9.click(function() {
+    	borrarPath();
+
+        socket = io();
+    	socket.emit("recorridos9",9);
+    	socket.on("recorridos9", function (data){
+			recorridos[9] = jQuery.parseJSON(data);
+			});
+
+          if ($recorrido9.is( ':checked' ))
+          {
+            loadRecorrido(9);
+            mapa.addLayer(geoRecorridos[9]);
+
+          }
+          else
+          {
+            mapa.removeLayer(geoRecorridos[9]);
+           }
+     });
+
+    var $recorrido10 = $('input[name="rec10"]');
+    $recorrido10.click(function() {
+    	borrarPath();
+
+        socket = io();
+    	socket.emit("recorridos10",10);
+    	socket.on("recorridos10", function (data){
+			recorridos[10] = jQuery.parseJSON(data);
+			});
+
+          if ($recorrido10.is( ':checked' ))
+          {
+            loadRecorrido(10);
+            mapa.addLayer(geoRecorridos[10]);
+
+          }
+          else
+          {
+            mapa.removeLayer(geoRecorridos[10]);
+           }
+     });
+
+    var $recorrido11 = $('input[name="rec11"]');
+    $recorrido11.click(function() {
+    	borrarPath();
+
+    	socket = io();
+    	socket.emit("recorridos11",11);
+    	socket.on("recorridos11", function (data){
+			recorridos[11] = jQuery.parseJSON(data);
+			});
+
+          if ($recorrido11.is( ':checked' ))
+          {
+            loadRecorrido(11);
+            mapa.addLayer(geoRecorridos[11]);
+
+          }
+          else
+          {
+            mapa.removeLayer(geoRecorridos[11]);
+           }
+     });
+
+    var $recorrido12 = $('input[name="rec12"]');
+    $recorrido12.click(function() {
+    	borrarPath();
+
+        socket = io();
+    	socket.emit("recorridos12",12);
+    	socket.on("recorridos12", function (data){
+			recorridos[12] = jQuery.parseJSON(data);
+			});
+
+          if ($recorrido12.is( ':checked' ))
+          {
+            loadRecorrido(12);
+            mapa.addLayer(geoRecorridos[12]);
+
+          }
+          else
+          {
+            mapa.removeLayer(geoRecorridos[12]);
+           }
+     });
+
+    var $recorrido13 = $('input[name="rec13"]');
+    $recorrido13.click(function() {
+    	borrarPath();
+    	socket = io();
+    	socket.emit("recorridos13",13);
+    	socket.on("recorridos13", function (data){
+			recorridos[13] = jQuery.parseJSON(data);
+			});
+
+          if ($recorrido13.is( ':checked' ))
+          {
+            loadRecorrido(13);
+            mapa.addLayer(geoRecorridos[13]);
+
+          }
+          else
+          {
+            mapa.removeLayer(geoRecorridos[13]);
+           }
+     });
+}
+
+
 function loadData(){
 	loadDatosIniciales();
 	loadMapa();
