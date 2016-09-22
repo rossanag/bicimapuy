@@ -1124,91 +1124,91 @@ function espaciosVerdesEvent(e)
 function loadRecorridos(){
 
 	 socket = io();
-	//  socket.emit("recorridos0",0);
-	//  socket.on("recorridos0", function (data){
-  //
-	// 			recorridos[0] = jQuery.parseJSON(data);
-  //
-  //      });
-  //
-  //   socket.emit("recorridos1",1);
-	//  socket.on("recorridos1", function (data){
-  //
-	// 			recorridos[1] = jQuery.parseJSON(data);
-  //
-  //      });
-  //
-  //   socket.emit("recorridos2",2);
-	//  socket.on("recorridos2", function (data){
-  //
-	// 			recorridos[2] = jQuery.parseJSON(data);
-  //      });
-  //
-  //   socket.emit("recorridos3",3);
-	//  socket.on("recorridos3", function (data){
-  //
-	// 			recorridos[3] = jQuery.parseJSON(data);
-  //      });
-  //
-  //   socket.emit("recorridos4",4);
-	//  socket.on("recorridos4", function (data){
-  //
-	// 			recorridos[4] = jQuery.parseJSON(data);
-  //      });
-  //
-  //   socket.emit("recorridos5",5);
-	//  socket.on("recorridos5", function (data){
-  //
-	// 			recorridos[5] = jQuery.parseJSON(data);
-  //      });
-  //
-  //   socket.emit("recorridos6",6);
-	//  socket.on("recorridos6", function (data){
-  //
-	// 			recorridos[6] = jQuery.parseJSON(data);
-  //      });
-  //   socket.emit("recorridos7",7);
-	//  socket.on("recorridos7", function (data){
-  //
-	// 			recorridos[7] = jQuery.parseJSON(data);
-  //      });
-  //
-	// socket.emit("recorridos8",8);
-	//  socket.on("recorridos8", function (data){
-  //
-	// 			recorridos[8] = jQuery.parseJSON(data);
-  //      });
-  //
-  //   socket.emit("recorridos9",9);
-	//  socket.on("recorridos9", function (data){
-  //
-	// 			recorridos[9] = jQuery.parseJSON(data);
-  //      });
-  //
-  //   socket.emit("recorridos10",10);
-	//  socket.on("recorridos10", function (data){
-  //
-	// 			recorridos[10] = jQuery.parseJSON(data);
-  //      });
-  //
-  //   socket.emit("recorridos11",11);
-	//  socket.on("recorridos11", function (data){
-  //
-	// 			recorridos[11] = jQuery.parseJSON(data);
-  //      });
-  //
-  //    socket.emit("recorridos12",12);
-	//  socket.on("recorridos12", function (data){
-  //
-	// 			recorridos[12] = jQuery.parseJSON(data);
-  //      });
-  //
-  //    socket.emit("recorridos13",13);
-	//  socket.on("recorridos13", function (data){
-  //
-	// 			recorridos[13] = jQuery.parseJSON(data);
-  //      });
-  //
+	 socket.emit("recorridos0",0);
+	 socket.on("recorridos0", function (data){
+
+				recorridos[0] = jQuery.parseJSON(data);
+
+       });
+
+    socket.emit("recorridos1",1);
+	 socket.on("recorridos1", function (data){
+
+				recorridos[1] = jQuery.parseJSON(data);
+
+       });
+
+    socket.emit("recorridos2",2);
+	 socket.on("recorridos2", function (data){
+
+				recorridos[2] = jQuery.parseJSON(data);
+       });
+
+    socket.emit("recorridos3",3);
+	 socket.on("recorridos3", function (data){
+
+				recorridos[3] = jQuery.parseJSON(data);
+       });
+
+    socket.emit("recorridos4",4);
+	 socket.on("recorridos4", function (data){
+
+				recorridos[4] = jQuery.parseJSON(data);
+       });
+
+    socket.emit("recorridos5",5);
+	 socket.on("recorridos5", function (data){
+
+				recorridos[5] = jQuery.parseJSON(data);
+       });
+
+    socket.emit("recorridos6",6);
+	 socket.on("recorridos6", function (data){
+
+				recorridos[6] = jQuery.parseJSON(data);
+       });
+    socket.emit("recorridos7",7);
+	 socket.on("recorridos7", function (data){
+
+				recorridos[7] = jQuery.parseJSON(data);
+       });
+
+	socket.emit("recorridos8",8);
+	 socket.on("recorridos8", function (data){
+
+				recorridos[8] = jQuery.parseJSON(data);
+       });
+
+    socket.emit("recorridos9",9);
+	 socket.on("recorridos9", function (data){
+
+				recorridos[9] = jQuery.parseJSON(data);
+       });
+
+    socket.emit("recorridos10",10);
+	 socket.on("recorridos10", function (data){
+
+				recorridos[10] = jQuery.parseJSON(data);
+       });
+
+    socket.emit("recorridos11",11);
+	 socket.on("recorridos11", function (data){
+
+				recorridos[11] = jQuery.parseJSON(data);
+       });
+
+     socket.emit("recorridos12",12);
+	 socket.on("recorridos12", function (data){
+
+				recorridos[12] = jQuery.parseJSON(data);
+       });
+
+     socket.emit("recorridos13",13);
+	 socket.on("recorridos13", function (data){
+
+				recorridos[13] = jQuery.parseJSON(data);
+       });
+  
 
     var $recorrido0 = $('input[name="rec0"]');
     $recorrido0.click(function() {
