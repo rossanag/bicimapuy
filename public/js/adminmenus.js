@@ -1228,7 +1228,7 @@ function loadRecorridos(){
 
           if ($recorrido0.is( ':checked' ))
           {
-            //loadRecorrido(0);
+            loadRecorrido(0);
             mapa.addLayer(geoRecorridos[0]);
 
           }
@@ -1249,7 +1249,7 @@ function loadRecorridos(){
 
           if ($recorrido1.is( ':checked' ))
           {
-            //loadRecorrido(1);
+            loadRecorrido(1);
             mapa.addLayer(geoRecorridos[1]);
 
           }
@@ -1272,7 +1272,7 @@ function loadRecorridos(){
 
           if ($recorrido2.is( ':checked' ))
           {
-            //loadRecorrido(2);
+            loadRecorrido(2);
             mapa.addLayer(geoRecorridos[2]);
 
           }
@@ -1295,7 +1295,7 @@ function loadRecorridos(){
 
           if ($recorrido3.is( ':checked' ))
           {
-            //loadRecorrido(3);
+            loadRecorrido(3);
             mapa.addLayer(geoRecorridos[3]);
 
           }
@@ -1316,7 +1316,7 @@ function loadRecorridos(){
 
           if ($recorrido4.is( ':checked' ))
           {
-            //loadRecorrido(4);
+            loadRecorrido(4);
             mapa.addLayer(geoRecorridos[4]);
 
           }
@@ -1337,7 +1337,7 @@ function loadRecorridos(){
 
           if ($recorrido5.is( ':checked' ))
           {
-            //loadRecorrido(5);
+            loadRecorrido(5);
             mapa.addLayer(geoRecorridos[5]);
 
           }
@@ -1359,7 +1359,7 @@ function loadRecorridos(){
 
           if ($recorrido6.is( ':checked' ))
           {
-            //loadRecorrido(6);
+            loadRecorrido(6);
             mapa.addLayer(geoRecorridos[6]);
 
           }
@@ -1382,7 +1382,7 @@ function loadRecorridos(){
 
           if ($recorrido7.is( ':checked' ))
           {
-            //loadRecorrido(7);
+            loadRecorrido(7);
             mapa.addLayer(geoRecorridos[7]);
 
           }
@@ -1404,7 +1404,7 @@ function loadRecorridos(){
 
           if ($recorrido8.is( ':checked' ))
           {
-            //loadRecorrido(8);
+            loadRecorrido(8);
             mapa.addLayer(geoRecorridos[8]);
 
           }
@@ -1426,7 +1426,7 @@ function loadRecorridos(){
 
           if ($recorrido9.is( ':checked' ))
           {
-            //loadRecorrido(9);
+            loadRecorrido(9);
             mapa.addLayer(geoRecorridos[9]);
 
           }
@@ -1448,7 +1448,7 @@ function loadRecorridos(){
 
           if ($recorrido10.is( ':checked' ))
           {
-            //loadRecorrido(10);
+            loadRecorrido(10);
             mapa.addLayer(geoRecorridos[10]);
 
           }
@@ -1470,7 +1470,7 @@ function loadRecorridos(){
 
           if ($recorrido11.is( ':checked' ))
           {
-            //loadRecorrido(11);
+            loadRecorrido(11);
             mapa.addLayer(geoRecorridos[11]);
 
           }
@@ -1492,7 +1492,7 @@ function loadRecorridos(){
 
           if ($recorrido12.is( ':checked' ))
           {
-            //loadRecorrido(12);
+            loadRecorrido(12);
             mapa.addLayer(geoRecorridos[12]);
 
           }
@@ -1513,7 +1513,7 @@ function loadRecorridos(){
 
           if ($recorrido13.is( ':checked' ))
           {
-            //loadRecorrido(13);
+            loadRecorrido(13);
             mapa.addLayer(geoRecorridos[13]);
 
           }
