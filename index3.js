@@ -19,11 +19,6 @@ var io = require('socket.io')(server);  //funciona
 
 app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
-//Nuevo
-//var HTTP_PORT  = 80;
-// var HTTPS_PORT = 443;
-// var HTTP_PORT  =  process.env.PORT || 5000;
-
 
 app.use( express.static(__dirname + '/public'));
 
