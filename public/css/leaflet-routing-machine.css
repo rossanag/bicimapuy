@@ -35,7 +35,7 @@
     transition: all 0.2s ease;
 }
 
-.leaflet-control-container .leaflet-routing-container-hide .leaflet-routing-alt, 
+.leaflet-control-container .leaflet-routing-container-hide .leaflet-routing-alt,
 .leaflet-control-container .leaflet-routing-container-hide .leaflet-routing-geocoders {
     display: none;
 }
@@ -113,7 +113,7 @@
 
 .leaflet-routing-geocoders button {
     font: bold 18px 'Lucida Console', Monaco, monospace;
-    border: 1px solid #ccc;    
+    border: 1px solid #ccc;
     border-radius: 4px;
     background-color: white;
     margin: 0;
@@ -175,8 +175,6 @@
     display: inline-block;
     vertical-align: middle;
     cursor: pointer;
-    background-color: #E5E4E2; /*agregado por mi, no tenía backround originalmente*/
-    color: #ccc;
 }
 
 .leaflet-routing-remove-waypoint:after {
@@ -211,7 +209,7 @@
     width: 48px;
 }
 
-.leaflet-routing-collapse-btn {    
+.leaflet-routing-collapse-btn {
     position: absolute;
     top: 0;
     right: 6px;
@@ -228,7 +226,7 @@
     position: relative;
     left: 4px;
     top: 4px;
-    display: block;    
+    display: block;
     width: 26px;
     height: 23px;
     background-image: url('routing-icon.png');
