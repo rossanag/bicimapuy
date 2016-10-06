@@ -5,20 +5,16 @@
 <meta name="Rossana Guerra" content=bicimapuy />
 <meta name=viewport content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
 <title>bicimap.uy</title>
-<link rel="shortcut icon" type=image/png href=imagenes/bicimap2-icono-32.png />
 <link rel=stylesheet href=leaflet.css />
 <link rel=stylesheet type=text/css href=css/controlrouting.css />
 <link rel=stylesheet href=css/Control.Geocoder.css />
-<link rel=stylesheet href=css/leaflet-routing-machine.css>
-
+<link rel=stylesheet href=css/leaflet-routing-machine.css />
 <link type=text/css rel=stylesheet href=Menu/css/demo.css />
 <link type=text/css rel=stylesheet href=Menu/css/menu.css />
 <link type=text/css rel=stylesheet href=css/fa/css/font-awesome.min.css />
 <link rel=stylesheet href=css/twitter.css>
 <link type=text/css rel=stylesheet href=css/mapa.css />
 <script src=js/jquery203.js type=text/javascript></script>
-<script src=Menu/js/loader.js type=text/javascript></script>
-<link type=text/css rel=stylesheet href=Menu/css/loader.css />
 <script src=js/jquery-ui.min.js type=text/javascript></script>
 <link href=css/jquery-ui.min.css type=text/css rel=stylesheet />
 <script src=leaflet.js></script>
@@ -32,9 +28,17 @@
 <script src=js/socket.io.js type=text/javascript></script>
 </head>
 <body>
-<div id=loading>
-<img id=loading-image src=imagenes/rueda32.gif alt=Pedaleando... />
-</div>
+<script src=js/lala2.js type=text/javascript></script>
+<script src=Mapas/bebederos.js></script>
+<script src=Mapas/bicicletarios.js></script>
+<script src=Mapas/banios.js></script>
+<script src=Mapas/patrimonio.js></script>
+<script src=Mapas/cultura.js></script>
+<script src=Mapas/bicicircuitos.js></script>
+<script src=Mapas/espacios_libres.js></script>
+<script src=js/controlrouting.js type=text/javascript></script>
+<script src=js/initmapa.js type=text/javascript></script>
+<script src=js/adminmenus.js type=text/javascript></script>
 <div id=map></div>
 <div id=twitter>
 <a class=twitter-timeline href=https://twitter.com/bicimapuy data-widget-id=659144567510474752>
@@ -42,7 +46,7 @@
 <script>!function(f,a,g){var e,b=f.getElementsByTagName(a)[0],c=/^http:/.test(f.location)?"http":"https";if(!f.getElementById(g)){e=f.createElement(a);e.id=g;e.src=c+"://platform.twitter.com/widgets.js";b.parentNode.insertBefore(e,b)}}(document,"script","twitter-wjs");</script>
 </div>
 <script>$("#twitter").hide();</script>
-<script>(function(m,l,g,i,k,n,a){m.GoogleAnalyticsObject=k;m[k]=m[k]||function(){(m[k].q=m[k].q||[]).push(arguments)},m[k].l=1*new Date();n=l.createElement(g),a=l.getElementsByTagName(g)[0];n.async=1;n.src=i;a.parentNode.insertBefore(n,a)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create","UA-77414313-1","auto");ga("send","pageview");</script>
+<script>(function(d,e,j,h,f,c,b){d.GoogleAnalyticsObject=f;d[f]=d[f]||function(){(d[f].q=d[f].q||[]).push(arguments)},d[f].l=1*new Date();c=e.createElement(j),b=e.getElementsByTagName(j)[0];c.async=1;c.src=h;b.parentNode.insertBefore(c,b)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create","UA-77414313-1","auto");ga("send","pageview");</script>
 <div id=page>
 <div class=header>
 <a href=#menu></a>
@@ -79,8 +83,8 @@
 <ul>
 <li>
 <span>
-<input id=planm type=checkbox name=pm value=PlanM class=Toggle>
 <img src=imagenes/pm2.png><a href=#pi/PM>&nbsp;&nbsp;Plan Movete</a>
+<input id=planm type=checkbox name=pm value=PlanM class=Toggle>
 </span>
 </li>
 <li>
@@ -89,13 +93,13 @@
 <input id=bicipunto type=checkbox name=bp value=Bicipunto class=Toggle>
 </span>
 </li>
+</ul>
 <li>
 <span>
 <img src=imagenes/bike_rack3.png><a href=#pi/Bicicletarios>&nbsp;&nbsp;Bicicletarios</a>
 <input id=bicicletario type=checkbox name=bicic value=Bicicletario class=Toggle>
 </span>
 </li>
-</ul>
 </li>
 <li>
 <span>
@@ -389,48 +393,41 @@
 <li><span><img src=imagenes/friends.png>&nbsp;&nbsp;Amigos de la bici</span>
 <ul>
 <li><span>
-<a href="https://www.facebook.com/groups/urubike/?fref=ts" target=_blank>Urubike&nbsp;&nbsp;
+<a href="https://www.facebook.com/groups/urubike/?fref=ts" target=_blank>Urubike
 </a><i class="fa fa-facebook"></i></span>
 <li><span>
-<a href="https://www.facebook.com/Unibiciur/?fref=ts" target=_blank>Unibiciur&nbsp;&nbsp;</a>
+<a href="https://www.facebook.com/Unibiciur/?fref=ts" target=_blank>Unibiciur</a>
 <i class="fa fa-facebook"></i></span>
 </li>
 <li><span>
-<a href="https://www.facebook.com/Libera-tu-bicicleta-Uruguay-611146365578804/?fref=ts" target=_blank>Liberá tu bici&nbsp;&nbsp;</a>
+<a href="https://www.facebook.com/Libera-tu-bicicleta-Uruguay-611146365578804/?fref=ts" target=_blank>Liberá tu bici</a>
 <i class="fa fa-facebook"></i></span>
 </li>
 <li><span>
-<a href=http://www.liberatubicicleta.org/ target=_blank>Liberá tu bici&nbsp;&nbsp;</a>
+<a href=http://www.liberatubicicleta.org/ target=_blank>Liberá tu bici</a>
 <i class="fa fa-globe"></i></span>
 </li>
 <li><span>
-<a href="https://www.facebook.com/masacriticamvd/?fref=ts" target=_blank>Masa Crítica&nbsp;&nbsp;</a>
+<a href="https://www.facebook.com/masacriticamvd/?fref=ts" target=_blank>Masa Crítica</a>
 <i class="fa fa-facebook"></i></span>
 </li>
 <li><span>
-<a href="https://www.facebook.com/BICICLETAS-VINTAGE-URUGUAY-228618817200904/?fref=ts" target=_blank>Bicicletas vintage&nbsp;&nbsp;</a>
+<a href="https://www.facebook.com/BICICLETAS-VINTAGE-URUGUAY-228618817200904/?fref=ts" target=_blank>Bicicletas vintage</a>
 <i class="fa fa-facebook"></i></span>
 </li>
-<li><span>
-<a href=http://www.bicitourmontevideo.uy/ target=_blank>Bicitour Mvd&nbsp;&nbsp;</a>
-<i class="fa fa-globe"></i></span>
-</li>
-<li><span><a href="https://www.facebook.com/ciclovidaonline/?fref=ts" target=_blank>Ciclovida&nbsp;&nbsp;</a>
+<li><span><a href=https://www.facebook.com/FIMbici/ target=_blank>FIM Bici</a>
 <i class="fa fa-facebook"></i></span>
 </li>
-<li><span><a href="https://www.facebook.com/Espacio-Bici-amigo-101158023376308/?fref=ts" target=_blank>Espacio Bici Amigo&nbsp;&nbsp;</a>
+<li><span><a href="https://www.facebook.com/MVDEnBici/?fref=ts" target=_blank>Montevideo en bici</a>
 <i class="fa fa-facebook"></i></span>
 </li>
-<li><span><a href="https://www.facebook.com/MVDEnBici/?fref=ts" target=_blank>Montevideo en bici&nbsp;&nbsp;</a>
-<i class="fa fa-facebook"></i></span>
-</li>
-<li><span><a href=http://radiopedal.uy/ target=_blank>Radio Pedal&nbsp;&nbsp;</a>
-<i class="fa fa-globe"></i></span>
-</li>
-<li><span><a href=https://www.workaway.info/511331214456-es.html target=_blank> Casa abierta del cicloturista&nbsp;&nbsp;</a>
+<li><span><a href=https://www.workaway.info/511331214456-es.html target=_blank> Casa abierta del cicloturista</a>
 <i class="fa fa-globe"></i></span>
 </li>
 </ul>
+</li>
+<li><span><a href="https://docs.google.com/forms/d/1WJC7QVbtDAS6HTX78Cs5QnppZspIxlswdENkmS7OH1A/viewform?usp=send_form" target=_blank>
+<img src=imagenes/sugerencia.png>&nbsp;&nbsp;Sugerencias</a></span>
 </li>
 <li><span><img src=imagenes/pf2.png>&nbsp;&nbsp;P + F</span>
 <ul>
@@ -438,8 +435,7 @@
 <ul>
 <li><span>¿Qué son las bicisendas?</span>
 <ul><li>
-<p class=texto>Carril sobre la vereda destinado al tránsito de bicicletas.</p></li>
-</ul>
+<p class=texto>Carril sobre la vereda destinado al tránsito de bicicletas.</p></li></ul>
 </li>
 <li><span>¿Qué son las ciclovías?</span>
 <ul><li>
@@ -467,7 +463,7 @@ Centros de Urubike que ofrecen gratuitamente caja de herramientas y un porta bic
 </li>
 <li><span>Plan Movete</span>
 <ul><li>
-<p class=texto> Estaciones para el alquiler de bicicletas de la IMM </p>
+<p class=texto>Estaciones para el alquiler de bicicletas de la IMM </p>
 </li></ul>
 </li>
 <li><span>Diferencia entre bicicletería y taller de reparación</span>
@@ -476,13 +472,13 @@ Centros de Urubike que ofrecen gratuitamente caja de herramientas y un porta bic
 Hay casos donde una bicicletería también es taller de reparación. En ese caso figura en ambas categorías.</p>
 </li></ul>
 </li>
-</ul></li>
 <li><span>¿Cómo sé el sentido de un repecho?</span>
 <ul><li>
 <p class=texto>El sentido está indicado por un marcador al comienzo del repecho que indica el largo del mismo (no la elevación).<br>
-Algunos repechos podrán ser mas difíciles o no dependiendo del ciclista, pero está bueno señalarlos.
-</p>
+Algunos repechos podrán ser mas difíciles o no dependiendo del ciclista, pero está bueno señalarlos.</p>
 </li></ul>
+</li>
+</ul>
 </li>
 <li><span>Ruteo y Geolocalización</span>
 <ul>
@@ -497,20 +493,54 @@ El objetivo es darte a conocer un camino correcto entre varios que respete el se
 </li>
 <li><span>¿Cómo evitar caminos en el ruteo?</span>
 <ul><li>
-<p class=texto>De momento no es posible, pero podés<br>indicar qué calles deseás incluir en tu recorrido.<br><b>Antes de seleccionar el destino</b> con el signo "+" agregás las calles por las cuales deseás pasar.</p>
+<p class=texto>De momento no es posible, pero sí es<br>posible indicar qué calles deseás incluir en tu recorrido.<br><b>Antes de seleccionar el destino</b> con el signo "+" agregás las calles por las cuales deseás pasar.</p>
 </li></ul>
 </li>
 <li><span>Sobre los puntos de interés más cercanos</span>
 <ul><li>
-<p class=texto>Toman como base tu geolocalización, pero moviendo el marcador podés cambiar el lugar que deseás tomar como referencia para encontrar los puntos cercanos de tu interés.</p>
+<p class=texto>Toman como base tu geolocalización, pero moviendo el marcador en el mapa podés cambiar el lugar que deseás tomar como referencia para encontrar los puntos cercanos de tu interés.</p>
 </li></ul></li>
 <li><span>No funciona la geolocalización</span>
 <ul><li>
-<p class=texto>En ese caso, para encontra el punto<br> más cercano, marcá en el mapa (aparece un marcador azul) <br> el lugar que deseás tener como referencia para tu búsqueda.
+<p class=texto>En ese caso para encontra el punto<br> más cercano, marcá en el mapa (aparece un marcador azul) <br> el lugar que deseás tener como referencia para tu búsqueda.<br><br>
+No interfiere en el ruteo.
 </p>
 </li></ul></li>
+</ul>
+</li>
+<li><span>Rutas sugeridas</span>
+<ul>
+<li><span>¿Quién sugiere las rutas?</span>
+<ul><li>
+<p class=texto>
+Las rutas son sugeridas por los propios usuarios que por motivos diversos transitan esas
+rutas cotidianamente. <br>Comparten generosamente su experiencia e información para que
+pueda servir de referencia a otros.
+<br><br>
+Por lo tanto es una guía subjetiva, pero útil y válida dado su origen, que nos ayuda a todos.
+<br><br>
+Para saber las características del recorrido, click sobre el ícono de información.
+</li></ul>
+</li>
+<li><span>Dificultad intermedia</span>
+<ul><li>
+<p class=texto>
+Son rutas que por lo general tienen pocos repechos, y calles<br> en general en buen estado, o en el mejor posible. <br>
+También incluyen el factor seguridad relativo a dos aspectos.<br>
+Uno que incluye las calles y avenidas
+mas transitadas que los hace sentir más acompañados. <br> Y el otro, porque su tránsito es más tranquilo.<br>
+<br> Dependerá del criterio de cada uno.
+</li></ul>
+</li>
+<li><span>Rápidas</span>
+<ul><li>
+<p class=texto>
+Prevalece el criterio del camino más directo de un lugar a otro.<br> El riesgo de las diferentes calles, es variado,<br>
+desde bajo, intermedio o alto, como también en tipo: más seguro o menos transitado, etc.
+</li></ul>
 </li>
 </ul>
+</li>
 <li><span>¿Puedo dejar la bici en los parkings?</span>
 <ul><li>
 <p class=texto>De acuerdo al <a class=link href=http://normativa.montevideo.gub.uy/articulos/87984#articulo_87986 target=_blank id=dec> Decreto de la Junta Departamental de Montevideo Nº 34.837</a> cada 5 automóviles debe haber un espacio para bicicletas a cambio de una contraprestación económica regulada que no supere el 10% de la tarifa para automóviles.<br><b> En revisión.</b></p>
@@ -522,15 +552,24 @@ El objetivo es darte a conocer un camino correcto entre varios que respete el se
 Podés colaborar corrigiendo o agregando datos que no figuren aún en la app/web a través del formulario que está en el ítem <b>Sugerencias</b> del menú para ese fin.</p>
 </li></ul>
 </li>
+<li><span>¿Cómo puedo colaborar con datos?</span>
+<ul><li>
+<p class=texto>En el item <b>Sugerencias</b> del menú<br>hay un formulario para agregar nuevos datos o corregir los existentes.<br><br>
+Para aportar un camino si usás <a href=https://www.strava.com/ target=_blank id=dec2>Strava</a> podés enviar el archivo GPX a bicimapuy@gmail.com
+<br>
+Otra forma es usando el editor de mapas online:
+<a href=http://geojson.io target=_blank id=dec3>http://geojson.io</a>.<br>
+Lo guardás (opción Save) como GeoJson y me lo enviás.<br><br><br>
+Clasificarlo: rápido, dificultad intermedia o turístico
+</p>
+</li></ul>
+</li>
 </ul>
 </li>
-<li><span><a href="https://docs.google.com/forms/d/1WJC7QVbtDAS6HTX78Cs5QnppZspIxlswdENkmS7OH1A/viewform?usp=send_form" target=_blank>
-<img src=imagenes/sugerencia.png>&nbsp;&nbsp;Sugerencias</a></span>
-</li>
-<li><span><img src=imagenes/info5.png>&nbsp;&nbsp;Acerca de</span>
+<li><span><img src=imagenes/info5.png>&nbsp;&nbsp;Acerca de bicimap</span>
 <ul>
-<li><p class=texto><b>bicimap.uy</b> es una web y app <i>colaborativa</i> desde su inicio, muchas personas, entes y organizaciones dieron ideas e información para hacerla. Están invitados a colaborar para mejorar su contenido accediendo al Item "Sugerencias" del menú.<br>
-Es una <b><i>versión beta</i></b> (en mejora/corrección permanente) funcional que reune la información mímima necesaria para que los ciclistas urbanos (turistas o locales) sepan con qué cuentan en la ciudad y los haga sentir más acompañados al subirse a la bici.<br><br>
+<li><p class=texto><b>bicimap.uy</b> es una web y app <i>colaborativa</i> desde su inicio, muchas personas, IMM y organizaciones dieron ideas e información para hacerla. Están invitados a colaborar para mejorar su contenido accediendo al Item "Sugerencias" del menú.<br>
+Es una <i>versión beta</i> (en mejora/corrección permanente) funcional que reune la información mímima necesaria para que los ciclistas urbanos (turistas o locales) sepan con qué cuentan en la ciudad y los haga sentir más acompañados al subirse a la bici.<br><br>
 Actualmente sólo incluye a la ciudad de Montevideo, está en mis planes incluir otras ciudades en un futuro, que espero, sea cercano.<br><br>
 Versión 1.0 beta :) <br><b>Puede visualizarse en la mayoría de celulares/tablets , se irá corrigiendo a todos los dispositivos móviles, y además la app</b><br><br>
 Diseño del logo: <span><a href=http://www.fyslab.net/ target=_blank>
@@ -540,7 +579,6 @@ Desarrollo: <b>Rossana Guerra</b> </p>
 </li>
 </ul>
 </li>
-</ul>
 </nav>
 </div>
 <div id=dialogo title=Info>
@@ -555,17 +593,6 @@ Para mostrar los <b>espacios verdes y lugares patrimoniales</b> hacé click sobr
 Hacé click sobre el ícono del menú para mostrar/esconder la ventana de información.<br><br><img src=imagenes/twitter_16.png></i><br>
 Hacé click sobre el ícono del menú para mostrar/esconder el timeline de Twitter.
 </div>
-<script src=js/lala2.js type=text/javascript></script>
-<script src=Mapas/bebederos.js></script>
-<script src=Mapas/bicicletarios.js></script>
-<script src=Mapas/banios.js></script>
-<script src=Mapas/patrimonio.js></script>
-<script src=Mapas/cultura.js></script>
-<script src=Mapas/bicicircuitos.js></script>
-<script src=Mapas/espacios_libres.js></script>
-<script src=js/controlrouting.js type=text/javascript></script>
-<script src=js/initmapa.js type=text/javascript></script>
-<script src=js/adminmenus.js type=text/javascript></script>
 <script type=text/javascript>loadData();</script>
 <button class=btnBorrar onclick=esconderMostrar()></button>
 </body>
