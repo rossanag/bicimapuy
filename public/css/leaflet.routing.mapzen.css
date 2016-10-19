@@ -17,6 +17,7 @@ html,body{
     width: 320px;
     background-color: white;
     padding-top: 4px;
+    top:60px;
     transition: all 0.2s ease;
 }
 
