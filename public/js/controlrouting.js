@@ -145,24 +145,32 @@ var control = L.Routing.control({
   //  waypoints: routingData.waypoints,
   // You can get your own Mapzen turn-by-turn & search API key from the Mapzen developer portal (https://mapzen.com/developers/)
 
-    geocoder: L.Control.Geocoder.mapzen('mapzen-3indRB'),
-    reverseWaypoints: true,
+  plan: L.Routing.plan([], {
+                   geocoder: L.Control.Geocoder.nominatim({
+                   geocodingQueryParams: { countrycodes: 'uy'}
+                 }),
+                 reverseWaypoints: true,
+                 city:'Montevideo',
+                 language: 'sp'
+               }),
+    lineOptions: {
+            styles:
+                [
+                  {color: 'black', opacity: 0.15, weight: 9}, //sombra
+                  {color: 'white', opacity: 0.8, weight: 6}, // Contorno
+                  {color: 'red', opacity: 1, weight: 4}] // Centro
+       },
+
     router: L.Routing.mapzen('mapzen-3indRB', {
                  costing: 'bicycle',
                  directions_options: {
-                 language: 'es'
+                   language: 'es'
                  }
     }),
 
     collapsible: true,
     formatter: new L.Routing.mapzenFormatter(),
-    lineOptions: {
-                 styles:
-                     [
-                         {color: 'black', opacity: 0.15, weight: 9}, //sombra
-                         {color: 'white', opacity: 0.8, weight: 6}, // Contorno
-                         {color: 'red', opacity: 1, weight: 4}] // Centro
-            },
+
     summaryTemplate:'<div class="start">{name}</div><div class="info {costing}">{distance}</div>'
     //summaryTemplate:  '<h2>Trayectoria: {name}</h2><h3>Distancia: {distance}</h3>',
 }).addTo(mapa);
