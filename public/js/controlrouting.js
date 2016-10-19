@@ -41,7 +41,8 @@ function borrar()
 
 function borrarRuta()
 {
-    routeControl.getPlan().setWaypoints([]);
+   if (routeControl.getPlan() != null)
+      routeControl.getPlan().setWaypoints([]);
 }
 
 function esconderMostrar()
