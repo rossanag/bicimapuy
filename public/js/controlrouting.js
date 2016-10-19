@@ -153,8 +153,7 @@ var control = L.Routing.control({
                  }
     }),
 
-    collapsible: true,
-    show: (map.getSize().x > 768)? true: false,
+    collapsible: true,    
     formatter: new L.Routing.mapzenFormatter(),
     lineOptions: {
                  styles:
