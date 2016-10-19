@@ -153,7 +153,7 @@ var control = L.Routing.control({
                  }
     }),
 
-    collapsible: true,    
+    collapsible: true,
     formatter: new L.Routing.mapzenFormatter(),
     lineOptions: {
                  styles:
@@ -164,7 +164,7 @@ var control = L.Routing.control({
             },
     summaryTemplate:'<div class="start">{name}</div><div class="info {costing}">{distance}</div>'
     //summaryTemplate:  '<h2>Trayectoria: {name}</h2><h3>Distancia: {distance}</h3>',
-}).addTo(map);
+}).addTo(mapa);
 
 L.Routing.errorControl(control).addTo(map);
 
