@@ -141,7 +141,7 @@ function removeRouting()
 function crearControlRouting() {
 var control = L.Routing.control({
     routeLine: function (route, options) { return L.Routing.mapzenLine(route, options); },
-    waypoints: routingData.waypoints,
+  //  waypoints: routingData.waypoints,
   // You can get your own Mapzen turn-by-turn & search API key from the Mapzen developer portal (https://mapzen.com/developers/)
 
     geocoder: L.Control.Geocoder.mapzen('mapzen-3indRB'),
