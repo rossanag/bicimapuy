@@ -166,7 +166,7 @@ var control = L.Routing.control({
     //summaryTemplate:  '<h2>Trayectoria: {name}</h2><h3>Distancia: {distance}</h3>',
 }).addTo(mapa);
 
-L.Routing.errorControl(control).addTo(map);
+L.Routing.errorControl(control).addTo(mapa);
 
 // to show where waypoints are even if there is no routing data
 control.on('routingerror', function () {
