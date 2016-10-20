@@ -233,12 +233,10 @@ function rutaAB(latA, latB)  // esto para cuando no se usa el control
         waypoints.push(latlngB);
 
         var routes = null;
-        waypoints: [
-            
-        ],
+
         router: L.Routing.mapzen('mapzen-3indRB', {
               costing: 'bicycle'
-        });
+        })
 
         //routes = L.Routing.osrmv1({addWaypoints: false});
         //routes: L.Routing.mapzen('mapzen-3indRB', {
