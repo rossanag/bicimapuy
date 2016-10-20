@@ -234,7 +234,7 @@ function rutaAB(latA, latB)  // esto para cuando no se usa el control
 
         var routes = null;
 
-        router: L.Routing.mapzen('mapzen-3indRB', {
+        routes: L.Routing.mapzen('mapzen-3indRB', {
               costing: 'bicycle'
         })
 
