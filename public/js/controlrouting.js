@@ -234,7 +234,7 @@ function rutaAB(latA, latB)  // esto para cuando no se usa el control
 
         var routes = null;
 
-        routes: L.Routing.mapzen('mapzen-3indRB', {costing: 'bicycle', addWaypoints:false});
+        routes: L.Routing.mapzen('mapzen-3indRB', {costing: 'bicycle'});
 
 
         //routes = L.Routing.osrmv1({addWaypoints: false});
@@ -242,9 +242,7 @@ function rutaAB(latA, latB)  // esto para cuando no se usa el control
             // addWaypoints: false,
           //  costing: 'bicycle'
         //})
-
-        if (routes == null)
-          alert("es nulaaaa");
+      
 
         routes.route(waypoints, function(err, routes) {
              if (line) {
