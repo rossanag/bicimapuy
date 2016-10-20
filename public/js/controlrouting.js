@@ -41,8 +41,7 @@ function borrar()
 
 function borrarRuta()
 {
-   if (routeControl.getPlan() != null)
-      routeControl.getPlan().setWaypoints([]);
+    routeControl.getPlan().setWaypoints([]);
 }
 
 function esconderMostrar()
@@ -140,7 +139,7 @@ function removeRouting()
 // }
 
 function crearControlRouting() {
-var control = L.Routing.control({
+var routeControl = L.Routing.control({
     routeLine: function (route, options) { return L.Routing.mapzenLine(route, options); },
   //  waypoints: routingData.waypoints,
   // You can get your own Mapzen turn-by-turn & search API key from the Mapzen developer portal (https://mapzen.com/developers/)
@@ -162,29 +161,21 @@ var control = L.Routing.control({
        },
 
     router: L.Routing.mapzen('mapzen-3indRB', {
-                 costing: 'bicycle',
-                 directions_options: {
-                   language: 'es'
-                 }
+                 costing: 'bicycle'
+                //  directions_options: {
+                //    language: 'es'
+                //  }
     }),
 
     collapsible: true,
     formatter: new L.Routing.mapzenFormatter(),
-    summaryTemplate:  '<h2>Trayectoria: {name}</h2><h3>Distancia: {distance} info {costing}</h3>',
-    //summaryTemplate:'<div class="start">{name}</div><div class="info {costing}">{distance}</div>'
+    //summaryTemplate:  '<h2>Trayectoria: {name}</h2><h3>Distancia: {distance} info {costing}</h3>',
+    summaryTemplate:'<div class="start">{name}</div><div class="info {costing}">{distance}</div>'
     //summaryTemplate:  '<h2>Trayectoria: {name}</h2><h3>Distancia: {distance}</h3>',
 }).addTo(mapa);
 
-L.Routing.errorControl(control).addTo(mapa);
 
-// to show where waypoints are even if there is no routing data
-control.on('routingerror', function () {
-  var waypoints = control.getWaypoints();
-  map.fitBounds([
-    waypoints[0].latLng,
-    waypoints[waypoints.length-1].latLng
-  ]);
-})
+
 }
 
 function calcRoute()  // esto para cuando no se usa el control
