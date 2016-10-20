@@ -149,8 +149,8 @@ var routeControl = L.Routing.control({
                    geocodingQueryParams: { countrycodes: 'uy'}
                  }),
                  reverseWaypoints: true,
-                 city:'Montevideo'
-                 //language: 'sp'
+                 city:'Montevideo',
+                 language: 'sp'
                }),
     lineOptions: {
             styles:
