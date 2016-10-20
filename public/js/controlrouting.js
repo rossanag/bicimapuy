@@ -244,6 +244,9 @@ function rutaAB(latA, latB)  // esto para cuando no se usa el control
           //  costing: 'bicycle'
         //})
 
+        if (routes == null)
+          alert("es nulaaaa");
+
         routes.route(waypoints, function(err, routes) {
              if (line) {
                  mapa.removeLayer(line);
