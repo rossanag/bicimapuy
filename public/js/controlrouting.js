@@ -235,7 +235,7 @@ function rutaAB(latA, latB)  // esto para cuando no se usa el control
         var routes = null;
 
         //routes = L.Routing.osrmv1({addWaypoints: false});
-        router: L.Routing.mapzen('mapzen-3indRB', {
+        routes: L.Routing.mapzen('mapzen-3indRB', {
             addWaypoints: false,
             costing: 'bicycle'
         }),
