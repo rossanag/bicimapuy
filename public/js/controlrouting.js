@@ -170,8 +170,8 @@ var control = L.Routing.control({
 
     collapsible: true,
     formatter: new L.Routing.mapzenFormatter(),
-
-    summaryTemplate:'<div class="start">{name}</div><div class="info {costing}">{distance}</div>'
+    summaryTemplate:  '<h2>Trayectoria: {name}</h2><h3>Distancia: {distance} info {costing}</h3>',
+    //summaryTemplate:'<div class="start">{name}</div><div class="info {costing}">{distance}</div>'
     //summaryTemplate:  '<h2>Trayectoria: {name}</h2><h3>Distancia: {distance}</h3>',
 }).addTo(mapa);
 
