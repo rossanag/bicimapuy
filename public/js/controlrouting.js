@@ -161,7 +161,7 @@ var routeControl = L.Routing.control({
        },
 
     router: L.Routing.mapzen('mapzen-3indRB', {
-                 costing: 'bicycle'
+                 costing: 'bicycle',
                 directions_options: {
                     language: 'es'
                   }
