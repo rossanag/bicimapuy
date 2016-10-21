@@ -161,8 +161,7 @@ function crearControlRouting() {
        },
 
     router: L.Routing.mapzen('mapzen-3indRB', {
-                 //costing: 'bicycle',
-                 costing: 'pedestrian',
+                 costing: 'bicycle',                 
                 directions_options: {
                     language: 'es'
                   }
