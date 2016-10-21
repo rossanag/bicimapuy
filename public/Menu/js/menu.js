@@ -92,15 +92,15 @@ $(function() {
 				$_aPie.click(function() {
 					if (routeControl != null)
 						routeControl.route({costing: "pedestrian"});
-				}
+				});
 				$_enBici.click(function() {
 					if (routeControl != null)
 						routeControl.route({costing: "bycicle"});
-				}
+				});
 				$_enAuto.click(function() {
 					if (routeControl != null)
 						routeControl.route({costing: "auto"});
-				}
+				});
 
       		API.close();
 
