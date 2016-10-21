@@ -2,7 +2,6 @@ var routeControl = null;
 var showControl = false;
 
 
-
 var line = null;
 
 function convertirKM(distancia)

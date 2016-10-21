@@ -1,2 +1,110 @@
-$(function(){menu=$("nav#menu").mmenu({navbars:[{position:"top",height:1,content:['<a class="fa fa-info-circle fa-2x"></a>']},{position:"bottom",content:['<a href="mailto:bicimapuy@gmail.com" class="fa fa-envelope"></a>','<a class="fa fa-twitter"></a>','<a href="https://www.facebook.com/" target="_blank"class="fa fa-facebook"></a>']}],extensions:["multiline"],onClick:{close:!1},navbar:{title:"Inicio"},clone:!0});API=$("#menu").data("mmenu");menu.on("click",'a[class^="fa fa-twitter"]',function(){$("#twitter").toggle();
-API.close();return!1});menu.on("click",'a[class^="fa fa-info-circle"]',function(){$("#dialogo").dialog("isOpen")?$("#dialogo").dialog("close"):$("#dialogo").dialog("open");return!1});$("#dialogo").dialog({autoOpen:!1,position:{my:"right top",at:"right top",of:window}});$("#loading").hide()});$(window).load(function(){var a=$('input[name="ruteo"]');a.click(function(){borrarPath();a.is(":checked")?(routing=!0,displayRoutingControl(),API.close()):(borrarRuta(),removeRouting())});API.close()});
+$(function() {
+				//$('nav#menu').mmenu();
+				menu =  $('nav#menu').mmenu(
+
+				{
+					navbars		: [{
+						position: "top",
+						height 	: 1,
+						content : [
+
+							'<a class="fa fa-info-circle fa-2x"></a>'
+
+						]
+					},
+					{
+			            position: "bottom", //bottom
+	        		    content: [
+	        		    	'<a href="mailto:bicimapuy@gmail.com" class="fa fa-envelope"></a>',
+	               			'<a class="fa fa-twitter"></a>',
+	               			'<a href="https://www.facebook.com/" target="_blank"class="fa fa-facebook"></a>'
+	            		]
+         			}
+					],
+					extensions: ["multiline"],
+        			 onClick: {
+             			close: false
+        			 },
+        			navbar:{
+        				title: "Inicio"
+        			},
+        			/* offCanvas: {
+                		  zposition : "next"
+             		}, */
+             		clone: true
+
+			});
+
+			API = $("#menu").data( "mmenu" ); // antes var API
+
+			menu.on( 'click', 'a[class^="fa fa-twitter"]', function() {  // esto funciona
+			 				//$('#twitter').show();
+							$( "#twitter" ).toggle();
+      						  //var API = $("#menu").data( "mmenu" );
+       						  API.close();
+
+			 				return false;
+			 			}
+			 );
+			 menu.on( 'click', 'a[class^="fa fa-info-circle"]', function() {  // esto funciona
+							if ($( "#dialogo" ).dialog( "isOpen" ))
+								$( "#dialogo" ).dialog( "close" );
+							else
+								$( "#dialogo" ).dialog( "open" );
+
+
+			 				return false;
+			 			}
+			 );
+
+			$( "#dialogo" ).dialog({
+  				autoOpen: false,
+  				position: { my: "right top", at: "right top", of: window }
+			});
+			$('#loading').hide();
+
+        });
+
+		$( window ).load(function() {
+
+  			var $ruteo = $('input[name="ruteo"]');
+  			$ruteo.click(function() {
+  				borrarPath();
+	  			if ($ruteo.is( ':checked' ))
+	  			{
+	  					routing = true;
+	      				displayRoutingControl();
+	      				API.close();
+	  			}
+	  			else
+	  			{
+	  				borrarRuta();
+	  				removeRouting();
+
+	  			}
+
+  			});
+
+				var $_aPie = $('input[name="_peaton"]');
+				var $_enBici = $('input[name="_enBici"]');
+				var $_enAuto = $('input[name="_enAuto"]');
+
+				$_aPie.click(function() {
+					if (routeControl != null)
+						routeControl.route({costing: "pedestrian"});
+				}
+				$_enBici.click(function() {
+					if (routeControl != null)
+						routeControl.route({costing: "bycicle"});
+				}
+				$_enAuto.click(function() {
+					if (routeControl != null)
+						routeControl.route({costing: "auto"});
+				}
+
+      		API.close();
+
+  			});
+
+
+//});
