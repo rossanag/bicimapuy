@@ -1,6 +1,8 @@
 var routeControl = null;
 var showControl = false;
 
+
+
 var line = null;
 
 function convertirKM(distancia)
@@ -242,7 +244,6 @@ function rutaAB(latA, latB)  // esto para cuando no se usa el control
             // addWaypoints: false,
           //  costing: 'bicycle'
         //})
-
 
         routes.route(waypoints, function(err, routes) {
              if (line) {
