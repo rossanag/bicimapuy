@@ -95,7 +95,7 @@ $(function() {
 					{
 						if ($_aPie.is( ':checked' )){
 							alert("seteo costing pededstrian");
-							routeControl.route({costing: "pedestrian"});
+							router.route({costing: "pedestrian"});
 							borrarRuta();
 						}
 					}
@@ -105,7 +105,7 @@ $(function() {
 					if (routeControl != null)
 					{
 						if ($_enBici.is( ':checked' ))
-							routeControl.route({costing: "bycicle"});
+							router.route({costing: "bycicle"});
 							alert("seteo costing bike");
 							borrarRuta();
 					}
@@ -117,7 +117,7 @@ $(function() {
 					if (routeControl != null)
 					{
 						if ($_enAuto.is( ':checked' ))
-							routeControl.route({costing: "auto"});
+							router.route({costing: "auto"});
 							borrarRuta();
 					}
 
