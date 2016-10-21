@@ -171,7 +171,7 @@ function crearControlRouting() {
     collapsible: true,
     formatter: new L.Routing.mapzenFormatter(),
     //summaryTemplate:  '<h2>Trayectoria: {name}</h2><h3>Distancia: {distance} info {costing}</h3>',
-    summaryTemplate:  '<h2>Trayectoria: {name}</h2><h3>Distancia: {distance}</h3>',
+    summaryTemplate:  '<h3><b>Distancia: {distance}</b></h3>',
 }).addTo(mapa);
 
 
