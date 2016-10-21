@@ -85,21 +85,31 @@ $(function() {
 
   			});
 
-				var $_aPie = $('input[name="_peaton"]');
-				var $_enBici = $('input[name="_enBici"]');
-				var $_enAuto = $('input[name="_enAuto"]');
+				var $_aPie = $('input[id="peaton"]');
+				var $_enBici = $('input[id="enBici"]');
+				var $_enAuto = $('input[id="enAuto"]');
 
 				$_aPie.click(function() {
 					if (routeControl != null)
-						routeControl.route({costing: "pedestrian"});
+					{
+						if ($_aPie.is( ':checked' ))
+							routeControl.route({costing: "pedestrian"});
+					}
 				});
 				$_enBici.click(function() {
 					if (routeControl != null)
-						routeControl.route({costing: "bycicle"});
+					{
+						if ($_enBici.is( ':checked' ))
+							routeControl.route({costing: "bycicle"});
+					}
 				});
 				$_enAuto.click(function() {
 					if (routeControl != null)
-						routeControl.route({costing: "auto"});
+					{
+						if ($_enAuto.is( ':checked' ))
+							routeControl.route({costing: "auto"});
+					}
+
 				});
 
       		API.close();
