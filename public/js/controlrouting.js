@@ -1,5 +1,6 @@
 var routeControl = null;
 var showControl = false;
+var route = null;
 
 var line = null;
 
@@ -161,7 +162,7 @@ function crearControlRouting() {
        },
 
     router: L.Routing.mapzen('mapzen-3indRB', {
-                 costing: 'bicycle',                 
+                 costing: 'bicycle',
                 directions_options: {
                     language: 'es'
                   }
