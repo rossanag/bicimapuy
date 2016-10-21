@@ -94,18 +94,17 @@ $(function() {
 					{
 						if ($_aPie.is( ':checked' )){
 							routeControl.route({costing: "pedestrian"});
-							alert("a Pieeeee");
+							borrarRuta();
 						}
 					}
-					else {
-						alert("es nulaaaaa");
-					}
+
 				});
 				$_enBici.click(function() {
 					if (routeControl != null)
 					{
 						if ($_enBici.is( ':checked' ))
 							routeControl.route({costing: "bycicle"});
+							borrarRuta();
 					}
 				});
 				$_enAuto.click(function() {
@@ -113,6 +112,7 @@ $(function() {
 					{
 						if ($_enAuto.is( ':checked' ))
 							routeControl.route({costing: "auto"});
+							borrarRuta();
 					}
 
 				});
