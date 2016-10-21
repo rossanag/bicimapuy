@@ -92,8 +92,13 @@ $(function() {
 				$_aPie.click(function() {
 					if (routeControl != null)
 					{
-						if ($_aPie.is( ':checked' ))
+						if ($_aPie.is( ':checked' )){
 							routeControl.route({costing: "pedestrian"});
+							alert("a Pieeeee");
+						}
+					}
+					else {
+						alert("es nulaaaaa");
 					}
 				});
 				$_enBici.click(function() {
