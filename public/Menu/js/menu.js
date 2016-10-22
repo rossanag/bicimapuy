@@ -94,7 +94,7 @@ $(function() {
 					{
 						if ($_aPie.is( ':checked' )){
 							routeControl.router.route({costing: "pedestrian"});
-							borrarRuta();
+							//borrarRuta();
 						}
 					}
 
@@ -104,7 +104,7 @@ $(function() {
 					{
 						if ($_enBici.is( ':checked' ))
 							routeControl.router.route({costing: "bycicle"});
-							borrarRuta();
+							//borrarRuta();
 					}
 					else {
 						alert("es nulo el control");
