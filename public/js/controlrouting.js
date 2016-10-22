@@ -1,6 +1,6 @@
 var routeControl = null;
 var showControl = false;
-var route = null;
+var router = null;
 
 var line = null;
 
