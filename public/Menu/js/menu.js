@@ -90,12 +90,10 @@ $(function() {
 				var $_enAuto = $('input[id="enAuto"]');
 
 				$_aPie.click(function() {
-					alert("a pie");
 					if (routeControl != null)
 					{
 						if ($_aPie.is( ':checked' )){
-							alert("seteo costing pededstrian");
-							router.route({costing: "pedestrian"});
+							routeControl.router.route({costing: "pedestrian"});
 							borrarRuta();
 						}
 					}
@@ -105,8 +103,7 @@ $(function() {
 					if (routeControl != null)
 					{
 						if ($_enBici.is( ':checked' ))
-							router.route({costing: "bycicle"});
-							alert("seteo costing bike");
+							routeControl.router.route({costing: "bycicle"});
 							borrarRuta();
 					}
 					else {
@@ -117,7 +114,7 @@ $(function() {
 					if (routeControl != null)
 					{
 						if ($_enAuto.is( ':checked' ))
-							router.route({costing: "auto"});
+							routeControl.router.route({costing: "auto"});
 							borrarRuta();
 					}
 
