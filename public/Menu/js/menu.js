@@ -93,8 +93,8 @@ $(function() {
 					if (routeControl != null)
 					{
 						if ($_aPie.is( ':checked' )){
-							routeControl.router.route({costing: "pedestrian"});
-							//routeControl.getRouter().options.costing = "pedestrian";
+							//routeControl.router.route({costing: "pedestrian"});
+							routeControl.getRouter().options.costing = "pedestrian";
   						routeControl.route();
 							//borrarRuta();
 						}
@@ -106,8 +106,7 @@ $(function() {
 					{
 						if ($_enBici.is( ':checked' ))
 							//routeControl.router.route({costing: "bycicle"});
-							routeControl.router.route({costing: "bycicle"});
-							//routeControl.getRouter().options.costing = "bycicle";
+							routeControl.getRouter().options.costing = "bycicle";
   						routeControl.route();
 							//borrarRuta();
 					}
