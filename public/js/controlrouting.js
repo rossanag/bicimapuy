@@ -170,8 +170,8 @@ function crearControlRouting() {
 
     collapsible: true,
     formatter: new L.Routing.mapzenFormatter(),
-    //summaryTemplate:  '<h2>Trayectoria: {name}</h2><h3>Distancia: {distance} info {costing}</h3>',
-    summaryTemplate:  '<h3><b>Distancia: {distance}</b></h3>',
+    summaryTemplate:  '<h2>Trayectoria: {name}</h2><h3>Distancia: {distance} info {costing}</h3>'
+    //summaryTemplate:  '<h3><b>Distancia: {distance}</b></h3>',
 }).addTo(mapa);
 
 
@@ -237,11 +237,11 @@ function rutaAB(latA, latB)  // esto para cuando no se usa el control
         //routes: L.Routing.mapzen('mapzen-3indRB', {costing: 'bicycle'});
 
 
-        routes = L.Routing.osrmv1({addWaypoints: false});
-        //routes: L.Routing.mapzen('mapzen-3indRB', {
-        //    addWaypoints: false,
-        //    costing: 'bicycle'
-        //});
+        //routes = L.Routing.osrmv1({addWaypoints: false});
+        routes = L.Routing.mapzen('mapzen-3indRB', {
+            addWaypoints: false,
+            costing: 'bicycle'
+        });
 
         routes.route(waypoints, function(err, routes) {
              if (line) {
