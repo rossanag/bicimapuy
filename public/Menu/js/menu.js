@@ -121,7 +121,7 @@ $(function() {
 							//routeControl.router.route({costing: "auto"});
 							routeControl.getRouter().options.costing = "auto";
   						routeControl.route();
-							borrarRuta();
+							//borrarRuta();
 					}
 
 				});

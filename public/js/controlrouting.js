@@ -237,11 +237,11 @@ function rutaAB(latA, latB)  // esto para cuando no se usa el control
         //routes: L.Routing.mapzen('mapzen-3indRB', {costing: 'bicycle'});
 
 
-        routes = L.Routing.osrmv1({addWaypoints: false});
-        //routes: L.Routing.mapzen('mapzen-3indRB', {
-            // addWaypoints: false,
-          //  costing: 'bicycle'
-        //})
+        //routes = L.Routing.osrmv1({addWaypoints: false});
+        routes: L.Routing.mapzen('mapzen-3indRB', {
+             //addWaypoints: false,
+            costing: 'bicycle'
+        });
 
         routes.route(waypoints, function(err, routes) {
              if (line) {
