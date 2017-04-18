@@ -8,7 +8,7 @@ var express = require('express'),
       elemParadas = [],
       paradas = [];
 
-var enforce = require('express-sslify');
+var enforce = require('express-sslify'); //para los certificados SSL
 
 var paradasant = [];
 var _recorridos = [];
