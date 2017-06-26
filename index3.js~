@@ -30,7 +30,6 @@ app.use( express.static(__dirname + '/public'));
 
   // app.set('port', HTTP_PORT);  NO FUNCIONÓ PERO DEBERÍA, TUVE QUE USAR PLUGIN express-sslify
   //
-  //
   // app.all('/*', function(req, res,  next) {
   //   if (/^http$/.test(req.protocol)) {
   //     var host = req.headers.host.replace(/:[0-9]+$/g, ""); // strip the port # if any
